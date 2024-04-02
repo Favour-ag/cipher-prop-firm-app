@@ -45,7 +45,10 @@ const Navbar = () => {
             >
               Login/Register
             </a>
-            <a href="#" className="py-2.5 px-3 rounded-3xl border">
+            <a
+              href="#"
+              className="py-2.5 px-3 rounded-3xl border border-red-700 shadow-sm shadow-blue-400"
+            >
               Select An Account
             </a>
           </div>
