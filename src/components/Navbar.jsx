@@ -13,13 +13,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 py-1 bg-black">
-      <div className="container px-6 lg:px-12 mx-auto relative lg:text-sm">
+    <nav className="sticky top-0 z-50 bg-[#010f1c]">
+      {/* DESKTOP VIEW */}
+      <div className="container px-3 py-3 lg:py-0 lg:px-20 mx-auto relative lg:text-sm">
         <div className="flex justify-between items-center">
+          {/* LOGO */}
           <div className="flex items-center flex-shrink-0">
             <img className="h-14 w-20 mr-2" src={logo} alt="Logo" />
-            {/* <span className="text-xl tracking-tight">CIPHER</span> */}
           </div>
+          {/* NAVLIST */}
           <ul className="hidden lg:flex ml-14">
             {navigation.map((item) => (
               <a
@@ -28,7 +30,7 @@ const Navbar = () => {
                 onClick={toggleNavbar}
                 className={`block relative font-code text-2xl  text-n-1 transition-colors hover:text-color-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-sm lg:font-semibold ${
+                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-sm lg:font-semibold hover:text-slate-300 ${
                   item.url === pathname.hash
                     ? "z-2 lg:text-n-1"
                     : "lg:text-n-1/50"
@@ -38,19 +40,29 @@ const Navbar = () => {
               </a>
             ))}
           </ul>
+          {/* BUTTONS */}
           <div className="hidden lg:flex justify-center space-x-6 items-center">
             <a
               href="#"
-              className="py-3 px-4  rounded-3xl bg-gradient-to-r from-red-500 to-blue-600"
+              className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
             >
               Login/Register
             </a>
-            <a
-              href="#"
-              className="py-2.5 px-3 rounded-3xl border border-red-700 shadow-sm shadow-blue-400"
-            >
-              Select An Account
-            </a>
+            <div className="py-3 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
+              <a href="#" className="py-3 px-3  bg-[#010f1c] rounded-3xl">
+                Select An Account
+              </a>
+            </div>
+          </div>
+          <div className="ml-14 block lg:hidden">
+            <div className="py-2.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
+              <a
+                href="#"
+                className="py-3 px-3  bg-[#010f1c] rounded-3xl text-sm"
+              >
+                Select An Account
+              </a>
+            </div>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
@@ -58,17 +70,18 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+        {/* MOBILE MENU */}
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+          <div className="fixed right-0 z-20 bg-[#010f1c] w-full h-full flex flex-col  items-center text-center lg:hidden">
             <ul>
               {navigation.map((item) => (
                 <a
                   key={item.id}
                   href={item.url}
                   onClick={toggleNavbar}
-                  className={`block relative font-code text-2xl  text-n-1 transition-colors hover:text-color-1 ${
+                  className={`block  text-2xl    hover:text-slate-200 ${
                     item.onlyMobile ? "lg:hidden" : ""
-                  } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                  } px-6 py-3 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                     item.url === pathname.hash
                       ? "z-2 lg:text-n-1"
                       : "lg:text-n-1/50"
@@ -78,16 +91,24 @@ const Navbar = () => {
                 </a>
               ))}
             </ul>
-            <div className="flex space-x-6">
+            <div>
+              <p className="text-2xl">Follow us on social media</p>
+              <div>
+                <a href=""></a>
+              </div>
+            </div>
+            <div className="flex flex-col text-center space-y-3 w-[90%]">
               <a
                 href="#"
-                className="py-2 px-3 bg-gradient-to-r from-red-500 to-blue-600 rounded-md"
+                className="py-2 px-6 bg-gradient-to-r from-red-500 to-blue-600 text-slate-200 text-2xl"
               >
-                Sign In
+                Dashboard
               </a>
-              <a href="#" className="py-2 px-3 rounded-md border">
-                Create an account
-              </a>
+              <div className="py-0.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-600">
+                <div className="py-2 px-0.5 bg-[#010f1c] text-2xl">
+                  <a href="#">Select An Account</a>
+                </div>
+              </div>
             </div>
           </div>
         )}

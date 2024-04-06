@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import EvaluationProcess from "./components/EvaluationProcess";
 import CipherChallenge from "./components/CipherChallenge";
 import Payouts from "./components/Payouts";
+import ChooseCipher from "./components/ChooseCipher";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <EvaluationProcess />
       <CipherChallenge />
       <Payouts />
+      <ChooseCipher />
     </>
   );
 };
