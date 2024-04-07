@@ -5,6 +5,12 @@ import icon4 from "../assets/icons/icon4.svg";
 import icon5 from "../assets/icons/icon5.svg";
 import icon6 from "../assets/icons/icon6.svg";
 
+import twitter from "../assets/socials/twitter.svg";
+import instagram from "../assets/socials/instagram.svg";
+import facebook from "../assets/socials/facebook.svg";
+import discordBlack from "../assets/socials/discord.svg";
+import telegram from "../assets/socials/telegram.svg";
+
 export const navigation = [
   {
     id: "0",
@@ -60,35 +66,35 @@ export const chooseCipher = [
   },
 ];
 
-// export const socials = [
-//   {
-//     id: "0",
-//     title: "Discord",
-//     iconUrl: discordBlack,
-//     url: "#",
-//   },
-//   {
-//     id: "1",
-//     title: "Twitter",
-//     iconUrl: twitter,
-//     url: "#",
-//   },
-//   {
-//     id: "2",
-//     title: "Instagram",
-//     iconUrl: instagram,
-//     url: "#",
-//   },
-//   {
-//     id: "3",
-//     title: "Telegram",
-//     iconUrl: telegram,
-//     url: "#",
-//   },
-//   {
-//     id: "4",
-//     title: "Facebook",
-//     iconUrl: facebook,
-//     url: "#",
-//   },
-// ];
+export const socials = [
+  {
+    id: "0",
+    title: "Twitter",
+    icon: twitter,
+    url: "#",
+  },
+  {
+    id: "1",
+    title: "Instagram",
+    icon: instagram,
+    url: "#",
+  },
+  {
+    id: "2",
+    title: "Facebook",
+    icon: facebook,
+    url: "#",
+  },
+  {
+    id: "3",
+    title: "Discord",
+    icon: discordBlack,
+    url: "#",
+  },
+  {
+    id: "4",
+    title: "Telegram",
+    icon: telegram,
+    url: "#",
+  },
+];

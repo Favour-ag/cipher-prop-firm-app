@@ -1,4 +1,5 @@
 import Astro from "../assets/Astro.png";
+import { socials } from "../constants";
 
 const HeroSection = () => {
   return (
@@ -29,6 +30,15 @@ const HeroSection = () => {
             <p className="lg:mt-3 text-sm md:text-2xl mt-[-12px] md:mt-0">
               Unleash Potential for Success and Fund Your Future
             </p>
+            <div>
+              <ul className="flex items-center justify-center gap-2">
+                {socials.map((social) => (
+                  <a key={social.id} href={social.url}>
+                    <img src={social.icon} alt="SocialMedia" />
+                  </a>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

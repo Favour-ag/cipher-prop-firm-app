@@ -2,7 +2,10 @@ import React from "react";
 
 const CipherChallenge = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col items-center mt-6 lg:mt-20">
+    <div
+      id="cipherchallenge"
+      className="w-full min-h-screen flex flex-col items-center mt-6 lg:mt-20"
+    >
       <h1 className="text-4xl sm:text-6xl lg:text-5xl text-center tracking-wide">
         Choose Your Cipher Challenge
       </h1>
