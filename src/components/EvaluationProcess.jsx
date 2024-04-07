@@ -1,6 +1,9 @@
 import evaluationIcon1 from "../assets/evaluationIcon1.svg";
 import evaluationIcon2 from "../assets/evaluationIcon2.svg";
 import evaluationIcon3 from "../assets/evaluationIcon3.svg";
+import evaluationEclipse from "../assets/evaluationeclipse.svg";
+import walletSvg from "../assets/walletSvg.svg";
+import bitcoin from "../assets/bitcoin.svg";
 
 const EvaluationProcess = () => {
   return (
@@ -8,7 +11,7 @@ const EvaluationProcess = () => {
       <h1 className="text-xl  lg:text-5xl text-center tracking-wide z-10">
         Our Evaluation Process
       </h1>
-      <div className="flex  justify-center px-0 lg:px-14 lg:gap-14">
+      <div className="flex lg:mt-8 justify-center px-0 lg:px-14 lg:gap-14">
         <div className="rounded-lg lg:w-1/2  mx-2 my-4 flex flex-col space-y-4 items-center">
           <div className="border w-[350px] md:w-[600px] rounded-lg flex flex-col md:flex-row lg:justify-around px-6 lg:px-8 py-6 space-x-0 lg:space-x-8">
             <div className="w-full flex justify-center lg:align-middle">
@@ -68,8 +71,18 @@ const EvaluationProcess = () => {
             </div>
           </div>
         </div>
-        <div className="rounded-lg w-1/2  mx-2 my-4 bg-blue-500 hidden md:block">
-          Your browser does not support the video tag.
+        <div className="hidden lg:block rounded-lg w-1/2  mx-2 my-4">
+          <div className="flex justify-center">
+            <img src={bitcoin} alt="bitcoin" className="z-10 relative top-40" />
+          </div>
+          <div className="flex items-center relative top-[20%]">
+            <img src={evaluationEclipse} alt="eclipse" />
+            <img
+              src={walletSvg}
+              alt="wallet"
+              className="relative right-96 z-10"
+            />
+          </div>
         </div>
       </div>
     </div>

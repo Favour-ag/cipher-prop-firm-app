@@ -11,6 +11,16 @@ import facebook from "../assets/socials/facebook.svg";
 import discordBlack from "../assets/socials/discord.svg";
 import telegram from "../assets/socials/telegram.svg";
 
+import profitTarget from "../assets/icons/cipherChallenge/profitTarget.svg";
+import maximumDailyLoss from "../assets/icons/cipherChallenge/maximumDailyLoss.svg";
+import maximumLoss from "../assets/icons/cipherChallenge/maximumLoss.svg";
+import leverage from "../assets/icons/cipherChallenge/leverage.svg";
+import trainingPeriod from "../assets/icons/cipherChallenge/trainingPeriod.svg";
+import weekendHolding from "../assets/icons/cipherChallenge/weekendHolding.svg";
+import minimumTradingDays from "../assets/icons/cipherChallenge/minimumTradingDays.svg";
+import newsTrading from "../assets/icons/cipherChallenge/newsTrading.svg";
+import maximumOverallDrawdown from "../assets/icons/cipherChallenge/maximumOverallDrawdown.svg";
+
 export const navigation = [
   {
     id: "0",
@@ -97,4 +107,49 @@ export const socials = [
     icon: telegram,
     url: "#",
   },
+];
+
+export const rules = [
+  { icon: profitTarget, text: "Profit Target" },
+  { icon: maximumDailyLoss, text: "maximum Daily Loss" },
+  { icon: maximumLoss, text: "Maximum Loss" },
+  { icon: leverage, text: "Leverage" },
+  { icon: trainingPeriod, text: "Training Period" },
+  { icon: weekendHolding, text: "Weekend Holding" },
+  { icon: minimumTradingDays, text: "Minimum Trading Days" },
+  { icon: newsTrading, text: "News Trading" },
+  { icon: maximumOverallDrawdown, text: "Maximum Overall Drawdown" },
+];
+export const phase1 = [
+  { text: "7%" },
+  { text: "5%" },
+  { text: "10%" },
+  { text: "1:100" },
+  { text: "Unlimited" },
+  { text: "Yes" },
+  { text: "2 Days" },
+  { text: "Yes" },
+  { text: "10%" },
+];
+export const phase2 = [
+  { text: "5%" },
+  { text: "5%" },
+  { text: "10%" },
+  { text: "1:100" },
+  { text: "Unlimited" },
+  { text: "Yes%" },
+  { text: "2 Days%" },
+  { text: "Yes" },
+  { text: "10%" },
+];
+export const phase3 = [
+  { text: "-" },
+  { text: "5%" },
+  { text: "10%" },
+  { text: "1:100" },
+  { text: "Unlimited" },
+  { text: "Yes%" },
+  { text: "2 Days%" },
+  { text: "Yes" },
+  { text: "10%" },
 ];

@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="hidden lg:block w-[100px] h-[400px] bg-[#eb26fd] rounded-full absolute top-[80%] left-20 translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
       <div className="hidden lg:block w-[600px] h-[400px] bg-[#023564] rounded-full absolute top-[110%] right-0 translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
       <div className="lg:w-1/2 z-10">
-        <div className="lg:min-w-full lg:h-screen flex flex-col  gap-3 p-5 lg:p-0 lg:relative lg:ml-24 lg:justify-center">
+        <div className="lg:min-w-full lg:h-screen flex flex-col  gap-3 p-5 lg:p-0 lg:relative lg:ml-24 lg:justify-center z-10">
           <h1 className=" text-2xl text-center lg:text-start lg:text-5xl font-semibold">
             Construct Your Edge and
             <span className="bg-gradient-to-t from-red-600 to-blue-600 inline-block text-transparent bg-clip-text lg:mr-2">
@@ -16,7 +16,7 @@ const HeroSection = () => {
             the Markets.
           </h1>
           <div>
-            <div className="hidden lg:flex justify-start space-x-6 items-start">
+            <div className="hidden lg:flex justify-start space-x-6 items-start z-10">
               <div className="py-3 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
                 <a href="#" className="py-3 px-3  bg-[#010f1c] rounded-3xl">
                   Select An Account
