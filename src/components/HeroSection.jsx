@@ -3,14 +3,16 @@ import { socials } from "../constants";
 
 const HeroSection = () => {
   return (
-    <div className="w-full h-full flex mt-0 lg:mt-2 items-center">
-      <div className="lg:w-[50%]">
-        <div className="lg:min-w-full lg:h-screen flex flex-col justify-center items-center gap-3 p-5 lg:p-0">
-          <h1 className="lg:pl-20 text-2xl text-center lg:text-5xl font-grotesk font-semibold">
+    <div className="w-full h-full flex mt-0 items-center">
+      <div className="hidden lg:block w-[100px] h-[400px] bg-[#eb26fd] rounded-full absolute top-[80%] left-20 translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
+      <div className="hidden lg:block w-[600px] h-[400px] bg-[#023564] rounded-full absolute top-[110%] right-0 translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
+      <div className="lg:w-1/2 z-10">
+        <div className="lg:min-w-full lg:h-screen flex flex-col  gap-3 p-5 lg:p-0 lg:relative lg:ml-24 lg:justify-center">
+          <h1 className=" text-2xl text-center lg:text-start lg:text-5xl font-semibold">
             Construct Your Edge and
-            <p className="bg-gradient-to-t from-red-600 to-blue-600 inline-block text-transparent bg-clip-text lg:mt-2">
+            <span className="bg-gradient-to-t from-red-600 to-blue-600 inline-block text-transparent bg-clip-text lg:mr-2">
               Decode
-            </p>
+            </span>
             the Markets.
           </h1>
           <div>
@@ -30,8 +32,8 @@ const HeroSection = () => {
             <p className="lg:mt-3 text-sm md:text-2xl mt-[-12px] md:mt-0">
               Unleash Potential for Success and Fund Your Future
             </p>
-            <div>
-              <ul className="flex items-center justify-center gap-2">
+            <div className="mt-4">
+              <ul className="flex items-center justify-center lg:justify-start gap-2">
                 {socials.map((social) => (
                   <a key={social.id} href={social.url}>
                     <img src={social.icon} alt="SocialMedia" />
@@ -42,9 +44,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
-      <div className="p-6 hidden lg:block w-[50%]">
-        <img src={Astro} alt="Astro" className="w-[400px] h-[700px] ml-20" />
+      <div className="p-6 hidden lg:block w-1/2 z-10">
+        <img src={Astro} alt="Astro" className="w-[400px] h-[700px] ml-20 " />
       </div>
     </div>
   );

@@ -4,8 +4,8 @@ import evaluationIcon3 from "../assets/evaluationIcon3.svg";
 
 const EvaluationProcess = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col items-center mt-6 lg:mt-10">
-      <h1 className="text-xl  lg:text-5xl text-center tracking-wide">
+    <div className="w-full min-h-screen flex flex-col items-center mt-6 lg:mt-10 ">
+      <h1 className="text-xl  lg:text-5xl text-center tracking-wide z-10">
         Our Evaluation Process
       </h1>
       <div className="flex  justify-center px-0 lg:px-14 lg:gap-14">
