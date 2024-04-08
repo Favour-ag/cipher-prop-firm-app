@@ -6,7 +6,7 @@ const ChooseCipher = () => {
       <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-10 lg:my-20">
         Why Choose Cipher?
       </h2>
-      <div className="flex flex-wrap justify-center lg:mt-[-50px]">
+      <div className="flex flex-wrap justify-center mt-[-50px]">
         {chooseCipher.map((chooseCipher, index) => (
           <div
             key={index}

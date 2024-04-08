@@ -3,9 +3,11 @@ import discordBlack from "../assets/socials/discord.svg";
 const JoinTeamCipher = () => {
   return (
     <div className=" w-full h-screen flex flex-col justify-center items-center">
-      <p className="lg:text-4xl font-semibold mt-96">Join our Team at Cipher</p>
-      <div className=" w-[1000px] lg:py-3 lg:px-12 text-center">
-        <p className="lg:text-xl">
+      <p className="text-3xl lg:text-4xl font-semibold mt-96">
+        Join our Team at Cipher
+      </p>
+      <div className=" lg:w-[1000px] lg:py-3 px-4 lg:px-12 text-center mt-3 lg:mt-0">
+        <p className="lg:text-xl text-justify">
           The industry's most affordable option with advanced technology to help
           you achieve your trading goals. We believe in your potential and are
           here to support your success. Additionally, join our platform to learn
@@ -13,9 +15,9 @@ const JoinTeamCipher = () => {
         </p>
       </div>
       {/* BUTTONS */}
-      <div className="hidden lg:flex justify-start space-x-6 items-start">
+      <div className="flex justify-start mt-2 lg:mt-0 space-x-3 lg:space-x-6 items-start">
         <div className="py-3 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
-          <a href="#" className="py-3 px-3  bg-[#010f1c] rounded-3xl">
+          <a href="#" className="py-3 lg:py-3.5 px-3  bg-[#010f1c] rounded-3xl">
             Select An Account
           </a>
         </div>
@@ -26,16 +28,19 @@ const JoinTeamCipher = () => {
           Affiliate Program
         </a>
       </div>
-      <div className=" w-full min-h-screen mt-20 flex lg:px-24 xl:px-32 gap-8">
-        <div className="w-1/2 space-y-3 mt-7">
-          <p className="lg:text-[26px] leading-none">
+      {/* NewsLetter */}
+      <div className=" w-full min-h-screen px-4 lg:mt-20 flex flex-col md:flex-row lg:px-24 xl:px-32 gap-8">
+        <div className="lg:w-1/2 lg:space-y-3 mt-3 lg:mt-7">
+          <p className="lg:text-[26px] leading-1">
             Stay ahead of the curve with exclusive access to promotions,
             discounts, and our newsletter.
           </p>
-          <p>Get instant access to weekly newsletter</p>
-          <div className="flex gap-3">
+          <p className="mt-1 lg:mt-0">
+            Get instant access to weekly newsletter
+          </p>
+          <div className="flex gap-3 mt-1 lg:mt-0">
             <input
-              className="placeholder:italic placeholder:text-slate-400 block bg-slate-300 w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none sm:text-sm text-black"
+              className="placeholder:italic placeholder:text-slate-400 block bg-slate-300 w-full border border-slate-300 rounded-md py-2 pl-4 lg:pl-9 pr-3 shadow-sm focus:outline-none sm:text-sm text-black"
               placeholder="youremail@example.com..."
               type="text"
             />
@@ -43,14 +48,14 @@ const JoinTeamCipher = () => {
               href="#"
               className="py-2 px-3   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
             >
-              subscribe
+              Subscribe
             </a>
           </div>
         </div>
-        <div className="w-1/2">
-          <div className="py-0.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl w-[400px] relative lg:left-20">
-            <div className="bg-[#010f1c] py-16 px-0.5 rounded-3xl h-[200px]">
-              <div className="lg:px-12 mt-[-36px]">
+        <div className="lg:w-1/2">
+          <div className="py-0.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl lg:w-[400px] relative lg:left-20">
+            <div className="bg-[#010f1c] py-16 px-0.5 rounded-3xl h-[178px] ">
+              <div className="px-4 lg:px-12 mt-[-36px]">
                 <p className="lg:text-base text-center">
                   For more Information about our Academy join our community on
                   Discord

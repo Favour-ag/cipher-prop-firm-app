@@ -21,9 +21,10 @@ const CipherChallenge = () => {
         </a>
       </div>
       {/*  */}
-      <div className="grid lg:grid-cols-4 gap-10">
+      <div className="absolute w-[600px] h-[400px] bg-[#023564] rounded-full translate-x-[-50%] translate-y-[-50%] blur-[100px] mt-[300px] right-0"></div>
+      <div className="grid lg:grid-cols-4 gap-10 z-10  place-items-center	px-24">
         <div>
-          <h3 className="text-md font-semibold lg:mt-8">Resources</h3>
+          <h3 className="text-md font-semibold lg:mt-8">Rules</h3>
           <h3 className="text-md font-semibold mb-4"></h3>
           <div className="space-y-2">
             {rules.map((rule, index) => (

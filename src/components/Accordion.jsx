@@ -21,13 +21,13 @@ const Accordion = ({ title, content }) => {
     // </div>
     <div className="border p-2 cursor-pointer">
       <div
-        className="flex w-full justify-between px-4 mb-2 text-lg "
+        className="flex w-full justify-between px-2 lg:px-4 mb-2 text-lg "
         onClick={() => setAccordionOpen(!accordionOpen)}
       >
         {title}
         <div>{accordionOpen ? "-" : "+"}</div>
       </div>
-      {accordionOpen && <div className="px-4  text-lg">{content}</div>}
+      {accordionOpen && <div className="px-2 lg:px-4 text-lg">{content}</div>}
     </div>
   );
 };
