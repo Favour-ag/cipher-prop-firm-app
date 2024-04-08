@@ -137,8 +137,8 @@ export const phase2 = [
   { text: "10%" },
   { text: "1:100" },
   { text: "Unlimited" },
-  { text: "Yes%" },
-  { text: "2 Days%" },
+  { text: "Yes" },
+  { text: "2 Days" },
   { text: "Yes" },
   { text: "10%" },
 ];
@@ -148,8 +148,8 @@ export const phase3 = [
   { text: "10%" },
   { text: "1:100" },
   { text: "Unlimited" },
-  { text: "Yes%" },
-  { text: "2 Days%" },
+  { text: "Yes" },
+  { text: "2 Days" },
   { text: "Yes" },
   { text: "10%" },
 ];
