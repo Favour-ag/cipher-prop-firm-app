@@ -9,4 +9,5 @@
 
 * {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }

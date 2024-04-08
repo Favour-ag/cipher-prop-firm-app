@@ -7,7 +7,7 @@ const Footer = () => {
   const pathname = useLocation();
   return (
     <div className="bg-[#0E1419] w-full h-full flex flex-col md:flex-row justify-center lg:px-24 lg:gap-12 lg:pt-10">
-      <div className="lg:w-1/2 lg:p-4 space-y-5 leading-7">
+      <div className="lg:w-1/2 lg:p-4 space-y-5 leading-7 mt-4">
         {/* logo */}
         <div>
           <img src={cipher} alt="cipher-logo" className="w-[100px]" />
@@ -68,7 +68,7 @@ const Footer = () => {
               <a href="">Terms & Conditions</a>
             </div>
           </div>
-          <div className="w-1/2 mt-4 lg:mt-0 mb-3">
+          <div className="w-1/2 mt-4 lg:mt-0 mb-4">
             <h3 className="text-md font-semibold lg:mb-2 text-[#0072D8]">
               QUICK LINKS
             </h3>
