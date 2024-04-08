@@ -61,7 +61,7 @@ const Navbar = () => {
             </div>
             {/* SELECT ACCOUNT BUTTON */}
             <div className="block lg:hidden">
-              <div className="py-0.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
+              <div className="py-[3px] px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
                 <a
                   href="#cipherchallenge"
                   className="py-1 px-1.5  bg-[#010f1c] rounded-3xl text-sm"
