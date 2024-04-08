@@ -29,7 +29,7 @@ const JoinTeamCipher = () => {
         </a>
       </div>
       {/* NewsLetter */}
-      <div className=" w-full min-h-screen px-4 lg:mt-20 flex flex-col md:flex-row lg:px-24 xl:px-32 gap-8">
+      <div className=" w-full min-h-screen px-4 mt-7 lg:mt-20 flex flex-col md:flex-row lg:px-24 xl:px-32 gap-8 ">
         <div className="lg:w-1/2 lg:space-y-3 mt-3 lg:mt-7">
           <p className="lg:text-[26px] leading-1">
             Stay ahead of the curve with exclusive access to promotions,
@@ -54,7 +54,7 @@ const JoinTeamCipher = () => {
         </div>
         <div className="lg:w-1/2">
           <div className="py-0.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl lg:w-[400px] relative lg:left-20">
-            <div className="bg-[#010f1c] py-16 px-0.5 rounded-3xl h-[178px] ">
+            <div className="bg-[#010f1c] py-16 px-0.5 rounded-3xl h-[178px]">
               <div className="px-4 lg:px-12 mt-[-36px]">
                 <p className="lg:text-base text-center">
                   For more Information about our Academy join our community on
