@@ -1,5 +1,5 @@
 import discordLogo from "../assets/discordLogo.svg";
-import discordBlack from "../assets/socials/discord.svg";
+
 const JoinTeamCipher = () => {
   return (
     <div className=" w-full h-screen flex flex-col justify-center items-center">
@@ -7,7 +7,7 @@ const JoinTeamCipher = () => {
         Join our Team at Cipher
       </p>
       <div className=" lg:w-[1000px] lg:py-3 px-4 lg:px-12 text-center mt-3 lg:mt-0">
-        <p className="lg:text-xl text-justify">
+        <p className="lg:text-xl text-justify text-slate-300">
           The industry's most affordable option with advanced technology to help
           you achieve your trading goals. We believe in your potential and are
           here to support your success. Additionally, join our platform to learn
@@ -62,7 +62,6 @@ const JoinTeamCipher = () => {
                 </p>
               </div>
               <div className="text-center mt-4">
-                {/* <img src={discordBlack} alt="" className="" /> */}
                 <a
                   href="#"
                   className="py-2.5 px-3   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"

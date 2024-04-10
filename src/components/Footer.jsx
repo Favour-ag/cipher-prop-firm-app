@@ -12,8 +12,7 @@ const Footer = () => {
         <div>
           <img src={cipher} alt="cipher-logo" className="w-[100px]" />
         </div>
-
-        <p className="text-justify text-lg px-4 lg:px-0 ">
+        <p className="text-justify text-md px-4 lg:px-0 ">
           All information disseminated by Cipher and its affiliates (hereafter
           referred to as the Company) is intended as general guidance. None of
           the data provided by the Company should be construed as investment

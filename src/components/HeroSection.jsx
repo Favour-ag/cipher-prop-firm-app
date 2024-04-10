@@ -20,14 +20,14 @@ const HeroSection = () => {
       <div className="hidden lg:block absolute right-12 top-32">
         <img src={ellipse} alt="ellipse" />
       </div>
-      <div className="hidden lg:block absolute left-[50%] top-52">
+      <div className="hidden lg:block absolute left-[60%] top-52">
         <img src={ellipsesmall} alt="ellipse" />
       </div>
       <div className="hidden lg:block absolute top-[100%] left-[45%] ">
         <img src={ellipse} alt="ellipse" />
       </div>
       <div className="lg:w-1/2 z-10 lg:pl-8 ">
-        <div className="lg:min-w-full lg:h-screen flex flex-col  gap-3 p-5 lg:p-0 lg:relative lg:ml-24 lg:justify-center z-10">
+        <div className="lg:min-w-full lg:h-screen flex flex-col  gap-3 p-5 lg:p-0 lg:relative lg:ml-16 lg:justify-center z-10">
           <h1 className=" text-2xl text-center lg:text-start lg:text-5xl font-semibold">
             Construct Your Edge and
             <span className="bg-gradient-to-t from-red-600 to-blue-600 inline-block text-transparent bg-clip-text lg:mr-2">
