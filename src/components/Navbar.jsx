@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-[#010f1c]">
-      <div className="container px-3 py-3 lg:py-0 lg:px-20 mx-auto relative lg:text-sm">
+      <div className="container px-3 py-3 lg:py-0 lg:px-18 mx-auto relative lg:text-sm">
         {/* DESKTOP VIEW */}
         <div className="flex justify-between items-center">
           {/* LOGO */}

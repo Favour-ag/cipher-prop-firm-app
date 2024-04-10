@@ -54,12 +54,12 @@ const CipherChallenge = () => {
       {/* background blur */}
       <div className="absolute w-[600px] h-[400px] bg-[#023564] rounded-full translate-x-[-50%] translate-y-[-50%] blur-[100px] mt-[300px] right-0"></div>
       {/* Table */}
-      <div className="grid lg:grid-cols-4 gap-10 z-10  place-items-center	lg:px-24">
+      <div className="w-full flex overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide lg:grid lg:grid-cols-4 gap-10 z-10  place-items-center px-8	lg:px-24 mb-5 lg:mb-0 ease-in duration-900">
         <div>
-          <h3 className="text-2xl lg:text-md font-semibold mt-8 lg:mt-16">
+          <h3 className="text-xl lg:text-md font-semibold mt-9 lg:mt-16">
             Rules
           </h3>
-          <div className="space-y-2">
+          <div className="lg:space-y-2">
             {rules.map((rule, index) => (
               <div key={index} className="flex items-center gap-2.5">
                 <img
@@ -67,7 +67,7 @@ const CipherChallenge = () => {
                   alt="profitTarget"
                   className="w-7 h-7 mt-5"
                 />
-                <p className="text-neutral-300 hover:text-white text-xl mt-5">
+                <p className="text-neutral-300 hover:text-white text-lg lg:text-xl mt-5">
                   {rule.text}
                 </p>
               </div>
@@ -75,14 +75,14 @@ const CipherChallenge = () => {
           </div>
         </div>
         <div>
-          <h3 className="text-3xl lg:text-md font-semibold lg: text-slate-400">
+          <h3 className="text-xl lg:text-md font-semibold mt-4 lg: text-slate-400">
             Evaluation
           </h3>
-          <h3 className="text-2xl lg:text-md font-semibold mb-4">Phase 1</h3>
-          <div className="space-y-2">
+          <h3 className="text-lg lg:text-md font-semibold lg:mb-4">Phase 1</h3>
+          <div className="mt-[-8px] lg:mt-0">
             {phase1.map((phase1, index) => (
               <div key={index} className="flex items-center">
-                <p className="text-neutral-300 hover:text-white text-2xl lg:text-xl mt-5">
+                <p className="text-neutral-300 hover:text-white text-lg  lg:text-xl mt-5">
                   {phase1.text}
                 </p>
               </div>
@@ -90,14 +90,14 @@ const CipherChallenge = () => {
           </div>
         </div>
         <div>
-          <h3 className="text-3xl lg:text-md font-semibold lg: text-slate-400">
+          <h3 className="text-xl lg:text-md font-semibold mt-4 lg: text-slate-400">
             Verification
           </h3>
-          <h3 className="text-2xl lg:text-md font-semibold mb-4">Phase 2</h3>
-          <div className="space-y-2">
+          <h3 className="text-lg lg:text-md font-semibold lg:mb-4">Phase 2</h3>
+          <div className="mt-[-8px] lg:mt-0">
             {phase2.map((phase2, index) => (
               <div key={index} className="flex items-center">
-                <p className="text-neutral-300 hover:text-white text-2xl lg:text-xl mt-5">
+                <p className="text-neutral-300 hover:text-white text-lg  lg:text-xl mt-5">
                   {phase2.text}
                 </p>
               </div>
@@ -105,20 +105,32 @@ const CipherChallenge = () => {
           </div>
         </div>
         <div>
-          <h3 className="text-3xl lg:text-md font-semibold text-slate-400">
+          <h3 className="text-xl lg:text-md font-semibold mt-4 lg: text-slate-400">
             Get Funded
           </h3>
-          <h3 className="text-2xl lg:text-md  mb-4">Cipher Trader</h3>
-          <div className="space-y-2">
+          <h3 className="text-lg lg:text-md font-semibold lg:mb-4">
+            Cipher Trader
+          </h3>
+          <div className="mt-[-8px] lg:mt-0">
             {phase3.map((phase3, index) => (
               <div key={index} className="flex items-center">
-                <p className="text-neutral-300 hover:text-white text-2xl lg:text-xl mt-5">
+                <p className="text-neutral-300 hover:text-white text-lg  lg:text-xl mt-5">
                   {phase3.text}
                 </p>
               </div>
             ))}
           </div>
         </div>
+      </div>
+      <div>
+        <h3>Fee</h3>
+        <p>$29</p>
+        <a
+          href="#"
+          className="py-2 px-6 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
+        >
+          2 Step
+        </a>
       </div>
     </div>
   );

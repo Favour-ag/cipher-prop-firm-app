@@ -1,4 +1,4 @@
-import Iphone from "../assets/iPhone15.png";
+import Iphone from "../assets/iphone15r.png";
 
 const PayoutSystem = () => {
   return (

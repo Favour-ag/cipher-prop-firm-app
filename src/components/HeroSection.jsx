@@ -1,12 +1,17 @@
 import Astro from "../assets/Astro.png";
 import { socials } from "../constants";
+import stars from "../assets/stars.svg";
 
 const HeroSection = () => {
   return (
     <div className="w-full h-full flex mt-0 items-center">
+      {/* Blur Background */}
       <div className="hidden lg:block w-[100px] h-[400px] bg-[#eb26fd] rounded-full absolute top-[80%] left-20 translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
       <div className="hidden lg:block w-[600px] h-[400px] bg-[#023564] rounded-full absolute top-[110%] right-0 translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
-      <div className="lg:w-1/2 z-10">
+      <div className="absolute w-full">
+        <img src={stars} alt="stars" />
+      </div>
+      <div className="lg:w-1/2 z-10 lg:pl-8 ">
         <div className="lg:min-w-full lg:h-screen flex flex-col  gap-3 p-5 lg:p-0 lg:relative lg:ml-24 lg:justify-center z-10">
           <h1 className=" text-2xl text-center lg:text-start lg:text-5xl font-semibold">
             Construct Your Edge and
