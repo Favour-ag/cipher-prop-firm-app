@@ -1,6 +1,9 @@
 import Astro from "../assets/Astro.png";
 import { socials } from "../constants";
 import stars from "../assets/stars.svg";
+import polygon from "../assets/polygon.svg";
+import ellipse from "../assets/Ellipse.svg";
+import ellipsesmall from "../assets/Ellipsesmall.svg";
 
 const HeroSection = () => {
   return (
@@ -8,8 +11,20 @@ const HeroSection = () => {
       {/* Blur Background */}
       <div className="hidden lg:block w-[100px] h-[400px] bg-[#eb26fd] rounded-full absolute top-[80%] left-20 translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
       <div className="hidden lg:block w-[600px] h-[400px] bg-[#023564] rounded-full absolute top-[110%] right-0 translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
-      <div className="absolute w-full">
+      <div className="hidden lg:block absolute w-full lg:px-12">
         <img src={stars} alt="stars" />
+      </div>
+      <div className="hidden lg:block absolute  lg:pl-32 xl:pl-38 lg:mb-[450px]">
+        <img src={polygon} alt="stars" className="w-[600px]" />
+      </div>
+      <div className="hidden lg:block absolute right-12 top-32">
+        <img src={ellipse} alt="ellipse" />
+      </div>
+      <div className="hidden lg:block absolute left-[50%] top-52">
+        <img src={ellipsesmall} alt="ellipse" />
+      </div>
+      <div className="hidden lg:block absolute top-[100%] left-[45%] ">
+        <img src={ellipse} alt="ellipse" />
       </div>
       <div className="lg:w-1/2 z-10 lg:pl-8 ">
         <div className="lg:min-w-full lg:h-screen flex flex-col  gap-3 p-5 lg:p-0 lg:relative lg:ml-24 lg:justify-center z-10">

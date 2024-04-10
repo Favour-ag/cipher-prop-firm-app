@@ -1,4 +1,5 @@
 import { rules, phase1, phase2, phase3 } from "../constants";
+import rightArrow from "../assets/rightArrow.svg";
 
 const CipherChallenge = () => {
   return (
@@ -122,14 +123,15 @@ const CipherChallenge = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="flex flex-col items-center text-xl">
         <h3>Fee</h3>
-        <p>$29</p>
+        <p className="font-semibold text-2xl">$29</p>
         <a
           href="#"
-          className="py-2 px-6 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
+          className=" flex gap-2 py-2 px-4 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl mt-3"
         >
-          2 Step
+          Start Challenge
+          <img src={rightArrow} alt="rightArrow" className="w-4" />
         </a>
       </div>
     </div>
