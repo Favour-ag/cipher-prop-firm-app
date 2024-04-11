@@ -15,28 +15,28 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-[#010f1c] w-full ">
-      <div className="container px-3 py-3 lg:py-0  mx-auto relative lg:text-sm">
+      <div className="container px-3 py-3 lg:py-0  mx-auto relative lg:text-sm lg:px-7">
         {/* DESKTOP VIEW */}
-        <div className="flex justify-between items-center lg:py-3">
+        <div className="flex justify-between items-center lg:py-3 ">
           {/* LOGO */}
           <div className="flex items-center flex-shrink-0">
             <img className="h-14 w-20 mr-2" src={logo} alt="Logo" />
           </div>
           {/* NAVLIST */}
-          <ul className="hidden lg:flex ml-14 space-x-6">
-            <li>
+          <ul className="hidden lg:flex ml-14 space-x-6 text-base transition-all	">
+            <li className="hover:text-slate-300">
               <Link to="/"> Home </Link>
             </li>
-            <li>
+            <li className="hover:text-slate-300">
               <Link to="/about"> About Us </Link>
             </li>
-            <li>
+            <li className="hover:text-slate-300">
               <Link to="/affliateprogram"> Affliate Program </Link>
             </li>
-            <li>
+            <li className="hover:text-slate-300">
               <Link to="/faq"> FAQ </Link>
             </li>
-            <li>
+            <li className="hover:text-slate-300">
               <Link to="/contact"> Contact </Link>
             </li>
           </ul>
@@ -78,7 +78,7 @@ const Navbar = () => {
         </div>
         {/* MOBILE MENU */}
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-[#010f1c] w-full h-full flex flex-col items-center text-center lg:hidden gap-3">
+          <div className="fixed right-0 z-20 bg-[#010f1c] w-full h-screen flex flex-col items-center text-center lg:hidden gap-3">
             <div className=" w-[400px] h-[400px] bg-[#023564] rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
             <ul className="space-y-3 mt-5 text-xl z-10">
               <li>

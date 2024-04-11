@@ -69,8 +69,12 @@ const JoinTeamCipher = () => {
                   Join The Community
                 </a>
               </div>
-              <div className=" ml-0">
-                <img src={discordLogo} alt="" className="w-24 rounded-bl-3xl" />
+              <div className="">
+                <img
+                  src={discordLogo}
+                  alt=""
+                  className="w-24 rounded-bl-3xl lg:mt-[-20px]"
+                />
               </div>
             </div>
           </div>

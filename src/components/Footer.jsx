@@ -1,10 +1,8 @@
-import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import cipher from "../assets/cipher.png";
 import { socials } from "../constants";
 import rightArrowUp from "../assets/rightArrowUp.svg";
-// import { navigation } from "../constants";
 const Footer = () => {
-  const pathname = useLocation();
   return (
     <div className="bg-[#0E1419] w-full h-full flex flex-col md:flex-row justify-center lg:px-24 lg:gap-12 lg:pt-10">
       <div className="lg:w-1/2 lg:p-4 space-y-5 leading-7 mt-4">
@@ -84,6 +82,22 @@ const Footer = () => {
                   {item.title}
                 </a>
               ))} */}
+
+              <li>
+                <Link to="/"> Home </Link>
+              </li>
+              <li>
+                <Link to="/about"> About Us </Link>
+              </li>
+              <li>
+                <Link to="/affliateprogram"> Affliate Program </Link>
+              </li>
+              <li>
+                <Link to="/faq"> FAQ </Link>
+              </li>
+              <li>
+                <Link to="/contact"> Contact </Link>
+              </li>
             </ul>
           </div>
         </div>
