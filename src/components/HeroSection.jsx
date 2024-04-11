@@ -30,7 +30,7 @@ const HeroSection = () => {
         <div className="lg:min-w-full lg:h-screen flex flex-col  gap-3 p-5 lg:p-0 lg:relative lg:ml-16 lg:justify-center z-10">
           <h1 className=" text-2xl text-center lg:text-start lg:text-5xl font-semibold">
             Construct Your Edge and
-            <span className="bg-gradient-to-t from-red-600 to-blue-600 inline-block text-transparent bg-clip-text lg:mr-2">
+            <span className="bg-gradient-to-t from-red-600 to-blue-600 inline-block text-transparent bg-clip-text mr-2">
               Decode
             </span>
             the Markets.
@@ -49,7 +49,7 @@ const HeroSection = () => {
                 Dashboard
               </a>
             </div>
-            <p className="lg:mt-3 text-sm md:text-2xl mt-[-12px] md:mt-0">
+            <p className="lg:mt-3 text-sm md:text-2xl mt-[-12px] md:mt-0 text-center lg:text-left">
               Unleash Potential for Success and Fund Your Future
             </p>
             <div className="mt-4">

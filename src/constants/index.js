@@ -21,33 +21,33 @@ import minimumTradingDays from "../assets/icons/cipherChallenge/minimumTradingDa
 import newsTrading from "../assets/icons/cipherChallenge/newsTrading.svg";
 import maximumOverallDrawdown from "../assets/icons/cipherChallenge/maximumOverallDrawdown.svg";
 
-export const navigation = [
-  {
-    id: "0",
-    title: "Home",
-    url: "#home",
-  },
-  {
-    id: "1",
-    title: "About Us",
-    url: "#about-us",
-  },
-  {
-    id: "2",
-    title: "Affliate Program",
-    url: "#affliate-program",
-  },
-  {
-    id: "3",
-    title: "FAQ",
-    url: "#faq",
-  },
-  {
-    id: "4",
-    title: "Contact Us",
-    url: "#contact-us",
-  },
-];
+// export const navigation = [
+//   {
+//     id: "0",
+//     title: "Home",
+//     url: "#home",
+//   },
+//   {
+//     id: "1",
+//     title: "About Us",
+//     url: "#about-us",
+//   },
+//   {
+//     id: "2",
+//     title: "Affliate Program",
+//     url: "#affliate-program",
+//   },
+//   {
+//     id: "3",
+//     title: "FAQ",
+//     url: "#faq",
+//   },
+//   {
+//     id: "4",
+//     title: "Contact Us",
+//     url: "#contact-us",
+//   },
+// ];
 
 export const chooseCipher = [
   {
@@ -157,24 +157,14 @@ export const phase3 = [
 export const accordionData = [
   {
     title: "What platfroms can I use for my trading?",
-    content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
-    laborum cupiditate possimus labore, hic temporibus velit dicta earum
-    suscipit commodi eum enim atque at? Et perspiciatis dolore iure
-    voluptatem.`,
+    content: `Cipher offers a diverse range of trading platforms, including the industry-standard MT4 and MT5, as well as DX Trades and TradeLocker`,
   },
   {
     title: "How do i get funded by Cipher? ",
-    content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
-    reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
-    quaerat iure quos dolorum accusantium ducimus in illum vero commodi
-    pariatur? Impedit autem esse nostrum quasi, fugiat a aut error cumque
-    quidem maiores doloremque est numquam praesentium eos voluptatem amet!
-    Repudiandae, mollitia id reprehenderit a ab odit!`,
+    content: `To receive funding from Cipher, you must pass our two phase evaluation course, designed to identify trading talent and help individuals overcome funding obstacles. Once you successfully pass both phases and demonstrate mastery, you can access our capital to trade.`,
   },
   {
     title: " What’s the minimum withdrawal for Cipher ?",
-    content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
-    quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
-    dolor ut sequi minus iste? Quas?`,
+    content: `The minimum withdrawal for Cipher is $50.`,
   },
 ];

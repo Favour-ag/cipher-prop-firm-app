@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import cipher from "../assets/cipher.png";
 import { socials } from "../constants";
 import rightArrowUp from "../assets/rightArrowUp.svg";
-import { navigation } from "../constants";
+// import { navigation } from "../constants";
 const Footer = () => {
   const pathname = useLocation();
   return (
@@ -73,7 +73,7 @@ const Footer = () => {
             </h3>
 
             <ul className="space-y-2">
-              {navigation.map((item) => (
+              {/* {navigation.map((item) => (
                 <a
                   key={item.id}
                   href={item.url}
@@ -83,7 +83,7 @@ const Footer = () => {
                 >
                   {item.title}
                 </a>
-              ))}
+              ))} */}
             </ul>
           </div>
         </div>

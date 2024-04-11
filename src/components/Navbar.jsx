@@ -1,8 +1,8 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/cipher.png";
-import { navigation } from "../constants";
+// import { navigation } from "../constants";
 import { socials } from "../constants";
 
 const Navbar = () => {
@@ -17,29 +17,28 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-[#010f1c] w-full ">
       <div className="container px-3 py-3 lg:py-0  mx-auto relative lg:text-sm">
         {/* DESKTOP VIEW */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center lg:py-3">
           {/* LOGO */}
           <div className="flex items-center flex-shrink-0">
             <img className="h-14 w-20 mr-2" src={logo} alt="Logo" />
           </div>
           {/* NAVLIST */}
-          <ul className="hidden lg:flex ml-14">
-            {navigation.map((item) => (
-              <a
-                key={item.id}
-                href={item.url}
-                onClick={toggleNavbar}
-                className={`block relative font-code text-2xl  text-n-1 transition-colors hover:text-color-1 ${
-                  item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-sm lg:font-semibold hover:text-slate-300 ${
-                  item.url === pathname.hash
-                    ? "z-2 lg:text-n-1"
-                    : "lg:text-n-1/50"
-                } lg:leading-5 lg:hover:text-n-1 xl:px-6`}
-              >
-                {item.title}
-              </a>
-            ))}
+          <ul className="hidden lg:flex ml-14 space-x-6">
+            <li>
+              <Link to="/"> Home </Link>
+            </li>
+            <li>
+              <Link to="/about"> About Us </Link>
+            </li>
+            <li>
+              <Link to="/affliateprogram"> Affliate Program </Link>
+            </li>
+            <li>
+              <Link to="/faq"> FAQ </Link>
+            </li>
+            <li>
+              <Link to="/contact"> Contact </Link>
+            </li>
           </ul>
           <div className="flex flex-end gap-3">
             {/* BUTTONS */}
@@ -81,23 +80,22 @@ const Navbar = () => {
         {mobileDrawerOpen && (
           <div className="fixed right-0 z-20 bg-[#010f1c] w-full h-full flex flex-col items-center text-center lg:hidden gap-3">
             <div className=" w-[400px] h-[400px] bg-[#023564] rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
-            <ul className="mt-12 z-10">
-              {navigation.map((item) => (
-                <a
-                  key={item.id}
-                  href={item.url}
-                  onClick={toggleNavbar}
-                  className={`block text-2xl    hover:text-slate-200 ${
-                    item.onlyMobile ? "lg:hidden" : ""
-                  } px-6 py-2.5 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-                    item.url === pathname.hash
-                      ? "z-2 lg:text-n-1"
-                      : "lg:text-n-1/50"
-                  } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
-                >
-                  {item.title}
-                </a>
-              ))}
+            <ul className="space-y-3 mt-5 text-xl z-10">
+              <li>
+                <Link to="/"> Home </Link>
+              </li>
+              <li>
+                <Link to="/about"> About Us </Link>
+              </li>
+              <li>
+                <Link to="/affliateprogram"> Affliate Program </Link>
+              </li>
+              <li>
+                <Link to="/faq"> FAQ </Link>
+              </li>
+              <li>
+                <Link to="/contact"> Contact </Link>
+              </li>
             </ul>
             <div className="z-10">
               <p className="text-2xl">Follow us on social media</p>
