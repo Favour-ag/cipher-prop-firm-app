@@ -38,7 +38,10 @@ const HeroSection = () => {
           <div>
             <div className="hidden lg:flex justify-start space-x-6 items-start z-10">
               <div className="py-3 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
-                <a href="#" className="py-3 px-3  bg-[#010f1c] rounded-3xl">
+                <a
+                  href="#cipherchallenge"
+                  className="py-3 px-3  bg-[#010f1c] rounded-3xl"
+                >
                   Select An Account
                 </a>
               </div>

@@ -11,17 +11,17 @@ const EvaluationProcess = () => {
       <h1 className="text-xl  lg:text-5xl text-center tracking-wide z-10">
         Our Evaluation Process
       </h1>
-      <div className="flex lg:mt-8 justify-center px-0 lg:px-14 lg:gap-14">
-        <div className="rounded-lg lg:w-1/2  mx-2 my-4 flex flex-col space-y-4 items-center">
+      <div className="flex lg:mt-8 justify-center px-0 lg:px-14 lg:gap-14 z-10">
+        <div className="rounded-lg lg:w-1/2  mx-2 my-4 flex flex-col space-y-4 items-center z-10">
           <div className="border w-[350px] md:w-[600px] rounded-lg flex flex-col md:flex-row lg:justify-around px-6 lg:px-8 py-6 space-x-0 lg:space-x-8">
-            <div className="w-full flex justify-center lg:align-middle">
+            <div className="w-full flex justify-center lg:align-middle z-10">
               <img
                 src={evaluationIcon1}
                 alt="01"
-                className="w-[100px] lg:w-[300px]"
+                className="w-[100px] lg:w-[300px] z-10"
               />
             </div>
-            <div>
+            <div className="z-10">
               <p className="text-3xl lg:text-6xl">01</p>
               <p className="text-xl lg:text-4xl">CIPHER CHALLENGE</p>
               <p className="text-justify">
@@ -34,11 +34,11 @@ const EvaluationProcess = () => {
             </div>
           </div>
           <div className="border w-[350px] md:w-[600px] rounded-lg flex flex-col md:flex-row lg:justify-around px-6 lg:px-8 py-6 space-x-0 lg:space-x-8">
-            <div className="w-full flex justify-center lg:align-middle">
+            <div className=" flex justify-center lg:align-middle">
               <img
                 src={evaluationIcon2}
                 alt="21"
-                className="w-[110px] lg:w-[400px]"
+                className="w-[110px] lg:w-[300px]"
               />
             </div>
             <div>
@@ -85,6 +85,7 @@ const EvaluationProcess = () => {
           </div>
         </div>
       </div>
+      <div className="hidden lg:block w-[600px] h-[400px] bg-[#023564]  border absolute  translate-x-[-50%] translate-y-[-50%] blur-[100px] top-[260%] right-[-290px]"></div>
     </div>
   );
 };

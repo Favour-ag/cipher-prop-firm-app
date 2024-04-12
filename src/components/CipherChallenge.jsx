@@ -53,7 +53,7 @@ const CipherChallenge = () => {
         <p>$100K</p>
       </div>
       {/* background blur */}
-      <div className="absolute w-[600px] h-[400px] bg-[#023564] rounded-full translate-x-[-50%] translate-y-[-50%] blur-[100px] mt-[300px] right-0"></div>
+      <div className="absolute w-[600px] h-[400px] bg-[#023564] rounded-full translate-x-[-50%] translate-y-[-50%] blur-[100px] mt-[500px] right-0"></div>
       {/* Table */}
       <div className="w-full flex overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide lg:grid lg:grid-cols-4 gap-10 z-10  place-items-center px-8	lg:px-24 mb-5 lg:mb-0 ease-in duration-900">
         <div>
