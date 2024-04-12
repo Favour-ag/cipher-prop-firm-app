@@ -168,3 +168,51 @@ export const accordionData = [
     content: `The minimum withdrawal for Cipher is $50.`,
   },
 ];
+export const accordionData1 = [
+  {
+    title: "Trading Rules",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Trading Platfrom",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Challenge Questions",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Withdraws",
+    content: `Coming Soon...`,
+  },
+];
+export const accordionData2 = [
+  {
+    title: "Can Someone else trade my account?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Are trade copiers or bots allowed on Cipher?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Is news trading allowed on Cipher?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Can I hold trade during news and over the weekend on Cipher?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "What is the inactivity rule of trading accounts?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Who can join Cipher?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Are there any confinements for traders who want to join Cipher?",
+    content: `Coming Soon...`,
+  },
+];

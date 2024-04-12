@@ -16,7 +16,7 @@ const AffliateProgram = () => {
           <div className="lg:min-w-full lg:h-screen flex flex-col  gap-3  lg:relative pt-2 lg:pt-32">
             <h1 className=" text-4xl text-start lg:text-7xl font-semibold">
               Affiliate
-              <span className="bg-gradient-to-t from-red-600 to-blue-600 inline-block text-transparent bg-clip-text lg:p-1 lg:ml-[-5px] pl-1">
+              <span className="bg-gradient-to-t from-red-600 to-blue-600 inline-block text-transparent bg-clip-text lg:p-1 pl-1 ">
                 Program
               </span>
             </h1>
@@ -25,10 +25,10 @@ const AffliateProgram = () => {
               and enjoy the fantastic advantages we offer you for every
               recommendation.
             </p>
-            <div>
+            <div className="lg:mt-3">
               <a
                 href="#"
-                className="py-3 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl lg:mt-9"
+                className="py-3 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl "
               >
                 Get Started
               </a>

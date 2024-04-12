@@ -123,7 +123,7 @@ const CipherChallenge = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center text-xl">
+      <div className="flex flex-col items-center text-xl ">
         <h3>Fee</h3>
         <p className="font-semibold text-2xl">$29</p>
         <a
@@ -131,7 +131,7 @@ const CipherChallenge = () => {
           className=" flex gap-2 py-2 px-4 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl mt-3"
         >
           Start Challenge
-          <img src={rightArrow} alt="rightArrow" className="w-4" />
+          <img src={rightArrow} alt="rightArrow" className="w-2 mt-0.5" />
         </a>
       </div>
     </div>
