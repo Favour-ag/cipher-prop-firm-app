@@ -1,4 +1,4 @@
-import { useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/cipher.png";
@@ -6,7 +6,6 @@ import logo from "../assets/cipher.png";
 import { socials } from "../constants";
 
 const Navbar = () => {
-  const pathname = useLocation();
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -43,12 +42,9 @@ const Navbar = () => {
           <div className="flex flex-end gap-3">
             {/* BUTTONS */}
             <div className="hidden lg:flex justify-center space-x-6 items-center">
-              <a
-                href="#login"
-                className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
-              >
-                Login/Register
-              </a>
+              <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
+                <Link to="/login"> Login/Register </Link>
+              </p>
               <div className="py-3 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
                 <a
                   href="#cipherchallenge"

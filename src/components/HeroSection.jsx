@@ -1,11 +1,29 @@
+import { Link } from "react-router-dom";
 import Astro from "../assets/Astro.png";
 import { socials } from "../constants";
 import stars from "../assets/stars.svg";
 import polygon from "../assets/polygon.svg";
 import ellipse from "../assets/Ellipse.svg";
 import ellipsesmall from "../assets/Ellipsesmall.svg";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const HeroSection = () => {
+  useGSAP(() => {
+    gsap.fromTo(
+      "#astro",
+      {
+        y: 0,
+      },
+      {
+        y: 50,
+        repeat: -1,
+        yoyo: true,
+        duration: 1,
+      }
+    );
+  }, []);
+
   return (
     <div className="w-full h-full flex mt-0 items-center">
       {/* Blur Background */}
@@ -45,12 +63,9 @@ const HeroSection = () => {
                   Select An Account
                 </a>
               </div>
-              <a
-                href="#"
-                className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
-              >
-                Dashboard
-              </a>
+              <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
+                <Link to="/login"> Dashboard </Link>
+              </p>
             </div>
             <p className="lg:mt-3 text-sm md:text-2xl mt-[-12px] md:mt-0 text-center lg:text-left">
               Unleash Potential for Success and Fund Your Future
@@ -68,7 +83,12 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="p-6 hidden lg:block w-1/2 z-10">
-        <img src={Astro} alt="Astro" className="w-[400px] h-[700px] ml-20 " />
+        <img
+          src={Astro}
+          alt="Astro"
+          id="astro"
+          className="w-[400px] h-[700px] ml-20 "
+        />
       </div>
     </div>
   );

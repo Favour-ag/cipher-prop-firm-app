@@ -85,7 +85,7 @@ const EvaluationProcess = () => {
           </div>
         </div>
       </div>
-      <div className="hidden lg:block w-[600px] h-[400px] bg-[#023564]  border absolute  translate-x-[-50%] translate-y-[-50%] blur-[100px] top-[260%] right-[-290px]"></div>
+      <div className="hidden lg:block w-[600px] h-[400px] bg-[#023564]  absolute  translate-x-[-50%] translate-y-[-50%] blur-[100px] top-[260%] right-[-290px]"></div>
     </div>
   );
 };
