@@ -4,8 +4,26 @@ import evaluationIcon3 from "../assets/evaluationIcon3.svg";
 import evaluationEclipse from "../assets/evaluationeclipse.svg";
 import walletSvg from "../assets/walletSvg.svg";
 import bitcoin from "../assets/bitcoin.svg";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const EvaluationProcess = () => {
+  useGSAP(() => {
+    gsap.fromTo(
+      "#bitcoin",
+      {
+        y: 290,
+      },
+      {
+        y: 0,
+        repeat: -1,
+        yoyo: true,
+        duration: 2,
+        rotation: 360,
+        ease: "power1.inOut",
+      }
+    );
+  }, []);
   return (
     <div className="w-full min-h-screen flex flex-col items-center mt-6 lg:mt-10 ">
       <h1 className="text-xl  lg:text-5xl text-center tracking-wide z-10">
@@ -73,7 +91,12 @@ const EvaluationProcess = () => {
         </div>
         <div className="hidden lg:block rounded-lg w-1/2  mx-2 my-4">
           <div className="flex justify-center">
-            <img src={bitcoin} alt="bitcoin" className="z-10 relative top-40" />
+            <img
+              src={bitcoin}
+              alt="bitcoin"
+              id="bitcoin"
+              className="z-10 relative top-40"
+            />
           </div>
           <div className="flex items-center relative top-[20%]">
             <img src={evaluationEclipse} alt="eclipse" />

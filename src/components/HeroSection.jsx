@@ -16,7 +16,7 @@ const HeroSection = () => {
         y: 0,
       },
       {
-        y: 50,
+        y: 60,
         repeat: -1,
         yoyo: true,
         duration: 1,
