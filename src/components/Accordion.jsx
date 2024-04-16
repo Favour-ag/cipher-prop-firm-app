@@ -11,13 +11,12 @@ const Accordion = ({ title, content }) => {
       >
         {title}
         <div>
-          {accordionOpen ? (
-            "-"
-          ) : (
-            <div className="border rounded-full p-2 h-7 flex items-center">
-              <img src={downArrow} alt="rightArrow" className="w-2.5" />
-            </div>
-          )}
+          {accordionOpen
+            ? "-"
+            : // <div className="border rounded-full p-2 h-7 flex items-center">
+              //   <img src={downArrow} alt="rightArrow" className="w-2.5" />
+              // </div>
+              "+"}
         </div>
       </div>
       {accordionOpen && (

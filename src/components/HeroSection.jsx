@@ -13,13 +13,15 @@ const HeroSection = () => {
     gsap.fromTo(
       "#astro",
       {
-        y: 0,
+        y: 60,
       },
       {
-        y: 60,
+        y: 0,
         repeat: -1,
         yoyo: true,
-        duration: 1,
+        duration: 2,
+
+        ease: "power1.inOut",
       }
     );
   }, []);

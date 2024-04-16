@@ -33,7 +33,7 @@ const Payment = () => {
                   />
                   <div className="px-2 md:px-0">
                     <p className="py-2 px-6   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
-                      <Link to="/login"> Apply </Link>
+                      <Link to="/"> Apply </Link>
                     </p>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ const Payment = () => {
                 </div>
                 <div className="px-3 flex flex-col md:flex-row gap-3 mt-3">
                   <div className="w-full md:w-1/2">
-                    <select className="bg-inherit border placeholder:text-slate-500 rounded-md p-2 lg:p-0 px-2 md:py-4 w-full text-slate-400">
+                    <select className="bg-inherit border placeholder:text-slate-500 rounded-md p-2  px-2 md:py-4 w-full text-slate-400">
                       <option value="" className="mr-2">
                         Country
                       </option>
@@ -105,7 +105,7 @@ const Payment = () => {
                     </select>
                   </div>
                   <div className="w-full md:w-1/2">
-                    <select className="bg-inherit border placeholder:text-slate-500 rounded-md px-2 md:py-4 w-full text-slate-400 p-2 lg:p-0 ">
+                    <select className="bg-inherit border placeholder:text-slate-500 rounded-md px-2 md:py-4 w-full text-slate-400 p-2">
                       <option value="" className="mr-2">
                         State
                       </option>
@@ -139,21 +139,42 @@ const Payment = () => {
 
                     <div className="flex justify-between items-center mt-3">
                       <p>Platfrom</p>
-                      <div className="z-10 flex space-x-2 lg:space-x-6 text-sm">
-                        <label htmlFor="mt4" className="space-x-3">
-                          <input type="radio" name="mt4" id="" checked />
+                      <div className="z-10 flex space-x-2 lg:space-x-6 text-sm ">
+                        <label htmlFor="mt4" className="space-x-3 flex">
+                          <input
+                            type="radio"
+                            name="mt4"
+                            id=""
+                            className="mr-1"
+                            checked
+                          />
                           MT-4
                         </label>
-                        <label htmlFor="mt5">
-                          <input type="radio" name="mt5" id="" />
+                        <label htmlFor="mt5" className="flex">
+                          <input
+                            type="radio"
+                            name="mt5"
+                            id=""
+                            className="mr-1"
+                          />
                           MT-5
                         </label>
                         <label htmlFor="dxtrade">
-                          <input type="radio" name="dxtrade" id="" />
+                          <input
+                            type="radio"
+                            name="dxtrade"
+                            id=""
+                            className="mr-1"
+                          />
                           DX TRADE
                         </label>
                         <label htmlFor="tradelocker">
-                          <input type="radio" name="mt5" id="" />
+                          <input
+                            type="radio"
+                            name="mt5"
+                            id=""
+                            className="mr-1"
+                          />
                           TRADE LOCKER
                         </label>
                       </div>

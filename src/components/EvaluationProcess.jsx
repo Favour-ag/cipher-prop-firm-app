@@ -12,7 +12,7 @@ const EvaluationProcess = () => {
     gsap.fromTo(
       "#bitcoin",
       {
-        y: 290,
+        y: 300,
       },
       {
         y: 0,
@@ -70,12 +70,8 @@ const EvaluationProcess = () => {
             </div>
           </div>
           <div className="border w-[350px] md:w-[600px] rounded-lg flex flex-col md:flex-row lg:justify-around px-6 lg:px-8 py-6 space-x-0 lg:space-x-8">
-            <div className="w-full flex justify-center lg:align-middle">
-              <img
-                src={evaluationIcon3}
-                alt="03"
-                className="w-[110px] lg:w-[400px]"
-              />
+            <div className="w-full flex">
+              <img src={evaluationIcon3} alt="03" className="w-[110px]" />
             </div>
             <div>
               <p className="text-3xl lg:text-6xl">03</p>
@@ -90,7 +86,7 @@ const EvaluationProcess = () => {
           </div>
         </div>
         <div className="hidden lg:block rounded-lg w-1/2  mx-2 my-4">
-          <div className="flex justify-center">
+          <div className="flex justify-start pl-44">
             <img
               src={bitcoin}
               alt="bitcoin"

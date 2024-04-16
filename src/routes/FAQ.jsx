@@ -66,8 +66,9 @@ const FAQ = () => {
             <p className="text-3xl lg:text-4xl font-semibold">
               Still not satisfied?
             </p>
+
             <a
-              href="#"
+              href="/contact"
               className=" flex gap-2 py-3 px-4 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
             >
               Contact Us

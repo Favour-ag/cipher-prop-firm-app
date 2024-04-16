@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-[#010f1c] w-full ">
-      <div className="container px-3 py-3 lg:py-0  mx-auto relative lg:text-sm lg:px-7">
+      <div className="container px-3 py-3.5 lg:py-0  mx-auto relative lg:text-sm lg:px-7">
         {/* DESKTOP VIEW */}
         <div className="flex justify-between items-center lg:py-3 ">
           {/* LOGO */}
@@ -56,10 +56,10 @@ const Navbar = () => {
             </div>
             {/* SELECT ACCOUNT BUTTON */}
             <div className="block lg:hidden">
-              <div className="py-[3px] px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
+              <div className="py-2 px-1  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
                 <a
                   href="#cipherchallenge"
-                  className="py-1 px-1.5  bg-[#010f1c] rounded-3xl text-sm"
+                  className="py-2 px-2  bg-[#010f1c] rounded-3xl text-sm"
                 >
                   Select An Account
                 </a>
@@ -67,7 +67,7 @@ const Navbar = () => {
             </div>
             <div className="lg:hidden md:flex flex-col justify-end">
               <button onClick={toggleNavbar}>
-                {mobileDrawerOpen ? <X /> : <Menu />}
+                {mobileDrawerOpen ? <X size={38} /> : <Menu size={38} />}
               </button>
             </div>
           </div>
@@ -108,8 +108,8 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col text-center space-y-3 w-[90%] mt-8 z-10">
               <a
-                href="#"
-                className="py-2 px-6 bg-gradient-to-r from-red-500 to-blue-600 text-slate-200 text-2xl"
+                href="#cipherchallenge"
+                className="py-3 px-6 bg-gradient-to-r from-red-500 to-blue-600 text-slate-200 text-2xl"
               >
                 Dashboard
               </a>
