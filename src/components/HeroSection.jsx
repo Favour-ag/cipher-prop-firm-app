@@ -27,7 +27,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="w-full h-full flex mt-3 md:mt-0 items-center">
+    <div className="w-full h-full flex mt-2 md:mt-0 items-center">
       {/* Blur Background */}
       <div className="block w-[100px] h-[200px] md:h-[400px] bg-[#eb26fd] rounded-full absolute top-[180px] md:top-[80%] md:left-20 md:translate-x-[-50%] md:translate-y-[-50%] blur-[100px]"></div>
       <div className="block w-[200px] md:w-[600px] h-[250px] md:h-[400px] bg-[#023564] rounded-full absolute top-[100px] md:top-[110%] right-0 md:translate-x-[-50%] md:translate-y-[-50%] blur-[100px]"></div>
@@ -48,16 +48,16 @@ const HeroSection = () => {
       </div>
       {/* ellipse mobile */}
       <div className="block absolute right-3 top-20">
-        <img src={ellipsesmall} alt="ellipse" className="w-8" />
+        <img src={ellipsesmall} alt="ellipse" className="w-6" />
       </div>
       <div className="block absolute left-4 top-[70px]">
-        <img src={ellipsesmall} alt="ellipse" className="w-5" />
+        <img src={ellipsesmall} alt="ellipse" className="w-4" />
       </div>
       <div className="block absolute left-4 top-[230px]">
-        <img src={ellipsesmall} alt="ellipse" className="w-5" />
+        <img src={ellipsesmall} alt="ellipse" className="w-4" />
       </div>
       <div className="block absolute left-48 top-[70px]">
-        <img src={ellipsesmall} alt="ellipse" className="w-5" />
+        <img src={ellipsesmall} alt="ellipse" className="w-4" />
       </div>
       <div className="lg:w-1/2 z-10 lg:pl-8 ">
         <div className="lg:min-w-full lg:h-screen flex flex-col  gap-3 p-5 lg:p-0 lg:relative lg:ml-16 lg:justify-center z-10 space-y-1">
