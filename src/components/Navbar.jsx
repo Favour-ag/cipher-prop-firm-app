@@ -59,11 +59,11 @@ const Navbar = () => {
               </div>
             </div>
             {/* SELECT ACCOUNT BUTTON */}
-            <div className="block lg:hidden">
-              <div className="py-2 px-1  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
+            <div className="flex lg:hidden">
+              <div className="py-1.5 px-1  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
                 <a
                   href="#cipherchallenge"
-                  className="py-2 px-2  bg-[#010f1c] rounded-3xl text-sm"
+                  className="py-2 px-2.5  bg-[#010f1c] rounded-3xl text-sm"
                 >
                   Select An Account
                 </a>
@@ -71,7 +71,7 @@ const Navbar = () => {
             </div>
             <div className="lg:hidden md:flex flex-col justify-end">
               <button onClick={toggleNavbar}>
-                {mobileDrawerOpen ? <X size={35} /> : <Menu size={35} />}
+                {mobileDrawerOpen ? <X size={30} /> : <Menu size={30} />}
               </button>
             </div>
           </div>
