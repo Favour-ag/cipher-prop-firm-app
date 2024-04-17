@@ -1,5 +1,5 @@
 import { rules, phase1, phase2, phase3 } from "../constants";
-import rightArrow from "../assets/rightArrow.svg";
+import rightArrowPointed from "../assets/rightArrowPointed.svg";
 import { Link } from "react-router-dom";
 
 const CipherChallenge = () => {
@@ -129,7 +129,11 @@ const CipherChallenge = () => {
         <p className="font-semibold text-4xl">$29</p>
         <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl flex space-x-2">
           <Link to="/payment"> Start Challenge </Link>
-          <img src={rightArrow} alt="rightArrow" className="w-2 mt-0.5" />
+          <img
+            src={rightArrowPointed}
+            alt="rightArrow"
+            className="w-4 mt-0.5"
+          />
         </p>
       </div>
     </div>

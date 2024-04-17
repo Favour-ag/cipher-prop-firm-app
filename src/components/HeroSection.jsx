@@ -27,14 +27,14 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="w-full h-full flex mt-0 items-center">
+    <div className="w-full h-full flex mt-3 md:mt-0 items-center">
       {/* Blur Background */}
-      <div className="hidden lg:block w-[100px] h-[400px] bg-[#eb26fd] rounded-full absolute top-[80%] left-20 translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
-      <div className="hidden lg:block w-[600px] h-[400px] bg-[#023564] rounded-full absolute top-[110%] right-0 translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
-      <div className="hidden lg:block absolute w-full lg:px-12">
+      <div className="block w-[100px] h-[200px] md:h-[400px] bg-[#eb26fd] rounded-full absolute top-[180px] md:top-[80%] md:left-20 md:translate-x-[-50%] md:translate-y-[-50%] blur-[100px]"></div>
+      <div className="block w-[200px] md:w-[600px] h-[250px] md:h-[400px] bg-[#023564] rounded-full absolute top-[100px] md:top-[110%] right-0 md:translate-x-[-50%] md:translate-y-[-50%] blur-[100px]"></div>
+      <div className="block absolute w-full lg:px-12">
         <img src={stars} alt="stars" />
       </div>
-      <div className="hidden lg:block absolute  lg:pl-32 xl:pl-38 lg:mb-[450px]">
+      <div className="block absolute  lg:pl-32 xl:pl-38 lg:mb-[450px]">
         <img src={polygon} alt="stars" className="w-[600px]" />
       </div>
       <div className="hidden lg:block absolute right-12 top-32">
@@ -43,12 +43,25 @@ const HeroSection = () => {
       <div className="hidden lg:block absolute left-[60%] top-52">
         <img src={ellipsesmall} alt="ellipse" />
       </div>
-      <div className="hidden lg:block absolute top-[100%] left-[45%] ">
+      <div className="block absolute top-[200px] md:top-[100%] right-4 md:left-[45%] ">
         <img src={ellipse} alt="ellipse" />
       </div>
+      {/* ellipse mobile */}
+      <div className="block absolute right-3 top-20">
+        <img src={ellipsesmall} alt="ellipse" className="w-8" />
+      </div>
+      <div className="block absolute left-4 top-[70px]">
+        <img src={ellipsesmall} alt="ellipse" className="w-5" />
+      </div>
+      <div className="block absolute left-4 top-[230px]">
+        <img src={ellipsesmall} alt="ellipse" className="w-5" />
+      </div>
+      <div className="block absolute left-48 top-[70px]">
+        <img src={ellipsesmall} alt="ellipse" className="w-5" />
+      </div>
       <div className="lg:w-1/2 z-10 lg:pl-8 ">
-        <div className="lg:min-w-full lg:h-screen flex flex-col  gap-3 p-5 lg:p-0 lg:relative lg:ml-16 lg:justify-center z-10">
-          <h1 className=" text-2xl text-center lg:text-start lg:text-5xl font-semibold">
+        <div className="lg:min-w-full lg:h-screen flex flex-col  gap-3 p-5 lg:p-0 lg:relative lg:ml-16 lg:justify-center z-10 space-y-1">
+          <h1 className="text-2xl text-center lg:text-start lg:text-5xl font-semibold pt-3 md:pt-0">
             Construct Your Edge and
             <span className="bg-gradient-to-t from-red-600 to-blue-600 inline-block text-transparent bg-clip-text mr-2">
               Decode
