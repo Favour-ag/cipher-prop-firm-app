@@ -81,31 +81,31 @@ export const socials = [
     id: "0",
     title: "Twitter",
     icon: twitter,
-    url: "#",
+    url: "https://twitter.com/",
   },
   {
     id: "1",
     title: "Instagram",
     icon: instagram,
-    url: "#",
+    url: "https://instagram.com/",
   },
   {
     id: "2",
     title: "Facebook",
     icon: facebook,
-    url: "#",
+    url: "https://facebook.com/",
   },
   {
     id: "3",
     title: "Discord",
     icon: discordBlack,
-    url: "#",
+    url: "https://discord.com/",
   },
   {
     id: "4",
     title: "Telegram",
     icon: telegram,
-    url: "#",
+    url: "https://telegram.com/",
   },
 ];
 
