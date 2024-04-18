@@ -78,7 +78,7 @@ const Navbar = () => {
         </div>
         {/* MOBILE MENU */}
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-[#010f1c] w-full h-full flex flex-col items-center text-center lg:hidden gap-3 transition duration-700 ease-in">
+          <div className="fixed right-0 z-20 bg-[#010f1c] w-full h-screen flex flex-col items-center text-center lg:hidden gap-3 transition duration-700 ease-in">
             <div className=" w-[400px] h-[400px] bg-[#023564] rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
             <ul className="space-y-3 mt-8 text-lg z-10">
               <li>
