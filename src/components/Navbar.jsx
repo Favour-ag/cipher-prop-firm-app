@@ -69,7 +69,7 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
-            <div className="lg:hidden md:flex flex-col justify-end">
+            <div className="lg:hidden md:flex flex-col justify-endfixed top-0">
               <button onClick={toggleNavbar}>
                 {mobileDrawerOpen ? <X size={30} /> : <Menu size={30} />}
               </button>
@@ -78,9 +78,9 @@ const Navbar = () => {
         </div>
         {/* MOBILE MENU */}
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-[#010f1c] w-full h-full flex flex-col items-center text-center lg:hidden gap-3 ">
+          <div className="fixed right-0 z-20 bg-[#010f1c] w-full h-full flex flex-col items-center text-center lg:hidden gap-3 transition duration-700 ease-in">
             <div className=" w-[400px] h-[400px] bg-[#023564] rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
-            <ul className="space-y-3 mt-5 text-lg z-10">
+            <ul className="space-y-3 mt-8 text-lg z-10">
               <li>
                 <Link to="/"> Home </Link>
               </li>
@@ -111,15 +111,12 @@ const Navbar = () => {
               </div>
             </div>
             <div className="flex flex-col text-center space-y-3 w-[75%] mt-8 z-10">
-              <a
-                href="#cipherchallenge"
-                className="py-3 px-6 bg-gradient-to-r from-red-500 to-blue-600 text-slate-200 text-lg"
-              >
-                Dashboard
-              </a>
+              <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 text-lg">
+                <Link to="/login"> Dashboard </Link>
+              </p>
               <div className="py-0.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-600">
                 <div className="py-2 px-0.5 bg-[#010f1c] text-lg">
-                  <a href="#">Select An Account</a>
+                  <a href="#cipherchallenge">Select An Account</a>
                 </div>
               </div>
             </div>
