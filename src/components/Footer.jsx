@@ -5,12 +5,12 @@ import rightArrowUp from "../assets/rightArrowUp.svg";
 const Footer = () => {
   return (
     <div className="bg-[#0E1419] w-full h-full flex flex-col md:flex-row justify-center lg:px-24 lg:gap-12 lg:pt-10">
-      <div className="lg:w-1/2 lg:p-4 space-y-5 leading-7 mt-4">
+      <div className="lg:w-1/2 px-2 lg:p-4 space-y-5 leading-7 mt-4">
         {/* logo */}
         <div>
           <img src={cipher} alt="cipher-logo" className="w-[100px]" />
         </div>
-        <p className="text-justify text-md px-4 lg:px-0 ">
+        <p className="text-justify text-md px-4 lg:px-0 text-sm md:text-base text-slate-300">
           All information disseminated by Cipher and its affiliates (hereafter
           referred to as the Company) is intended as general guidance. None of
           the data provided by the Company should be construed as investment
@@ -21,14 +21,14 @@ const Footer = () => {
           technology.
         </p>
 
-        <p className="text-jusify text-lg px-4 lg:px-0">
+        <p className="text-jusify  px-4 lg:px-0 text-sm md:text-base text-slate-300">
           The Company does not engage in soliciting futures, options, or forex
           transactions. Past performance is not necessarily indicative of future
           outcomes. This information is governed by Nigerian law.
         </p>
 
         <div className="mt-4">
-          <ul className="flex items-center justify-center lg:justify-start gap-2">
+          <ul className="flex items-center justify-center lg:justify-start gap-2 ">
             {socials.map((social) => (
               <a key={social.id} href={social.url}>
                 <img src={social.icon} alt="SocialMedia" />
@@ -37,7 +37,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="lg:w-1/2 flex flex-col items-center ">
+      <div className="lg:w-1/2 flex flex-col items-center text-sm md:text-base text-slate-300">
         <div className="bg-[#FFFFFF33] w-[90%] mt-8 rounded-md flex items-center py-2 justify-between px-2 flex-col md:flex-row">
           <p className="font-semibold">Newsletter Group</p>
           <div className="py-0.5 px-0.5 w-[300px] bg-gradient-to-r from-red-500 to-blue-600">

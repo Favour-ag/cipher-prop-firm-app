@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/cipher.png";
-// import { navigation } from "../constants";
 import { socials } from "../constants";
 
 const Navbar = () => {

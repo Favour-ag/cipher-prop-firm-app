@@ -8,7 +8,7 @@ const CipherChallenge = () => {
       id="cipherchallenge"
       className="w-full min-h-screen flex flex-col items-center mt-6 md:mt-20 z-10 "
     >
-      <h1 className="text-4xl md:text-5xl text-center tracking-wide z-10">
+      <h1 className=" text-xl md:text-5xl text-center tracking-wide z-10 pt-5 md:pt-0">
         Choose Your Cipher Challenge
       </h1>
       <div className="flex space-x-6 z-10 mt-3 text-2xl ">
