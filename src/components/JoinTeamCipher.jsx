@@ -55,7 +55,7 @@ const JoinTeamCipher = () => {
           </div>
         </div>
         <div className="lg:w-1/2 lg:mt-0">
-          <div className="py-0.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl h-[225px] lg:w-[400px]  relative lg:left-20">
+          <div className="py-0.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl h-[180px] lg:w-[400px]  relative lg:left-20">
             <div className="bg-[#010f1c] py-16 px-0.5 rounded-3xl h-full">
               <div className="px-2 lg:px-12 mt-[-45px]">
                 <p className="text-slate-300 lg:text-base text-center">
