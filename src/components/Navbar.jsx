@@ -59,7 +59,7 @@ const Navbar = () => {
               </div>
             </div>
             {/* SELECT ACCOUNT BUTTON */}
-            <div className="flex lg:hidden">
+            <div className="flex lg:hidden relative top-[-5px]">
               <div className="py-2 px-1  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
                 <a
                   href="#cipherchallenge"
