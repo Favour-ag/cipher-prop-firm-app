@@ -8,7 +8,7 @@ const CipherChallenge = () => {
       id="cipherchallenge"
       className="w-full min-h-screen flex flex-col items-center mt-6 md:mt-20 z-10 "
     >
-      <h1 className=" text-xl md:text-5xl text-center tracking-wide z-10 pt-5 md:pt-0">
+      <h1 className="text-xl md:text-5xl text-center tracking-wide z-10">
         Choose Your Cipher Challenge
       </h1>
       <div className="flex space-x-6 z-10 mt-3 text-2xl ">
@@ -56,7 +56,7 @@ const CipherChallenge = () => {
       {/* background blur */}
       <div className="absolute w-[600px] h-[400px] bg-[#023564] rounded-full translate-x-[-50%] translate-y-[-50%] blur-[100px] mt-[500px] right-0"></div>
       {/* Table */}
-      <div className="w-full flex overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide md:grid md:grid-cols-4 gap-10 z-10  place-items-center px-8	md:px-24 mb-5 md:mb-0 ease-in duration-900">
+      <div className="w-full flex overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide md:grid md:grid-cols-4 gap-10 z-10  place-items-center px-8	md:px-24 mb-5 md:mb-0 ease-in duration-900 text-sm md:text-base">
         <div>
           <h3 className="text-xl md:text-md font-semibold mt-9 md:mt-16">
             Rules
@@ -69,7 +69,7 @@ const CipherChallenge = () => {
                   alt="profitTarget"
                   className="w-7 h-7 mt-5"
                 />
-                <p className="text-neutral-300 hover:text-white text-md md:text-xl mt-5">
+                <p className="text-neutral-300 hover:text-white text-md md:text-xl mt-7 md:mt-5">
                   {rule.text}
                 </p>
               </div>
@@ -124,7 +124,7 @@ const CipherChallenge = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center text-xl space-y-1">
+      <div className="flex flex-col items-center text-xl space-y-1 mt-5">
         <h3>Fee</h3>
         <p className="font-semibold text-4xl">$29</p>
         <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl flex space-x-2">
