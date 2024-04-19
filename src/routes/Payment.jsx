@@ -118,11 +118,11 @@ const Payment = () => {
               </div>
             </div>
             <div className="lg:w-1/2 space-y-5 px-3 md:px-0 mt-5 lg:mt-10">
-              <div className="border rounded-2xl w-full md:w-[540px] h-[300px]">
-                <div className="flex flex-col justify-center items-center py-8 px-8">
+              <div className="border rounded-2xl w-full md:w-[540px] h-[360px] md:h-[300px]">
+                <div className="flex flex-col justify-center items-center py-5 md:py-8 px-8 ">
                   <p className="text-lg">Your Order</p>
                   <div className="space-y-6">
-                    <div className="flex flex-col md:justify-between items-center">
+                    <div className="flex flex-col md:flex-row md:justify-between items-center">
                       <p>Steps</p>
                       <div className="flex space-x-8  text-sm">
                         <div className="flex justify-center items-center">
@@ -137,16 +137,15 @@ const Payment = () => {
                       </div>
                     </div>
 
-                    <div className="flex justify-between items-center mt-3">
+                    <div className="flex flex-col md:flex-row md:justify-between items-center mt-3 ">
                       <p>Platfrom</p>
-                      <div className="z-10 flex space-x-2 lg:space-x-6 text-sm ">
+                      <div className="hidden z-10 md:flex space-x-2 lg:space-x-6 text-sm ">
                         <label htmlFor="mt4" className="space-x-3 flex">
                           <input
                             type="radio"
                             name="mt4"
                             id=""
                             className="mr-1"
-                            checked
                           />
                           MT-4
                         </label>
@@ -178,11 +177,28 @@ const Payment = () => {
                           TRADE LOCKER
                         </label>
                       </div>
+                      {/* Mobile Platform Screen */}
+                      <div className="block md:hidden">
+                        <select className="bg-inherit border placeholder:text-slate-500 rounded-md px-2 md:py-4 w-full text-slate-400 p-2 text-sm">
+                          <option value="" className="mr-2">
+                            MT4
+                          </option>
+                          <option value="" className="mr-2">
+                            MT5
+                          </option>
+                          <option value="" className="mr-2">
+                            DXTRADE
+                          </option>
+                          <option value="" className="mr-2">
+                            TRADELOCKER
+                          </option>
+                        </select>
+                      </div>
                     </div>
 
-                    <div className="flex justify-between items-center mt-3 ">
+                    <div className="flex flex-col md:flex-row md:justify-between items-center mt-3">
                       <p>Account Size</p>
-                      <div className="flex rounded-lg space-x-10  items-center text-base">
+                      <div className="hidden md:flex rounded-lg space-x-10  items-center text-base">
                         <a
                           href="#"
                           className="py-1 px-3 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
@@ -194,8 +210,29 @@ const Payment = () => {
                         <p>$50K</p>
                         <p>$100K</p>
                       </div>
+                      {/* Account Size Screen */}
+                      <div className="block md:hidden">
+                        <select className="bg-inherit border placeholder:text-slate-500 rounded-md px-2 md:py-4 w-full text-slate-400 p-2 text-sm">
+                          <option value="" className="mr-2">
+                            $5k
+                          </option>
+                          <option value="" className="mr-2">
+                            $10k
+                          </option>
+                          <option value="" className="mr-2">
+                            $25k
+                          </option>
+                          <option value="" className="mr-2">
+                            $50k
+                          </option>
+                          <option value="" className="mr-2">
+                            $100k
+                          </option>
+                        </select>
+                      </div>
                     </div>
-                    <div className="flex justify-between">
+                    {/* Total Div */}
+                    <div className="flex flex-col items-center md:flex-row justify-between">
                       <p>Total</p>
                       <p>$30</p>
                     </div>
