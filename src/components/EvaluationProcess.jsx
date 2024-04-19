@@ -74,7 +74,7 @@ const EvaluationProcess = () => {
               <img
                 src={evaluationIcon3}
                 alt="03"
-                className="w-[90px] md:w-[110px]"
+                className="w-[80px] md:w-[400px]"
               />
             </div>
             <div className="text-slate-300">
