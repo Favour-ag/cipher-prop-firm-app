@@ -22,7 +22,7 @@ const CipherChallenge = () => {
           2 Step
         </a>
       </div>
-      <div className="z-10 flex mt-7 space-x-2 md:space-x-6 text-md md:text-xl">
+      <div className="z-10 flex mt-7 space-x-2 md:space-x-6 text-sm md:text-xl">
         <label htmlFor="mt4" className="space-x-3">
           <input type="radio" name="mt4" id="" checked className="mr-1.5" />
           MT-4
@@ -77,7 +77,7 @@ const CipherChallenge = () => {
           </div>
         </div>
         <div>
-          <h3 className="text-xl md:text-md font-semibold mt-4 md: text-slate-400">
+          <h3 className="text-lg md:text-xl md:text-md font-semibold mt-4 md: text-slate-400">
             Evaluation
           </h3>
           <h3 className="text-md md:text-md font-semibold md:mb-4">Phase 1</h3>
@@ -92,7 +92,7 @@ const CipherChallenge = () => {
           </div>
         </div>
         <div>
-          <h3 className="text-xl md:text-md font-semibold mt-4 md: text-slate-400">
+          <h3 className="text-lg md:text-xl md:text-md font-semibold mt-4 md: text-slate-400">
             Verification
           </h3>
           <h3 className="text-md md:text-md font-semibold md:mb-4">Phase 2</h3>
@@ -107,10 +107,10 @@ const CipherChallenge = () => {
           </div>
         </div>
         <div>
-          <h3 className="text-xl md:text-md font-semibold mt-4 md: text-slate-400">
+          <h3 className="text-lg md:text-xl font-semibold mt-4 md: text-slate-400">
             Get Funded
           </h3>
-          <h3 className="text-md md:text-md font-semibold md:mb-4">
+          <h3 className="text-md md:text-lg md:text-md md:text-md font-semibold md:mb-4">
             Cipher Trader
           </h3>
           <div className="mt-[-8px] md:mt-0">
@@ -127,7 +127,7 @@ const CipherChallenge = () => {
       <div className="flex flex-col items-center text-xl space-y-1 mt-5">
         <h3>Fee</h3>
         <p className="font-semibold text-4xl">$29</p>
-        <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl flex space-x-2">
+        <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl flex space-x-2 text-sm md:text-lg">
           <Link to="/payment"> Start Challenge </Link>
           <img
             src={rightArrowPointed}

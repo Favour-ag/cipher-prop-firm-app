@@ -5,12 +5,12 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full h-screen flex justify-center">
+      <div className="w-full h-screen md:h-[750px] flex justify-center">
         <div className="w-full flex flex-col pt-6   md:w-[70%]">
           <p className="text-4xl text-center mb-12">Contact Us</p>
           <div className="px-3 flex flex-col md:flex-row gap-3 md:gap-8">
             <div className="w-full md:w-1/2">
-              <p>First Name</p>
+              <p>First Name *</p>
               <input
                 type="text"
                 placeholder="First Name"
@@ -18,7 +18,7 @@ const Contact = () => {
               />
             </div>
             <div className="w-full md:w-1/2">
-              <p>Last Name</p>
+              <p>Last Name *</p>
               <input
                 type="text"
                 placeholder="Last Name"
@@ -26,8 +26,8 @@ const Contact = () => {
               />
             </div>
           </div>
-          <div className="flex px-3 flex-col md:flex-row gap-3 md:gap-8 pt-3">
-            <div className="md:w-1/2">
+          <div className="flex px-3 flex-col  gap-3 md:gap-8 pt-3">
+            <div className="w-full">
               <p>Email *</p>
               <input
                 type="text"
@@ -35,7 +35,7 @@ const Contact = () => {
                 className="bg-inherit border placeholder:text-slate-500 rounded-md p-2 w-full md:py-4"
               />
             </div>
-            <div className="md:w-1/2">
+            <div className="w-full">
               <p>Subject *</p>
               <input
                 type="text"
