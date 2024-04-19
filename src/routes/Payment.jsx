@@ -122,7 +122,7 @@ const Payment = () => {
                 <div className="flex flex-col justify-center items-center py-8 px-8">
                   <p className="text-lg">Your Order</p>
                   <div className="space-y-6">
-                    <div className="flex justify-between items-center">
+                    <div className="flex flex-col md:justify-between items-center">
                       <p>Steps</p>
                       <div className="flex space-x-8  text-sm">
                         <div className="flex justify-center items-center">
@@ -202,25 +202,27 @@ const Payment = () => {
                   </div>
                 </div>
               </div>
-              <div className="border rounded-2xl w-[540px] h-[510px]">
-                <div className="flex flex-col  py-8 px-8">
-                  <p className="text-lg text-center">Choose Payment Method</p>
+              <div className="border rounded-2xl md:w-[540px] h-[430px] md:h-[510px] text-sm md:text-base">
+                <div className="flex flex-col py-4 md:py-8 px-3 md:px-8">
+                  <p className="text-lg md:text-center">
+                    Choose Payment Method
+                  </p>
                   <div className="mt-5">
                     <p>
-                      <span className="text-blue-400 pr-1">*</span>Credit or
-                      Debit Card
+                      <span className="text-blue-400 pr-1 ">*</span>
+                      Credit or Debit Card
                     </p>
-                    <div className="border rounded-2xl w-[475px] h-[250px]">
-                      <div className="lg:p-5 ">
+                    <div className="border rounded-2xl md:w-[475px] h-[200px] md:h-[250px]">
+                      <div className="p-3 md:p-5 ">
                         <p className="text-base">Card Number</p>
-                        <div className="bg-inherit border w-[100%]  rounded-md flex py-2 px-3 ">
+                        <div className="bg-inherit border w-[100%]  rounded-md flex py-2 px-1 md:px-3 ">
                           <input
                             type="text"
                             className="block bg-inherit rounded-md py-2  mx-2 shadow-sm focus:outline-none                active:bg-inherit 
                     sm:text-md text-white w-[450px] placeholder:text-slate-400"
                             placeholder="Credit or Debit Card"
                           />
-                          <div className="flex w-[100px] space-x-1 cursor-pointer">
+                          <div className="flex mr-8 md:mr-0 w-[100px] space-x-1 cursor-pointer">
                             <img src={visaCreditCard} alt="visa" />
                             <img src={masterCard} alt="mastercard" />
                           </div>
@@ -250,7 +252,9 @@ const Payment = () => {
                     <div className="bg-inherit border w-[100%]  rounded-md flex py-2 px-3 justify-between">
                       <div className="flex items-center">
                         <input type="radio" className="mr-1" />
-                        <p>Pay with cryptocurrencies</p>
+                        <p className="text-sm md:text-base">
+                          Pay with cryptocurrencies
+                        </p>
                       </div>
                       <div className="flex w-[100px] space-x-1 cursor-pointer">
                         <img src={bitcoin} alt="bitcoin" />
@@ -261,7 +265,7 @@ const Payment = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex px-8">
+                <div className="flex px-3 md:px-8">
                   <p className="py-2 px-6   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
                     <Link to="#"> Place Order </Link>
                   </p>
@@ -271,7 +275,7 @@ const Payment = () => {
           </div>
           <div className="w-full flex flex-col md:flex-row lg:py-10 lg:pb-24 mb-12 lg:mb-0">
             <div className="lg:w-1/2 h-full flex justify-center items-start flex-col space-y-2 lg:space-y-0 lg:gap-4 p-4">
-              <p className="text-4xl lg:text-5xl font-semibold">
+              <p className="text-lg lg:text-5xl font-semibold">
                 Frequently Asked Questions
               </p>
               {/* <a
@@ -280,11 +284,11 @@ const Payment = () => {
               >
                 See all FAQs
               </a> */}
-              <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
+              <p className="py-3 px-4 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl text-sm md:text-base">
                 <Link to="/faq"> See all FAQs </Link>
               </p>
             </div>
-            <div className="lg:w-1/2 h-full flex justify-center items-start flex-col px-3 lg:px-6 ">
+            <div className="lg:w-1/2 h-full flex justify-center items-start flex-col px-4 lg:px-6">
               <div className="w-full">
                 <div className="space-y-4">
                   {accordionData.map(({ title, content }) => (

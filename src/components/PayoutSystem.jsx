@@ -14,7 +14,7 @@ const PayoutSystem = () => {
         </p>
       </div>
       <div className="rounded-lg lg:w-1/2  mx-2 my-4 ">
-        <img src={Iphone} alt="Iphone" className="w-[300px] md:w-full " />
+        <img src={Iphone} alt="Iphone" className=" " />
       </div>
     </div>
   );
