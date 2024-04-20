@@ -30,7 +30,7 @@ const Login = () => {
                 />
               </label>
             </div>
-            <div className="flex justify-between text-[#0072D8] m-1">
+            <div className="flex justify-between text-[#0072D8] m-1 ">
               <label htmlFor="">
                 <input type="radio" name="" id="" className="mr-1" />
                 Remember me
