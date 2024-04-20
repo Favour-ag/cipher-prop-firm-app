@@ -5,6 +5,7 @@ import AffliateProgram from "./routes/AffliateProgram";
 import FAQ from "./routes/FAQ";
 import Contact from "./routes/Contact";
 import Login from "./routes/Login";
+import SignUp from "./routes/SignUp";
 import Payment from "./routes/Payment";
 
 export const router = createBrowserRouter([
@@ -14,5 +15,6 @@ export const router = createBrowserRouter([
   { id: "3", path: "/faq", element: <FAQ /> },
   { id: "4", path: "/contact", element: <Contact /> },
   { id: "5", path: "/login", element: <Login /> },
-  { id: "6", path: "/payment", element: <Payment /> },
+  { id: "6", path: "/signup", element: <SignUp /> },
+  { id: "7", path: "/payment", element: <Payment /> },
 ]);
