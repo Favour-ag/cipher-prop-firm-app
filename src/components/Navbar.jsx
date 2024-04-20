@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-[#010f1c] w-full ">
-      <div className="container px-2 md:px-3 py-2 md:py-3.5 lg:py-0  mx-auto relative lg:text-sm lg:px-7">
+      <div className="container px-2 md:px-3 py-2 md:py-3.5 lg:py-0  mx-auto relative text-sm lg:px-7">
         {/* DESKTOP VIEW */}
         <div className="flex justify-between items-center lg:py-3 ">
           {/* LOGO */}
@@ -26,7 +26,7 @@ const Navbar = () => {
           </div>
           {/* NAVLIST */}
           <ul className="hidden lg:flex ml-14 space-x-6 text-base transition-all	">
-            <li className="hover:text-slate-300">
+            <li className="hover:text-slate-300 ">
               <Link to="/"> Home </Link>
             </li>
             <li className="hover:text-slate-300">
@@ -62,7 +62,7 @@ const Navbar = () => {
               <div className="py-3 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
                 <a
                   href="#cipherchallenge"
-                  className="py-3 px-3  bg-[#010f1c] rounded-3xl text-sm "
+                  className="py-3 px-3  bg-[#010f1c] rounded-3xl text-sm md:text-base"
                 >
                   Select An Account
                 </a>
@@ -111,7 +111,7 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col text-center space-y-3 w-[75%] mt-8 z-10">
               <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 text-lg">
-                <Link to="/login"> Dashboard </Link>
+                <a href="/login">Dashboard</a>
               </p>
               <div className="py-0.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-600">
                 <div className="py-2 px-0.5 bg-[#010f1c] text-lg">
