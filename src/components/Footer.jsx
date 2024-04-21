@@ -36,6 +36,8 @@ const Footer = () => {
             ))}
           </ul>
         </div>
+
+        <p>© 2024 Cipher. All rights reserved.</p>
       </div>
       <div className="lg:w-1/2 flex flex-col items-center text-sm md:text-base text-slate-300">
         <div className="bg-[#FFFFFF33] w-[90%] mt-8 rounded-md flex items-center py-2 justify-between px-2 flex-col md:flex-row">

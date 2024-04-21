@@ -91,7 +91,7 @@ const About = () => {
           {/* OUR MISSION */}
           <div className="flex flex-col lg:gap-8 lg:mt-24 lg:px-12">
             <div className="text-center">
-              <p className="bg-gradient-to-t from-red-600 to-blue-600 inline-block text-transparent bg-clip-text text-4xl font-semibold">
+              <p className="bg-gradient-to-t from-red-600 to-blue-600 inline-block text-transparent bg-clip-text text-4xl font-semibold mt-5 md:mt-0">
                 Our Mission
               </p>
             </div>
