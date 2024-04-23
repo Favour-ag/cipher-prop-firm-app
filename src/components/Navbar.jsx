@@ -18,14 +18,16 @@ const Navbar = () => {
         <div className="flex justify-between items-center lg:py-3 ">
           {/* LOGO */}
           <div className="flex items-center flex-shrink-0">
-            <img
-              className="h-12 md:h-14 w-14 md:w-20 mr-2"
-              src={logo}
-              alt="Logo"
-            />
+            <a href="/">
+              <img
+                className="h-12 md:h-14 w-14 md:w-20 mr-2"
+                src={logo}
+                alt="Logo"
+              />
+            </a>
           </div>
           {/* NAVLIST */}
-          <ul className="hidden lg:flex ml-14 space-x-6 text-base transition-all	">
+          {/* <ul className="hidden lg:flex ml-14 space-x-6 text-base transition-all	">
             <li className="hover:text-slate-300 ">
               <Link to="/"> Home </Link>
             </li>
@@ -41,7 +43,51 @@ const Navbar = () => {
             <li className="hover:text-slate-300">
               <Link to="/contact"> Contact </Link>
             </li>
-          </ul>
+          </ul> */}
+          <nav className=" hidden lg:flex ml-14 space-x-6 text-base transition-all">
+            <Link
+              to="/"
+              className={`text-white font-bold px-4 py-2 rounded ${
+                location.pathname === "/" ? "text-blue-800" : ""
+              }`}
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className={`text-white font-bold px-4 py-2 rounded ${
+                location.pathname === "/about" ? "text-blue-800" : ""
+              }`}
+            >
+              About
+            </Link>
+            <Link
+              to="/affliateprogram"
+              className={`text-white font-bold px-4 py-2 rounded ${
+                location.pathname === "/affliateprogram" ? "text-blue-800" : ""
+              }`}
+            >
+              Affiliate Program
+            </Link>
+            <Link
+              to="/faq"
+              className={`text-white font-bold px-4 py-2 rounded ${
+                location.pathname === "/faq" ? "text-blue-800" : ""
+              }`}
+            >
+              FAQ
+            </Link>
+
+            <Link
+              to="/contact"
+              className={`text-white font-bold px-4 py-2 rounded ${
+                location.pathname === "/contact" ? "text-blue-800" : ""
+              }`}
+            >
+              Contact
+            </Link>
+          </nav>
+
           <div className="flex flex-end gap-3">
             {/* BUTTONS */}
             <div className="hidden lg:flex justify-center space-x-6 items-center">
