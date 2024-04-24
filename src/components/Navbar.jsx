@@ -48,7 +48,7 @@ const Navbar = () => {
             <Link
               to="/"
               className={`text-white font-bold px-4 py-2 rounded ${
-                location.pathname === "/" ? "text-blue-800" : ""
+                location.pathname === "/" ? "text-blue-600" : ""
               }`}
             >
               Home
@@ -56,7 +56,7 @@ const Navbar = () => {
             <Link
               to="/about"
               className={`text-white font-bold px-4 py-2 rounded ${
-                location.pathname === "/about" ? "text-blue-800" : ""
+                location.pathname === "/about" ? "text-blue-600" : ""
               }`}
             >
               About
@@ -64,7 +64,7 @@ const Navbar = () => {
             <Link
               to="/affliateprogram"
               className={`text-white font-bold px-4 py-2 rounded ${
-                location.pathname === "/affliateprogram" ? "text-blue-800" : ""
+                location.pathname === "/affliateprogram" ? "text-blue-600" : ""
               }`}
             >
               Affiliate Program
@@ -72,7 +72,7 @@ const Navbar = () => {
             <Link
               to="/faq"
               className={`text-white font-bold px-4 py-2 rounded ${
-                location.pathname === "/faq" ? "text-blue-800" : ""
+                location.pathname === "/faq" ? "text-blue-600" : ""
               }`}
             >
               FAQ
@@ -81,7 +81,7 @@ const Navbar = () => {
             <Link
               to="/contact"
               className={`text-white font-bold px-4 py-2 rounded ${
-                location.pathname === "/contact" ? "text-blue-800" : ""
+                location.pathname === "/contact" ? "text-blue-600" : ""
               }`}
             >
               Contact
