@@ -11,7 +11,7 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-[#F8F8FF] h-[2400px] md:h-[1800px] flex flex-col w-full items-center text-black">
+      <div className="bg-[#F8F8FF] h-[2500px] md:h-[1850px] flex flex-col w-full items-center text-black">
         <div className="w-[90%]">
           <div className="flex flex-col-reverse  md:flex-row lg:gap-12 mt-8 lg:mt-24 lg:px-12">
             <div className="lg:w-1/2  flex items-center mt-5 md:mt-0">
