@@ -216,3 +216,61 @@ export const accordionData2 = [
     content: `Coming Soon...`,
   },
 ];
+export const accordionData3 = [
+  {
+    title: "Which broker is Cipher partnered with?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Which platforms can I use for my trading?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Which instruments can I trade with Cipher?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Does Cipher host trading competitions?",
+    content: `Coming Soon...`,
+  },
+];
+export const accordionData4 = [
+  {
+    title: "Why should I join Cipher?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "What is the most capital I can manage on Cipher?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "How long do I have to complete the evaluation process on Cipher?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "How long does it take to get funded on Cipher?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Is there a free retry on Cipher?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Are there any minimum trading days?",
+    content: `Coming Soon...`,
+  },
+];
+export const accordionData5 = [
+  {
+    title: "How does the Payout System work on Cipher?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "How do I request a payout from Cipher?",
+    content: `Coming Soon...`,
+  },
+  {
+    title: "Are the fees refundable?",
+    content: `Coming Soon...`,
+  },
+];

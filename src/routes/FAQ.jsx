@@ -1,14 +1,29 @@
+import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import searchIcon from "../assets/searchIcon.svg";
 import Accordion from "../components/Accordion";
-import { accordionData1 } from "../constants";
 import { accordionData2 } from "../constants";
-// import rightArrow from "../assets/rightArrow.svg";
+import { accordionData3 } from "../constants";
+import { accordionData4 } from "../constants";
+import { accordionData5 } from "../constants";
+import rightArrow from "../assets/rightArrow.svg";
 import discordLogo from "../assets/discordLogo.svg";
 import rightPointedArrow from "../assets/rightPointedArrow.svg";
 
 const FAQ = () => {
+  const [isActive, setIsActive] = useState({
+    id: "divOne",
+  });
+  useEffect(() => {
+    console.log(isActive);
+  }, [isActive]);
+  const hideShowDiv = (e) => {
+    setIsActive({
+      id: e.target.id,
+    });
+  };
+
   return (
     <>
       <Navbar />
@@ -37,23 +52,179 @@ const FAQ = () => {
             </div>
           </div>
         </div>
-        <div className="w-full min-h-full flex flex-col md:flex-row lg:px-16 pt-6 lg:pt-14">
-          <div className="lg:w-[40%]">
-            <div className="w-full h-full flex justify-center items-start flex-col px-3 lg:px-6 lg:pr-24">
+
+        <div className="flex flex-col md:flex-row w-full md:min-h-screen justify-center mt-5 md:mt-0">
+          <div className="lg:w-[40%] flex flex-col justify-center">
+            <div className="px-4 md:px-32">
               <div className="w-full">
                 <div className="space-y-4">
-                  {accordionData1.map(({ title, content }) => (
-                    <Accordion key={title} title={title} content={content} />
-                  ))}
+                  {/* div1 */}
+                  <div
+                    id="divOne"
+                    className={
+                      isActive.id === "divOne"
+                        ? `bg-gradient-to-r from-red-500 to-blue-600 p-[2px] w-full h-full`
+                        : ""
+                    }
+                  >
+                    <div
+                      id="divOne"
+                      className={
+                        isActive.id === "divOne"
+                          ? `divOne cursor-pointer  flex justify-between p-5 bg-[#010f1c]`
+                          : " border-2 border-white divOne cursor-pointer  flex justify-between p-5 "
+                      }
+                      onClick={(e) => {
+                        hideShowDiv(e);
+                      }}
+                    >
+                      <p
+                        onClick={(e) => {
+                          hideShowDiv(e);
+                        }}
+                      >
+                        Trading Rules
+                      </p>
+                      <img
+                        src={rightArrow}
+                        alt=""
+                        className="w-[10px]"
+                        onClick={(e) => {
+                          hideShowDiv(e);
+                        }}
+                      />
+                    </div>
+                  </div>
+                  {/* div2 */}
+                  <div
+                    id="divTwo"
+                    className={
+                      isActive.id === "divTwo"
+                        ? `bg-gradient-to-r from-red-500 to-blue-600 p-[2px] w-full h-full`
+                        : " "
+                    }
+                  >
+                    <div
+                      id="divTwo"
+                      className={
+                        isActive.id === "divTwo"
+                          ? `divTwo cursor-pointer  flex justify-between p-5 bg-[#010f1c]`
+                          : " border-2 border-white divTwo cursor-pointer  flex justify-between p-5 "
+                      }
+                      onClick={(e) => {
+                        hideShowDiv(e);
+                      }}
+                    >
+                      <p>Trading Platform</p>
+                      <img src={rightArrow} alt="" className="w-[10px]" />
+                    </div>
+                  </div>
+                  {/* div3 */}
+                  <div
+                    id="divThree"
+                    className={
+                      isActive.id === "divThree"
+                        ? `bg-gradient-to-r from-red-500 to-blue-600 p-[2px] w-full h-full`
+                        : " "
+                    }
+                  >
+                    <div
+                      id="divThree"
+                      className={
+                        isActive.id === "divThree"
+                          ? `divOne cursor-pointer  flex justify-between p-5 bg-[#010f1c]`
+                          : " border-2 border-white divThree cursor-pointer  flex justify-between p-5 "
+                      }
+                      onClick={(e) => {
+                        hideShowDiv(e);
+                      }}
+                    >
+                      <p>Trading Rules</p>
+                      <img src={rightArrow} alt="" className="w-[10px]" />
+                    </div>
+                  </div>
+                  {/* div4 */}
+                  <div
+                    id="divFour"
+                    className={
+                      isActive.id === "divFour"
+                        ? `bg-gradient-to-r from-red-500 to-blue-600 p-[2px] w-full h-full`
+                        : " "
+                    }
+                  >
+                    <div
+                      id="divFour"
+                      className={
+                        isActive.id === "divFour"
+                          ? `divOne cursor-pointer  flex justify-between p-5 bg-[#010f1c]`
+                          : " border-2 border-white divFour cursor-pointer  flex justify-between p-5 "
+                      }
+                      onClick={(e) => {
+                        hideShowDiv(e);
+                      }}
+                    >
+                      <p>Trading Rules</p>
+                      <img src={rightArrow} alt="" className="w-[10px]" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="pt-12 md:pt-0">
-            <div className="w-full h-full flex justify-center items-start flex-col px-3 lg:px-6 lg:pr-24">
-              <div className="w-full">
-                <div className="space-y-4 ">
+          <div className="mt-5 md:mt-0 lg:w-[60%] ">
+            <div className="w-full  h-full flex justify-center items-start flex-col px-4 lg:px-3  lg:pr-24">
+              {/* div1 */}
+              <div className="w-full ">
+                <div
+                  className={
+                    isActive.id === "divOne"
+                      ? `divOne space-y-4 `
+                      : "divOne hidden"
+                  }
+                >
                   {accordionData2.map(({ title, content }) => (
+                    <Accordion key={title} title={title} content={content} />
+                  ))}
+                </div>
+              </div>
+              {/* div2 */}
+              <div className="w-full">
+                <div
+                  className={
+                    isActive.id === "divTwo"
+                      ? `divTwo space-y-4`
+                      : "divTwo hidden"
+                  }
+                >
+                  {accordionData3.map(({ title, content }) => (
+                    <Accordion key={title} title={title} content={content} />
+                  ))}
+                </div>
+              </div>
+              {/* div3 */}
+              <div className="w-full">
+                <div
+                  className={
+                    isActive.id === "divThree"
+                      ? `divThree space-y-4`
+                      : "divThree hidden"
+                  }
+                >
+                  {accordionData4.map(({ title, content }) => (
+                    <Accordion key={title} title={title} content={content} />
+                  ))}
+                </div>
+              </div>
+              {/* div4 */}
+              <div className="w-full">
+                <div
+                  className={
+                    isActive.id === "divFour"
+                      ? `divFour space-y-4`
+                      : "divFour hidden"
+                  }
+                >
+                  {accordionData5.map(({ title, content }) => (
                     <Accordion key={title} title={title} content={content} />
                   ))}
                 </div>
@@ -61,6 +232,7 @@ const FAQ = () => {
             </div>
           </div>
         </div>
+        {/* still not satisfied? */}
         <div className=" w-full h-screen flex flex-col justify-center items-center">
           <div className="mt-60 flex flex-col md:flex-row justify-center items-center space-x-4 space-y-2 lg:space-y-0">
             <p className="text-3xl lg:text-4xl font-semibold">
