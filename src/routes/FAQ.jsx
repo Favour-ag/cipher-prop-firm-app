@@ -78,13 +78,7 @@ const FAQ = () => {
                         hideShowDiv(e);
                       }}
                     >
-                      <p
-                        onClick={(e) => {
-                          hideShowDiv(e);
-                        }}
-                      >
-                        Trading Rules
-                      </p>
+                      <p>Trading Rules</p>
                       <img
                         src={rightArrow}
                         alt=""
