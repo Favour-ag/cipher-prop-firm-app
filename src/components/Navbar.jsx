@@ -48,7 +48,7 @@ const Navbar = () => {
             <Link
               to="/"
               className={`text-white font-bold px-4 py-2 rounded ${
-                location.pathname === "/" ? "text-blue-600" : ""
+                location.pathname === "/" ? "text-blue-500" : ""
               }`}
             >
               Home
@@ -56,7 +56,7 @@ const Navbar = () => {
             <Link
               to="/about"
               className={`text-white font-bold px-4 py-2 rounded ${
-                location.pathname === "/about" ? "text-blue-600" : ""
+                location.pathname === "/about" ? "text-blue-500" : ""
               }`}
             >
               About
@@ -64,7 +64,7 @@ const Navbar = () => {
             <Link
               to="/affliateprogram"
               className={`text-white font-bold px-4 py-2 rounded ${
-                location.pathname === "/affliateprogram" ? "text-blue-600" : ""
+                location.pathname === "/affliateprogram" ? "text-blue-500" : ""
               }`}
             >
               Affiliate Program
@@ -72,7 +72,7 @@ const Navbar = () => {
             <Link
               to="/faq"
               className={`text-white font-bold px-4 py-2 rounded ${
-                location.pathname === "/faq" ? "text-blue-600" : ""
+                location.pathname === "/faq" ? "text-blue-500" : ""
               }`}
             >
               FAQ
@@ -81,7 +81,7 @@ const Navbar = () => {
             <Link
               to="/contact"
               className={`text-white font-bold px-4 py-2 rounded ${
-                location.pathname === "/contact" ? "text-blue-600" : ""
+                location.pathname === "/contact" ? "text-blue-500" : ""
               }`}
             >
               Contact
@@ -91,10 +91,10 @@ const Navbar = () => {
           <div className="flex flex-end gap-3">
             {/* BUTTONS */}
             <div className="hidden lg:flex justify-center space-x-6 items-center">
-              <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
+              <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-500 rounded-3xl">
                 <Link to="/login"> Login/Register </Link>
               </p>
-              <div className="py-3 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
+              <div className="py-3 px-0.5  bg-gradient-to-r from-red-500 to-blue-500 rounded-3xl">
                 <a
                   href="#cipherchallenge"
                   className="py-3 px-3  bg-[#010f1c] rounded-3xl"
@@ -105,7 +105,7 @@ const Navbar = () => {
             </div>
             {/* SELECT ACCOUNT BUTTON */}
             <div className="flex lg:hidden relative top-[-5px]">
-              <div className="py-2.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
+              <div className="py-2.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-500 rounded-3xl">
                 <a
                   href="#cipherchallenge"
                   className="py-2 px-3  bg-[#010f1c] rounded-3xl text-sm md:text-base"
@@ -156,10 +156,10 @@ const Navbar = () => {
               </div>
             </div>
             <div className="flex flex-col text-center space-y-3 w-[75%] mt-8 z-10">
-              <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 text-lg">
+              <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-500 text-lg">
                 <a href="/login">Dashboard</a>
               </p>
-              <div className="py-0.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-600">
+              <div className="py-0.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-500">
                 <div className="py-2 px-0.5 bg-[#010f1c] text-lg">
                   <a href="#cipherchallenge">Select An Account</a>
                 </div>

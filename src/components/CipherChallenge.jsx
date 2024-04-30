@@ -5,13 +5,24 @@ import { useEffect, useState } from "react";
 
 const CipherChallenge = () => {
   const [isActive, setIsActive] = useState({
-    id: "buttonTwo",
+    id: "divTwo",
   });
   useEffect(() => {
     console.log(isActive);
   }, [isActive]);
   const hideShowDiv = (e) => {
     setIsActive({
+      id: e.target.id,
+    });
+  };
+  const [priceButton, setpriceButton] = useState({
+    id: "priceButtonOne",
+  });
+  useEffect(() => {
+    console.log(priceButton);
+  }, [isActive]);
+  const hideShowPriceButton = (e) => {
+    setpriceButton({
       id: e.target.id,
     });
   };
@@ -93,7 +104,13 @@ const CipherChallenge = () => {
       {/* background blur */}
       <div className="absolute w-[600px] h-[400px] bg-[#023564] rounded-full translate-x-[-50%] translate-y-[-50%] blur-[100px] mt-[500px] right-0"></div>
       {/* Table */}
-      <div className="w-full flex overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide md:grid md:grid-cols-4 gap-10 z-10  place-items-center px-8	md:px-24 mb-5 md:mb-0 ease-in duration-900 text-sm md:text-base">
+      <div
+        className={
+          isActive.id === "divTwo"
+            ? `divTwo w-full flex overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide md:grid md:grid-cols-4 gap-10 z-10  place-items-center px-8	md:px-24 mb-5 md:mb-0 ease-in duration-900 text-sm md:text-base `
+            : "flex lg:space-x-32 z-10"
+        }
+      >
         {/* Rules */}
         <div>
           <h3 className="text-xl md:text-md font-semibold mt-9 md:mt-16">
@@ -127,7 +144,7 @@ const CipherChallenge = () => {
           <div>
             {phase1.map((phase1, index) => (
               <div key={index} className="flex items-center">
-                <p className="text-neutral-300 hover:text-white text-md  md:text-xl mt-7">
+                <p className="text-neutral-300 hover:text-white text-md  md:text-xl mt-[26px] md:mt-7">
                   {phase1.text}
                 </p>
               </div>
@@ -167,7 +184,7 @@ const CipherChallenge = () => {
           <div className="mt-[-8px] md:mt-0">
             {phase2.map((phase2, index) => (
               <div key={index} className="flex items-center">
-                <p className="text-neutral-300 hover:text-white text-md  md:text-xl mt-7">
+                <p className="text-neutral-300 hover:text-white text-md  md:text-xl mt-[26px] md:mt-7">
                   {phase2.text}
                 </p>
               </div>
@@ -176,16 +193,16 @@ const CipherChallenge = () => {
         </div>
         {/* Phase3 */}
         <div>
-          <h3 className="text-lg md:text-xl font-semibold  md: text-slate-400">
+          <h3 className="text-lg md:text-xl font-semibold  md: text-slate-400 mb-5 lg:mb-3">
             Get Funded
           </h3>
-          <h3 className="text-md md:text-lg md:text-md md:text-md font-semibold md:mb-4">
+          <h3 className="text-md md:text-lg md:text-md md:text-md font-semibold md:mb-4 ">
             Cipher Trader
           </h3>
           <div className="mt-[-8px] md:mt-0">
             {phase3.map((phase3, index) => (
               <div key={index} className="flex items-center">
-                <p className="text-neutral-300 hover:text-white text-md  md:text-xl mt-7">
+                <p className="text-neutral-300 hover:text-white text-md  md:text-xl mt-[28px] md:mt-7">
                   {phase3.text}
                 </p>
               </div>
