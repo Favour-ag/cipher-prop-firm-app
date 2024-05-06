@@ -148,7 +148,7 @@ const FAQ = () => {
                         hideShowDiv(e);
                       }}
                     >
-                      <p>Withdrawal</p>
+                      <p>Withdrawals</p>
                       <img src={rightArrow} alt="" className="w-[10px]" />
                     </div>
                   </div>
