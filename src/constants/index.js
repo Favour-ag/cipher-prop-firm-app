@@ -21,6 +21,15 @@ import minimumTradingDays from "../assets/icons/cipherChallenge/minimumTradingDa
 import newsTrading from "../assets/icons/cipherChallenge/newsTrading.svg";
 import maximumOverallDrawdown from "../assets/icons/cipherChallenge/maximumOverallDrawdown.svg";
 
+import dashboard from "../assets/dashboardSideNavIcons/dashboard.svg";
+import withdrawal from "../assets/dashboardSideNavIcons/withdrawal.svg";
+import announcement from "../assets/dashboardSideNavIcons/announcement.svg";
+import rulesandfaq from "../assets/dashboardSideNavIcons/rulesandfaq.svg";
+import affiliate from "../assets/dashboardSideNavIcons/affiliate.svg";
+import needhelp from "../assets/dashboardSideNavIcons/needHelp.svg";
+import settings from "../assets/dashboardSideNavIcons/settings.svg";
+import logout from "../assets/dashboardSideNavIcons/logout.svg";
+
 // export const navigation = [
 //   {
 //     id: "0",
@@ -200,88 +209,142 @@ export const accordionData1 = [
 export const accordionData2 = [
   {
     title: "Can Someone else trade my account?",
-    content: `Coming Soon...`,
+    content: `No, giving another person access to your account will not be permitted and it will violate our terms of service`,
   },
   {
     title: "Are trade copiers or bots allowed on Cipher?",
-    content: `Coming Soon...`,
+    content: `No, trade copy machines or bots are not allowed. We want all trading to be done by teh account holder`,
   },
   {
     title: "Is news trading allowed on Cipher?",
-    content: `Coming Soon...`,
+    content: `We know that news occasions give greate trading opportunities for Cipher Traders to maximzize thier potential. But traders that are opened 1-5 minutes earlier to and after a high-impacts news occasion ont the influenced currency will not be counted. Our framework will close these traders immediately. It'll not lead to an account infringement. News trading will not lead to a loss of account`,
   },
   {
     title: "Can I hold trade during news and over the weekend on Cipher?",
-    content: `Coming Soon...`,
+    content: `Yes, you're allowed to do that. Weekend holding is allowed, providing you with more time to keep your trades open if needed.`,
   },
   {
     title: "What is the inactivity rule of trading accounts?",
-    content: `Coming Soon...`,
+    content: `Regular trading activities are important to maintain teh active status of your Cipher Trading Account. According to our policy, all trading accounts that are inactive for 30 consecutive days will be automatically suspended. To promote consistent trading and ensure effective management of all active accounts, this measure has been introduced. In case your account is suspended due to dormancy, if it's not too much trouble contact our support team for help on reactivation`,
   },
   {
     title: "Who can join Cipher?",
-    content: `Coming Soon...`,
+    content: `If you have reached the legal trading age, which is 18 years of age you can join Cipher`,
   },
   {
     title: "Are there any confinements for traders who want to join Cipher?",
-    content: `Coming Soon...`,
+    content: `Cipher does not discriminate any trader from anywhere around the world. But due to our Complaiance with certain international trading laws we cannot offer our services to U.S Clients on MT4 and MT5. But we do offer U.S Clients services on DX TRADE and TRADELOCKER`,
   },
 ];
 export const accordionData3 = [
   {
     title: "Which broker is Cipher partnered with?",
-    content: `Coming Soon...`,
+    content: `We have gladly joined forces with ..., a controlled and regarded broker eminent for its progressed innovation, competitive condtions and comprehensive extend of trading instruments`,
   },
   {
     title: "Which platforms can I use for my trading?",
-    content: `Coming Soon...`,
+    content: `Cipher offers a diverse range of trading platforms, including the industry statand MT4 and MT5, as well as DX trades and Trade Locker`,
   },
   {
     title: "Which instruments can I trade with Cipher?",
-    content: `Coming Soon...`,
+    content: `You can trade Forex, Crypto, Indices, Metals & Energies with RAW spreads.`,
   },
   {
     title: "Does Cipher host trading competitions?",
-    content: `Coming Soon...`,
+    content: `Yes, we do have trading competitions. These competitions offer an energizing opportunity for traders to exhibit their abilities and win prizes.`,
   },
 ];
 export const accordionData4 = [
   {
     title: "Why should I join Cipher?",
-    content: `Coming Soon...`,
+    content: `Firstly, we are the most affordable prop firm in the world, and we have an Immersive educational platform designed to empower traders on their journey to success. Unlike other prop firms we want you to use your talents, make your dreams become a fruition to pass your accounts, get funded so you can have a gateway to achieve financial freedom. We have the best Lightning-fast payouts processing time of 15 hours so you can enjoy your earnings with delay.`,
   },
   {
     title: "What is the most capital I can manage on Cipher?",
-    content: `Coming Soon...`,
+    content: `You can manage up to $400,000 combined. You must pass each challenge individually.`,
   },
   {
     title: "How long do I have to complete the evaluation process on Cipher?",
-    content: `Coming Soon...`,
+    content: `No need to rush, take all teh time you need. We do not have a minimum or maximum limit on trading days during our evaluation period`,
   },
   {
     title: "How long does it take to get funded on Cipher?",
-    content: `Coming Soon...`,
+    content: `After you pass your Phase 1 Stage you will receive your Phase 2 Stage in 30 minutes and when you pass your Phase 2 Stage, you will get a Cipher funded account once you've signed the customer agreement. We don't want our traders to miss important trades that could help them pass their Evaluation so we try to give them their accounts as fast as we can.`,
   },
   {
     title: "Is there a free retry on Cipher?",
-    content: `Coming Soon...`,
+    content: `Since our evaluation has no time limit, we do not offer a free retry. But we offer discounts. Benefit a 5% discount when you fail an account.`,
   },
   {
     title: "Are there any minimum trading days?",
-    content: `Coming Soon...`,
+    content: `Yes, you need to trade for a minimum of 2days on each Phase Challenge`,
   },
 ];
 export const accordionData5 = [
   {
     title: "How does the Payout System work on Cipher?",
-    content: `Coming Soon...`,
+    content: `A trader is qualified to ask for a payout after 14 days on both the 1 Step Cipher Funded account and 2 Step Cipher Funded account. There will be an 80% profit split applied on first payout, 85% profit split applied on third payout and 90% profit split applied on 5th payout.`,
   },
   {
     title: "How do I request a payout from Cipher?",
-    content: `Coming Soon...`,
+    content: `We have the best Lightning-fast payouts processing time of 15 hours so you can enjoy your earnings without delay. In your dashboard on our site, you can see "Payouts" in teh menu, click on it and follow the screen, the minimum amount for a payout is 1%. Payouts will be processed through crypto BTC, ETH and USDT TRC20.`,
   },
   {
     title: "Are the fees refundable?",
-    content: `Coming Soon...`,
+    content: `To appreciate you for choosing Cipher as your partner, all traders who pass the Evalution Phase 1 and Phase 2 will receive a refund of their fees with thier 3rd profit split.`,
+  },
+];
+
+export const dashboardSideNavListTop = [
+  {
+    icon: dashboard,
+    title: "Dashboard",
+    url: "Dashboard",
+    active: true, // Set to true if this link is active
+  },
+  {
+    icon: withdrawal,
+    title: "Withdrawal",
+    url: "Withdrawal",
+    active: false,
+  },
+  {
+    icon: announcement,
+    title: "Announcements",
+    url: "Announcements",
+    active: false,
+  },
+  {
+    icon: rulesandfaq,
+    title: "Rules & Faq",
+    url: "RulesandFaq",
+    active: false,
+  },
+  {
+    icon: affiliate,
+    title: "Affiliate",
+    url: "Affiliate",
+    active: false,
+  },
+];
+
+export const dashboardSideNavListBottom = [
+  {
+    icon: needhelp,
+    title: "Need help?",
+    url: "NeedHelp",
+    active: false, // Set to true if this link is active
+  },
+  {
+    icon: settings,
+    title: "Settings",
+    url: "Settings",
+    active: false, // Set to true if this link is active
+  },
+  {
+    icon: logout,
+    title: "Logout",
+    url: "Logout",
+    active: false, // Set to true if this link is active
   },
 ];

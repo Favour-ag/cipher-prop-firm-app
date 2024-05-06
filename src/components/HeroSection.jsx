@@ -79,7 +79,7 @@ const HeroSection = () => {
                 </a>
               </div>
               <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
-                <Link to="/login"> Dashboard </Link>
+                <Link to="/dashboard"> Dashboard </Link>
               </p>
             </div>
             <p className="lg:mt-3 text-sm md:text-2xl mt-[-12px] md:mt-0 text-center lg:text-left">

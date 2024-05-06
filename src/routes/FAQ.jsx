@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import searchIcon from "../assets/searchIcon.svg";
@@ -15,9 +15,7 @@ const FAQ = () => {
   const [isActive, setIsActive] = useState({
     id: "divOne",
   });
-  useEffect(() => {
-    console.log(isActive);
-  }, [isActive]);
+
   const hideShowDiv = (e) => {
     setIsActive({
       id: e.target.id,
@@ -72,21 +70,14 @@ const FAQ = () => {
                       className={
                         isActive.id === "divOne"
                           ? `divOne cursor-pointer  flex justify-between p-5 bg-[#010f1c]`
-                          : " border-2 border-white divOne cursor-pointer  flex justify-between p-5 "
+                          : " border-2 border-white divOne cursor-pointer  flex justify-between p-5"
                       }
                       onClick={(e) => {
                         hideShowDiv(e);
                       }}
                     >
                       <p>Trading Rules</p>
-                      <img
-                        src={rightArrow}
-                        alt=""
-                        className="w-[10px]"
-                        onClick={(e) => {
-                          hideShowDiv(e);
-                        }}
-                      />
+                      <img src={rightArrow} alt="" className="w-[10px]" />
                     </div>
                   </div>
                   {/* div2 */}
