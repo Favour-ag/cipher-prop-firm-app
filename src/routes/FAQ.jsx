@@ -124,7 +124,7 @@ const FAQ = () => {
                         hideShowDiv(e);
                       }}
                     >
-                      <p>Trading Rules</p>
+                      <p>Challenge Questions</p>
                       <img src={rightArrow} alt="" className="w-[10px]" />
                     </div>
                   </div>
@@ -148,7 +148,7 @@ const FAQ = () => {
                         hideShowDiv(e);
                       }}
                     >
-                      <p>Trading Rules</p>
+                      <p>Withdrawal</p>
                       <img src={rightArrow} alt="" className="w-[10px]" />
                     </div>
                   </div>
