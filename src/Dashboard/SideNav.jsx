@@ -14,7 +14,7 @@ function SideNav() {
 
   return (
     <div
-      className={`bg-inherit  ${
+      className={`bg-inherit w-100 h-100 ${
         open ? "w-56 px-8 py-3" : "w-20 py-3 px-5"
       } duration-300 relative border-r`}
     >

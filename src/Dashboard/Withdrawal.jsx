@@ -1,14 +1,16 @@
 import React from "react";
 import SideNav from "./SideNav";
+import AccountInfo from "../components/AccountInfo";
 
 const Withdrawal = () => {
   return (
-    <div className="flex text-white">
-      <div className="">
-        <SideNav />
-      </div>
-      <div className="">
-        <h1 className="text-4xl">Withdrawal</h1>
+    <div className="flex bg-inherit w-full h-full">
+      <SideNav />
+      <div className="w-full h-screen p-3">
+        <AccountInfo />
+        <div className="flex flex-col w-full justify-center items-center ">
+          <p>You currently have no announcement</p>
+        </div>
       </div>
     </div>
   );
