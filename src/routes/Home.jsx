@@ -6,7 +6,7 @@ import PayoutSystem from "../components/PayoutSystem";
 import ChooseCipher from "../components/ChooseCipher";
 import JoinTeamCipher from "../components/JoinTeamCipher";
 import Faq from "../components/Faq";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
       <ChooseCipher />
       <JoinTeamCipher />
       <Faq />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
