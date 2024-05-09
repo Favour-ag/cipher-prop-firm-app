@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import searchIcon from "../assets/searchIcon.svg";
@@ -12,6 +13,8 @@ import discordLogo from "../assets/discordLogo.svg";
 import rightPointedArrow from "../assets/rightPointedArrow.svg";
 
 const FAQ = () => {
+  useEffect(() => {}, []);
+
   const [isActive, setIsActive] = useState({
     id: "divOne",
   });
@@ -25,7 +28,12 @@ const FAQ = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full min-h-full  bg-[#010f1c] flex flex-col items-center lg:mt-4 lg:space-y-7">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        className="w-full min-h-full  bg-[#010f1c] flex flex-col items-center lg:mt-4 lg:space-y-7"
+      >
         <div className=" w-full flex flex-col items-center">
           <div className=" lg:w-[50%] flex flex-col items-center gap-4 mt-8">
             <p className="text-4xl lg:text-6xl text-center font-semibold">
@@ -290,7 +298,7 @@ const FAQ = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <Footer />
     </>
   );

@@ -1,4 +1,6 @@
-import React from "react";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import affiliateFrameStep1 from "../assets/affiliateFrameStep1.svg";
@@ -8,10 +10,17 @@ import affiliateFrameStep4 from "../assets/affiliateFrameStep4.svg";
 import affiliateFrameStep5 from "../assets/affiliateFrameStep5.svg";
 
 const AffliateProgram = () => {
+  useEffect(() => {}, []);
   return (
     <>
       <Navbar />
-      <div className="w-full h-full lg:h-[550px] bg-[#010f1c] lg:px-20 flex flex-col lg:flex-row lg:pt-4 gap-2 lg:gap-0">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        className="w-full h-full lg:h-[550px] bg-[#010f1c] lg:px-20 flex flex-col lg:flex-row lg:pt-4 gap-2 lg:gap-0"
+      >
+        {" "}
         <div className="w-full lg:w-1/2 z-10 p-2 lg:p-0">
           <div className="lg:min-w-full lg:h-screen flex flex-col  gap-3  lg:relative pt-2 lg:pt-32">
             <h1 className=" text-4xl text-start lg:text-7xl font-semibold">
@@ -72,7 +81,7 @@ const AffliateProgram = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
       <Footer />
     </>
   );

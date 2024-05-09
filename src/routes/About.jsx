@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AboutFrame1 from "../assets/AboutFrame1.svg";
@@ -8,10 +10,22 @@ import discord from "../assets/discord.svg";
 import { Link } from "react-router-dom";
 
 const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Set isVisible to true after the component mounts to trigger the fade-in animation
+    setIsVisible(true);
+  }, []);
+
   return (
     <>
       <Navbar />
-      <div className="bg-[#010f1c] h-[2500px] md:h-[1850px] flex flex-col w-full items-center text-white">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isVisible ? 1 : 0 }}
+        transition={{ duration: 1 }}
+        className="bg-[#010f1c] h-[2500px] md:h-[1850px] flex flex-col w-full items-center text-white"
+      >
         <div className="w-[90%]">
           <div className="flex flex-col-reverse  md:flex-row lg:gap-12 mt-8 lg:mt-24 lg:px-12">
             <div className="lg:w-1/2  flex items-center mt-5 md:mt-0">
@@ -170,7 +184,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <Footer />
     </>
   );
