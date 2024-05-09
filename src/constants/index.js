@@ -188,24 +188,7 @@ export const accordionData = [
     content: `The minimum withdrawal for Cipher is $50.`,
   },
 ];
-export const accordionData1 = [
-  {
-    title: "Trading Rules",
-    content: `Coming Soon...`,
-  },
-  {
-    title: "Trading Platfrom",
-    content: `Coming Soon...`,
-  },
-  {
-    title: "Challenge Questions",
-    content: `Coming Soon...`,
-  },
-  {
-    title: "Withdraws",
-    content: `Coming Soon...`,
-  },
-];
+
 export const accordionData2 = [
   {
     title: "Can Someone else trade my account?",
@@ -217,7 +200,7 @@ export const accordionData2 = [
   },
   {
     title: "Is news trading allowed on Cipher?",
-    content: `We know that news occasions give greate trading opportunities for Cipher Traders to maximzize thier potential. But traders that are opened 1-5 minutes earlier to and after a high-impacts news occasion ont the influenced currency will not be counted. Our framework will close these traders immediately. It'll not lead to an account infringement. News trading will not lead to a loss of account`,
+    content: `We know that news occasions give great trading opportunities for Cipher Traders to maximzize thier potential. But trades that are opened 1-5 minutes earlier to and after a high-impact news occasion on the influenced currency will not be counted. Our framework will close these trades immediately. It'll not lead to an account infringement. News trading will not lead to a loss of account`,
   },
   {
     title: "Can I hold trade during news and over the weekend on Cipher?",
@@ -233,17 +216,17 @@ export const accordionData2 = [
   },
   {
     title: "Are there any confinements for traders who want to join Cipher?",
-    content: `Cipher does not discriminate any trader from anywhere around the world. But due to our Complaiance with certain international trading laws we cannot offer our services to U.S Clients on MT4 and MT5. But we do offer U.S Clients services on DX TRADE and TRADELOCKER`,
+    content: `Cipher does not discriminate any trader from anywhere around the world. But due to our Compliance with certain international trading laws we cannot offer our services to U.S clients on MT4 and MT5. But we do offer U.S Clients services on DX TRADE and TRADELOCKER`,
   },
 ];
 export const accordionData3 = [
   {
     title: "Which broker is Cipher partnered with?",
-    content: `We have gladly joined forces with ..., a controlled and regarded broker eminent for its progressed innovation, competitive condtions and comprehensive extend of trading instruments`,
+    content: `We have gladly joined forces with ..., a controlled and regarded broker eminent for its progressed innovation, competitive conditions and comprehensive extend of trading instruments`,
   },
   {
     title: "Which platforms can I use for my trading?",
-    content: `Cipher offers a diverse range of trading platforms, including the industry statand MT4 and MT5, as well as DX trades and Trade Locker`,
+    content: `Cipher offers a diverse range of trading platforms, including the industry standard MT4 and MT5, as well as DX trades and Trade Locker`,
   },
   {
     title: "Which instruments can I trade with Cipher?",
@@ -257,7 +240,7 @@ export const accordionData3 = [
 export const accordionData4 = [
   {
     title: "Why should I join Cipher?",
-    content: `Firstly, we are the most affordable prop firm in the world, and we have an Immersive educational platform designed to empower traders on their journey to success. Unlike other prop firms we want you to use your talents, make your dreams become a fruition to pass your accounts, get funded so you can have a gateway to achieve financial freedom. We have the best Lightning-fast payouts processing time of 15 hours so you can enjoy your earnings with delay.`,
+    content: `Firstly, we are the most affordable prop firm in the world, and we have an Immersive educational platform designed to empower traders on their journey to success. Unlike other prop firms we want you to use your talents, make your dreams become a fruition to pass your accounts, get funded so you can have a gateway to achieve financial freedom. We have the best Lightning-fast payouts processing time of 15 hours so you can enjoy your earnings with delay. To appreciate you for choosing Cipher as your partner, all traders who pass the Evaluation Phase 1 and Phas 2 will receive a refund of theirfees with their 3rd profit split.`,
   },
   {
     title: "What is the most capital I can manage on Cipher?",
@@ -265,11 +248,11 @@ export const accordionData4 = [
   },
   {
     title: "How long do I have to complete the evaluation process on Cipher?",
-    content: `No need to rush, take all teh time you need. We do not have a minimum or maximum limit on trading days during our evaluation period`,
+    content: `No need to rush, take all the time you need. We do not have a minimum or maximum limit on trading days during our evaluation period`,
   },
   {
     title: "How long does it take to get funded on Cipher?",
-    content: `After you pass your Phase 1 Stage you will receive your Phase 2 Stage in 30 minutes and when you pass your Phase 2 Stage, you will get a Cipher funded account once you've signed the customer agreement. We don't want our traders to miss important trades that could help them pass their Evaluation so we try to give them their accounts as fast as we can.`,
+    content: `After you pass your Phase 1 Stage, you will receive your Phase 2 Stage in 30 minutes and when you pass your Phase 2 Stage, you will get a Cipher funded account once you've signed the customer agreement. We don't want our traders to miss important trades that could help them pass their Evaluation so we try to give them their accounts as fast as we can.`,
   },
   {
     title: "Is there a free retry on Cipher?",
@@ -277,7 +260,7 @@ export const accordionData4 = [
   },
   {
     title: "Are there any minimum trading days?",
-    content: `Yes, you need to trade for a minimum of 2days on each Phase Challenge`,
+    content: `Yes, you need to trade for a minimum of 2 days on each Phase Challenge`,
   },
 ];
 export const accordionData5 = [
@@ -287,7 +270,7 @@ export const accordionData5 = [
   },
   {
     title: "How do I request a payout from Cipher?",
-    content: `We have the best Lightning-fast payouts processing time of 15 hours so you can enjoy your earnings without delay. In your dashboard on our site, you can see "Payouts" in teh menu, click on it and follow the screen, the minimum amount for a payout is 1%. Payouts will be processed through crypto BTC, ETH and USDT TRC20.`,
+    content: `We have the best Lightning-fast payouts processing time of 15 hours so you can enjoy your earnings without delay. In your dashboard on our site, you can see "Payouts" in the menu, click on it and follow the screen, the minimum amount for a payout is 1%. Payouts will be processed through crypto BTC, ETH and USDT TRC20.`,
   },
   {
     title: "Are the fees refundable?",
