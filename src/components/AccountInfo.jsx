@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const AccountInfo = () => {
   return (
-    <div className="bg-inherit flex w-full space-x-3">
+    <div className="bg-inherit flex w-full space-x-3 ">
       <select
         name="accountID"
         id="accountid"
-        className="bg-[#575757] border border-white rounded-md px-1"
+        className="bg-[#575757] border border-white rounded-md px-1 cursor-pointer"
       >
         <option value="Account 1 - #45b650">Account 1 - #45b650</option>
         <option value="Account 1 - #45b650">Account 2 - #45b651</option>

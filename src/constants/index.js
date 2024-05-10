@@ -176,7 +176,7 @@ export const phase3 = [
 
 export const accordionData = [
   {
-    title: "What platfroms can I use for my trading?",
+    title: "What platforms can I use for my trading?",
     content: `Cipher offers a diverse range of trading platforms, including the industry-standard MT4 and MT5, as well as DX Trades and TradeLocker`,
   },
   {
@@ -200,7 +200,7 @@ export const accordionData2 = [
   },
   {
     title: "Is news trading allowed on Cipher?",
-    content: `We know that news occasions give great trading opportunities for Cipher Traders to maximzize thier potential. But trades that are opened 1-5 minutes earlier to and after a high-impact news occasion on the influenced currency will not be counted. Our framework will close these trades immediately. It'll not lead to an account infringement. News trading will not lead to a loss of account`,
+    content: `We know that news occasions give great trading opportunities for Cipher Traders to maximize thier potential. But trades that are opened 1-5 minutes earlier to and after a high-impact news occasion on the influenced currency will not be counted. Our framework will close these trades immediately. It'll not lead to an account infringement. News trading will not lead to a loss of account`,
   },
   {
     title: "Can I hold trade during news and over the weekend on Cipher?",

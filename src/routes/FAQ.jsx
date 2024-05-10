@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -15,14 +15,17 @@ import rightPointedArrow from "../assets/rightPointedArrow.svg";
 const FAQ = () => {
   useEffect(() => {}, []);
 
-  const [isActive, setIsActive] = useState({
-    id: "divOne",
-  });
+  const [isActive, setIsActive] = useState({ id: "divOne" });
+  const [searchValue, setSearchValue] = useState("");
 
   const hideShowDiv = (e) => {
     setIsActive({
       id: e.target.id,
     });
+  };
+
+  const clearSearch = () => {
+    setSearchValue("");
   };
 
   return (
@@ -42,17 +45,28 @@ const FAQ = () => {
                 Questions
               </span>
             </p>
-            <div className="hidden  w-full md:flex flex-col items-center">
-              <div className="py-0.5 px-0.5 border bg-[#FFFFFF33] w-[80%] rounded-lg ">
-                <div className="flex  w-full rounded-lg items-center justify-start">
+            <div className="hidden w-full md:flex flex-col items-center relative">
+              <div className="py-0.5 px-0.5 border bg-[#FFFFFF33] w-[80%] rounded-lg relative">
+                <div className="flex w-full rounded-lg items-center justify-start">
                   <div className="w-[30.14px] h-[30.14px] flex justify-center items-center rounded-lg cursor-pointer absolute ml-2">
                     <img src={searchIcon} alt="search" />
                   </div>
                   <input
                     type="text"
-                    className="placeholder:text-white block bg-[#FFFFFF33] w-[100%] rounded-md py-2 pl-12 pr-3 shadow-sm focus:outline-none sm:text-md text-white "
+                    className="placeholder:text-white block bg-[#FFFFFF33] w-[100%] rounded-md py-2 pl-12 pr-3 shadow-sm focus:outline-none sm:text-md text-white"
                     placeholder="Search keywords... (trade, account)"
+                    value={searchValue}
+                    onChange={(e) => setSearchValue(e.target.value)}
                   />
+                  {/* Render 'x' button inside the input if input is active and has content */}
+                  {isActive && searchValue && (
+                    <div
+                      className="absolute top-0 right-0 h-full flex items-center pr-3 text-white cursor-pointer"
+                      onClick={clearSearch}
+                    >
+                      {"x"}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

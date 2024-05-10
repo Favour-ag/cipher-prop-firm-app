@@ -3,7 +3,7 @@ import { accordionData } from "../constants";
 
 const Faq = () => {
   return (
-    <div className="w-full flex flex-col md:flex-row lg:py-10 lg:pb-24 mb-12 lg:mb- px-1">
+    <div className="w-full flex flex-col md:flex-row lg:py-10 lg:pb-24 mb-12  px-1">
       <div className="lg:w-1/2 h-full lg:px-24 flex justify-center items-start flex-col space-y-2 lg:space-y-0 lg:gap-4 p-4">
         <p className="text-xl lg:text-5xl font-semibold ">
           Frequently Asked Questions
