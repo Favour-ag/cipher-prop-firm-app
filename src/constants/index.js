@@ -30,6 +30,14 @@ import needhelp from "../assets/dashboardSideNavIcons/needHelp.svg";
 import settings from "../assets/dashboardSideNavIcons/settings.svg";
 import logout from "../assets/dashboardSideNavIcons/logout.svg";
 
+import Equity from "../assets/dashboardIcons/equity.svg";
+import Balance from "../assets/dashboardIcons/balance.svg";
+import Trades from "../assets/dashboardIcons/trades.svg";
+import avgWinning from "../assets/dashboardIcons/avgWinningTradeArrow.svg";
+import avgLosing from "../assets/dashboardIcons/avgLosingTradeArrow.svg";
+import winrate from "../assets/dashboardIcons/winrate.svg";
+import { color } from "framer-motion";
+
 // export const navigation = [
 //   {
 //     id: "0",
@@ -329,5 +337,85 @@ export const dashboardSideNavListBottom = [
     title: "Logout",
     url: "Logout",
     active: false, // Set to true if this link is active
+  },
+];
+export const accountStatus = [
+  {
+    title: "Account Size",
+    value: "$5,000",
+  },
+  {
+    title: "Start Date",
+    value: "15/04/2023",
+  },
+  {
+    title: "End Date",
+    value: "15/04/2023",
+  },
+  {
+    title: "Platform",
+    value: "MT4",
+  },
+  {
+    title: "Phase",
+    value: "2",
+  },
+];
+export const detailStatistics = [
+  {
+    icon: Equity,
+    title: "Equity",
+    value: "$5,453.02",
+  },
+  {
+    icon: Balance,
+    title: "Balance",
+    value: "$4,867.32",
+  },
+  {
+    icon: Trades,
+    title: "Trades",
+    value: "1",
+  },
+  {
+    icon: avgWinning,
+    title: "Avg. Winning Trade",
+    value: "$0.00",
+  },
+  {
+    icon: avgLosing,
+    title: "Avg. Losing Trade",
+    value: "$-3.21",
+  },
+  {
+    icon: winrate,
+    title: "Win Rate",
+    value: "2%",
+  },
+];
+export const accountAnalysis = [
+  {
+    title: "Number of Days",
+    value: "43",
+  },
+  {
+    title: "Total Trades Taken",
+    value: "81",
+  },
+  {
+    title: "Average Trade Per Day",
+    value: "1,03",
+  },
+  {
+    title: "Total Lots used",
+    value: "189.08",
+  },
+  {
+    title: "Biggest Win",
+    value: "$1,234.43",
+  },
+  {
+    title: "Biggest Loss",
+    value: "$500.21",
   },
 ];

@@ -53,7 +53,7 @@ const FAQ = () => {
                   </div>
                   <input
                     type="text"
-                    className="placeholder:text-white block bg-[#FFFFFF33] w-[100%] rounded-md py-2 pl-12 pr-3 shadow-sm focus:outline-none sm:text-md text-white"
+                    className="placeholder:text-white block bg-[#FFFFFF33] w-[100%] rounded-md py-2 pl-12 pr-8 shadow-sm focus:outline-none sm:text-md text-white"
                     placeholder="Search keywords... (trade, account)"
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}
@@ -61,10 +61,10 @@ const FAQ = () => {
                   {/* Render 'x' button inside the input if input is active and has content */}
                   {isActive && searchValue && (
                     <div
-                      className="absolute top-0 right-0 h-full flex items-center pr-3 text-white cursor-pointer"
+                      className="absolute top-0 right-0 h-full flex items-center pr-4 text-white cursor-pointer"
                       onClick={clearSearch}
                     >
-                      {"x"}
+                      <p className="text-xl">{"x"}</p>
                     </div>
                   )}
                 </div>

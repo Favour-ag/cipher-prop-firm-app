@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import rightArrow from "../assets/rightArrow.svg";
 import { dashboardSideNavListTop } from "../constants";
 import { dashboardSideNavListBottom } from "../constants";
 import Logo from "../assets/logo.svg";
 
 function SideNav() {
-  const [open, setOpen] = useState(true);
   const [activeLink, setActiveLink] = useState(null);
 
   const handleLinkClick = (url) => {
@@ -14,19 +12,8 @@ function SideNav() {
 
   return (
     <div
-      className={`bg-inherit w-100 fixed left-0 top-0 h-full ${
-        open ? "w-56 px-8 py-3" : "w-20 py-3 px-5"
-      } duration-300 relative border-r`}
+      className={`bg-inherit w-100 fixed left-0 top-0 h-full w-56 px-8 py-3 border-r`}
     >
-      <div
-        className={`rounded-full absolute -right-3 top-9 border border-white cursor-pointer w-8 h-8  flex justify-center items-center ${
-          open && "rotate-180"
-        }`}
-        onClick={() => setOpen(!open)}
-      >
-        <img src={rightArrow} alt="" className="w-4 h-4 text-black" />
-      </div>
-
       <div className="w-full h-full flex flex-col ">
         <a href="/">
           <img

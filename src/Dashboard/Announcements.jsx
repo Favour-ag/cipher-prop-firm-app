@@ -22,7 +22,7 @@ const Announcements = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: isVisible ? 1 : 0 }}
           transition={{ duration: 1 }}
-          className="flex flex-col w-full justify-center items-center "
+          className="flex flex-col w-full  justify-center items-center "
         >
           <img src={announcementBigo} alt="" />
           <p>You currently have no announcement</p>

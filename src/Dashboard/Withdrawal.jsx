@@ -14,7 +14,7 @@ const withdrawal = () => {
       <div className="fixed left-0 top-0 h-full">
         <SideNav />
       </div>
-      <div className="ml-56 w-full h-screen p-3 px-20 pt-4 space-y-12 overflow-y-auto">
+      <div className="ml-56 w-full h-screen p-3 pt-4 space-y-12 overflow-y-auto ">
         {/* Set overflow-y-auto to enable scrolling for the content */}
         <AccountInfo />
         <motion.div
