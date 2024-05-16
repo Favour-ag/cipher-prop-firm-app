@@ -36,7 +36,7 @@ import Trades from "../assets/dashboardIcons/trades.svg";
 import avgWinning from "../assets/dashboardIcons/avgWinningTradeArrow.svg";
 import avgLosing from "../assets/dashboardIcons/avgLosingTradeArrow.svg";
 import winrate from "../assets/dashboardIcons/winrate.svg";
-import { color } from "framer-motion";
+import iIcon from "../assets/dashboardIcons/iIcon.svg";
 
 // export const navigation = [
 //   {
@@ -417,5 +417,54 @@ export const accountAnalysis = [
   {
     title: "Biggest Loss",
     value: "$500.21",
+  },
+];
+export const profitTargetDashboard = [
+  {
+    icon: profitTarget,
+    text: "Profit Target",
+    icon2: iIcon,
+    amt: "$9,470.84",
+    profitTargetDashboard: "$5,000 Profit target",
+  },
+];
+export const maximumLossDashboard = [
+  {
+    icon: maximumLoss,
+    text: "Maximum Loss",
+    icon2: iIcon,
+    amt: "$0.00",
+    maximumLossDashboard: " $5,000.00 ",
+    threshold: " $45,000.",
+  },
+];
+export const dailyLossLimitDashboard = [
+  {
+    icon: maximumLoss,
+    text: "Daily Loss Limit",
+    icon2: iIcon,
+    amt: "$656.40",
+    dailyLossLimitDashboard: "$2,345.00",
+    todayStartingBalance: "$5,000",
+    threshold: " $44,000.",
+  },
+];
+export const netProfitLossDashboard = [
+  {
+    icon: profitTarget,
+    text: "Net Profit/Loss",
+    icon2: iIcon,
+    amt: "$9,470.84",
+    netProfitLossDashboard: "$5,000 Profit target",
+  },
+];
+export const minTradingDaysDashboard = [
+  {
+    icon: maximumLoss,
+    text: "Min. Trading days",
+    icon2: iIcon,
+    amt: "$0.00",
+    minTradingDaysDashboard: " $5,000.00 ",
+    threshold: " $45,000.",
   },
 ];
