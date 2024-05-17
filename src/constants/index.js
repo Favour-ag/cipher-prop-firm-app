@@ -37,6 +37,7 @@ import avgWinning from "../assets/dashboardIcons/avgWinningTradeArrow.svg";
 import avgLosing from "../assets/dashboardIcons/avgLosingTradeArrow.svg";
 import winrate from "../assets/dashboardIcons/winrate.svg";
 import iIcon from "../assets/dashboardIcons/iIcon.svg";
+import { color } from "framer-motion";
 
 // export const navigation = [
 //   {
@@ -467,4 +468,56 @@ export const minTradingDaysDashboard = [
     minTradingDaysDashboard: " $5,000.00 ",
     threshold: " $45,000.",
   },
+];
+export const dates = [
+  { text: "16 May" },
+  {
+    text: "15 May",
+  },
+  {
+    text: "12 May",
+  },
+  {
+    text: "9 May",
+  },
+  {
+    text: "8 May",
+  },
+];
+export const trades = [
+  { text: "1" },
+  {
+    text: "2",
+  },
+  {
+    text: "3",
+  },
+  {
+    text: "1",
+  },
+  {
+    text: "10",
+  },
+];
+export const lots = [
+  { text: "0.02" },
+  {
+    text: "0.04",
+  },
+  {
+    text: "45.00",
+  },
+  {
+    text: "0.01",
+  },
+  {
+    text: "350.01",
+  },
+];
+export const results = [
+  { text: "-$0.04" },
+  { text: "-$0.08" },
+  { text: "$1035.00" },
+  { text: "-$0.06" },
+  { text: "$8969.13" },
 ];

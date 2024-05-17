@@ -10,6 +10,10 @@ import {
   dailyLossLimitDashboard,
   netProfitLossDashboard,
   minTradingDaysDashboard,
+  dates,
+  trades,
+  lots,
+  results,
 } from "../constants";
 import { detailStatistics } from "../constants";
 import { accountAnalysis } from "../constants";
@@ -265,7 +269,7 @@ const RulesandFaq = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[35%] h-full bg-inherit">
+            <div className="w-[35%] h-100 bg-inherit">
               <div className="border rounded-xl w-full h-full px-6 py-3 space-y-3">
                 {/* ACCOUNT STATUS */}
                 <div>
@@ -316,8 +320,68 @@ const RulesandFaq = () => {
             </div>
           </div>
         </motion.div>
-        <div>
+        <div className="pl-16">
           <h1 className="text-4xl font-semibold">Trade History</h1>
+          <div className="flex space-x-44">
+            {/* dates */}
+            <div>
+              <h3 className="font-semibold text-xl">Rules</h3>
+              <div>
+                {dates.map((date, index) => (
+                  <div key={index} className="flex items-center text-xl">
+                    <p className="text-neutral-300 hover:text-white  md:mt-5">
+                      {date.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* trades */}
+            <div>
+              <h3 className="font-semibold text-xl">Rules</h3>
+              <div>
+                {trades.map((trade, index) => (
+                  <div key={index} className="flex items-center text-xl">
+                    <p className="text-neutral-300 hover:text-white  md:mt-5">
+                      {trade.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* lots */}
+            <div>
+              <h3 className="font-semibold text-xl">Rules</h3>
+              <div>
+                {lots.map((lot, index) => (
+                  <div key={index} className="flex items-center text-xl">
+                    <p className="text-neutral-300 hover:text-white  md:mt-5">
+                      {lot.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* results */}
+            <div>
+              <h3 className="font-semibold text-xl">Rules</h3>
+              <div>
+                {lots.map((result, index) => (
+                  <div key={index} className="flex items-center text-xl">
+                    <p
+                      className={`text-neutral-300 hover:text-white md:mt-5 ${
+                        result.color === "green"
+                          ? "text-green-500"
+                          : "text-red-500"
+                      }`}
+                    >
+                      {result.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
