@@ -7,9 +7,7 @@ const CipherChallenge = () => {
   const [isActive, setIsActive] = useState({
     id: "stepTwo",
   });
-  useEffect(() => {
-    console.log(isActive);
-  }, [isActive]);
+
   const hideShowDiv = (e) => {
     setIsActive({
       id: e.target.id,
@@ -19,9 +17,7 @@ const CipherChallenge = () => {
   const [priceButton, setPriceButton] = useState({
     id: "priceBtnOne",
   });
-  useEffect(() => {
-    console.log(feeButton);
-  }, [isActive]);
+
   const hideShowPriceButton = (e) => {
     setPriceButton({
       id: e.target.id,
@@ -29,22 +25,13 @@ const CipherChallenge = () => {
   };
 
   const [selectedOption, setSelectedOption] = useState("mt4");
-
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
 
   const [feeButton, setFeeButton] = useState({
-    id: "feeButtonOne",
+    id: "fee1",
   });
-  useEffect(() => {
-    console.log(feeButton);
-  }, [isActive]);
-  const hideShowFeeButton = (e) => {
-    setFeeButton({
-      id: e.target.id,
-    });
-  };
 
   return (
     <div
@@ -88,6 +75,7 @@ const CipherChallenge = () => {
           </a>
         </button>
       </div>
+      {/* RADIO BUTTON */}
       <div className="z-10 flex mt-7 space-x-2 md:space-x-6 text-sm md:text-xl">
         <label htmlFor="mt4" className="space-x-3">
           <input
@@ -144,9 +132,9 @@ const CipherChallenge = () => {
           <a
             id="priceBtnOne"
             className={
-              isActive.id === "stepOne" || "priceBtnOne" || "feeButtonOne"
+              priceButton.id === "priceBtnOne"
                 ? `stepOne cursor-pointer py-1 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
-                : "cursor-pointer"
+                : " cursor-pointer "
             }
             onClick={(e) => {
               hideShowPriceButton(e);
@@ -159,12 +147,12 @@ const CipherChallenge = () => {
           <a
             id="priceBtnTwo"
             className={
-              isActive.id === "priceBtnTwo"
-                ? `stepTwo cursor-pointer py-1 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
-                : "cursor-pointer"
+              priceButton.id === "priceBtnTwo"
+                ? `stepOne cursor-pointer py-1 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                : " cursor-pointer "
             }
             onClick={(e) => {
-              hideShowDiv(e);
+              hideShowPriceButton(e);
             }}
           >
             $10K
@@ -174,12 +162,12 @@ const CipherChallenge = () => {
           <a
             id="priceBtnThree"
             className={
-              isActive.id === "priceBtnThree"
-                ? `stepTwo cursor-pointer py-1 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
-                : "cursor-pointer"
+              priceButton.id === "priceBtnThree"
+                ? `stepOne cursor-pointer py-1 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                : " cursor-pointer "
             }
             onClick={(e) => {
-              hideShowDiv(e);
+              hideShowPriceButton(e);
             }}
           >
             $25K
@@ -187,14 +175,14 @@ const CipherChallenge = () => {
         </button>
         <button>
           <a
-            id="PriceBtnFour"
+            id="priceBtnFour"
             className={
-              isActive.id === "priceBtnFour"
-                ? `stepTwo cursor-pointer py-1 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
-                : "cursor-pointer"
+              priceButton.id === "priceBtnFour"
+                ? `stepOne cursor-pointer py-1 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                : " cursor-pointer "
             }
             onClick={(e) => {
-              hideShowDiv(e);
+              hideShowPriceButton(e);
             }}
           >
             $50K
@@ -204,12 +192,12 @@ const CipherChallenge = () => {
           <a
             id="priceBtnFive"
             className={
-              isActive.id === "priceBtnFive"
+              priceButton.id === "priceBtnFive"
                 ? `stepTwo cursor-pointer py-1 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
                 : "cursor-pointer"
             }
             onClick={(e) => {
-              hideShowDiv(e);
+              hideShowPriceButton(e);
             }}
           >
             $100K
@@ -328,26 +316,112 @@ const CipherChallenge = () => {
       {/* FEE  */}
       <div className="flex flex-col items-center text-xl space-y-1 mt-5">
         <h3>Fee</h3>
-        <p
-          className={
-            isActive.id === "stepOne" ||
-            isActive.id == "priceBtnOne" ||
-            isActive.id === "feeButtonOne"
-              ? `stepOne priceBtnOne feeButtonOne font-semibold text-4xl`
-              : "stepOne priceBtnOne feeButtonOne hidden"
-          }
-        >
-          $39
-        </p>
-        <p
-          className={
-            isActive.id === "stepTwo"
-              ? `stepTwo font-semibold text-4xl`
-              : "stepTwo hidden"
-          }
-        >
-          $29
-        </p>
+        {/* step1 */}
+        <div>
+          <p
+            id="fee1"
+            className={
+              isActive.id === "stepOne" && priceButton.id === "priceBtnOne"
+                ? `fee1 font-semibold text-4xl`
+                : "fee1 hidden"
+            }
+          >
+            $39
+          </p>
+          <p
+            id="fee2"
+            className={
+              isActive.id === "stepOne" && priceButton.id === "priceBtnTwo"
+                ? `fee2 font-semibold text-4xl`
+                : "fee2 hidden"
+            }
+          >
+            $66
+          </p>
+          <p
+            id="fee3"
+            className={
+              isActive.id === "stepOne" && priceButton.id === "priceBtnThree"
+                ? `fee3 font-semibold text-4xl`
+                : "fee3 hidden"
+            }
+          >
+            $157
+          </p>
+          <p
+            id="fee4"
+            className={
+              isActive.id === "stepOne" && priceButton.id === "priceBtnFour"
+                ? `fee4 font-semibold text-4xl`
+                : "fee4 hidden"
+            }
+          >
+            $299
+          </p>
+          <p
+            id="fee5"
+            className={
+              isActive.id === "stepOne" && priceButton.id === "priceBtnFive"
+                ? `fee5 font-semibold text-4xl`
+                : "fee5 hidden"
+            }
+          >
+            $399
+          </p>
+        </div>
+        {/* step2 */}
+        <div>
+          <p
+            id="fee1"
+            className={
+              isActive.id === "stepTwo" && priceButton.id === "priceBtnOne"
+                ? `fee1 font-semibold text-4xl`
+                : "fee1 hidden"
+            }
+          >
+            $29
+          </p>
+          <p
+            id="fee2"
+            className={
+              isActive.id === "stepTwo" && priceButton.id === "priceBtnTwo"
+                ? `fee2 font-semibold text-4xl`
+                : "fee2 hidden"
+            }
+          >
+            $57
+          </p>
+          <p
+            id="fee3"
+            className={
+              isActive.id === "stepTwo" && priceButton.id === "priceBtnThree"
+                ? `fee3 font-semibold text-4xl`
+                : "fee3 hidden"
+            }
+          >
+            $129
+          </p>
+          <p
+            id="fee4"
+            className={
+              isActive.id === "stepTwo" && priceButton.id === "priceBtnFour"
+                ? `fee4 font-semibold text-4xl`
+                : "fee4 hidden"
+            }
+          >
+            $229
+          </p>
+          <p
+            id="fee5"
+            className={
+              isActive.id === "stepTwo" && priceButton.id === "priceBtnFive"
+                ? `fee5 font-semibold text-4xl`
+                : "fee5 hidden"
+            }
+          >
+            $359
+          </p>
+        </div>
         <p className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl flex space-x-2 text-sm md:text-lg">
           <Link to="/payment"> Start Challenge </Link>
           <img
