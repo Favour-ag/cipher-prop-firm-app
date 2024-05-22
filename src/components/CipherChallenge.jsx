@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const CipherChallenge = () => {
   const [isActive, setIsActive] = useState({
-    id: "divTwo",
+    id: "stepTwo",
   });
   useEffect(() => {
     console.log(isActive);
@@ -15,17 +15,37 @@ const CipherChallenge = () => {
       id: e.target.id,
     });
   };
-  const [priceButton, setpriceButton] = useState({
-    id: "priceButtonOne",
+
+  const [priceButton, setPriceButton] = useState({
+    id: "priceBtnOne",
   });
   useEffect(() => {
-    console.log(priceButton);
+    console.log(feeButton);
   }, [isActive]);
   const hideShowPriceButton = (e) => {
-    setpriceButton({
+    setPriceButton({
       id: e.target.id,
     });
   };
+
+  const [selectedOption, setSelectedOption] = useState("mt4");
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+  const [feeButton, setFeeButton] = useState({
+    id: "feeButtonOne",
+  });
+  useEffect(() => {
+    console.log(feeButton);
+  }, [isActive]);
+  const hideShowFeeButton = (e) => {
+    setFeeButton({
+      id: e.target.id,
+    });
+  };
+
   return (
     <div
       id="cipherchallenge"
@@ -38,10 +58,10 @@ const CipherChallenge = () => {
         <div className="flex justify-center items-center">
           <button>
             <a
-              id="divOne"
+              id="stepOne"
               className={
-                isActive.id === "divOne"
-                  ? `divOne cursor-pointer py-2 px-6 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                isActive.id === "stepOne"
+                  ? `stepOne cursor-pointer py-2 px-6 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
                   : "cursor-pointer"
               }
               onClick={(e) => {
@@ -54,10 +74,10 @@ const CipherChallenge = () => {
         </div>
         <button>
           <a
-            id="divTwo"
+            id="stepTwo"
             className={
-              isActive.id === "divTwo"
-                ? `divTwo cursor-pointer py-2 px-6 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+              isActive.id === "stepTwo"
+                ? `stepTwo cursor-pointer py-2 px-6 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
                 : "cursor-pointer"
             }
             onClick={(e) => {
@@ -70,44 +90,139 @@ const CipherChallenge = () => {
       </div>
       <div className="z-10 flex mt-7 space-x-2 md:space-x-6 text-sm md:text-xl">
         <label htmlFor="mt4" className="space-x-3">
-          <input type="radio" name="mt4" id="" checked className="mr-1.5" />
+          <input
+            type="radio"
+            name="tradingPlatform"
+            id="mt4"
+            value="mt4"
+            checked={selectedOption === "mt4"}
+            onChange={handleOptionChange}
+            className="mr-1.5"
+          />
           MT-4
         </label>
-        <label htmlFor="mt5">
-          <input type="radio" name="mt5" id="" className="mr-1.5" />
+        <label htmlFor="mt5" className="space-x-3">
+          <input
+            type="radio"
+            name="tradingPlatform"
+            id="mt5"
+            value="mt5"
+            checked={selectedOption === "mt5"}
+            onChange={handleOptionChange}
+            className="mr-1.5"
+          />
           MT-5
         </label>
-        <label htmlFor="dxtrade">
-          <input type="radio" name="dxtrade" id="" className="mr-1.5" />
+        <label htmlFor="dxtrade" className="space-x-3">
+          <input
+            type="radio"
+            name="tradingPlatform"
+            id="dxtrade"
+            value="dxtrade"
+            checked={selectedOption === "dxtrade"}
+            onChange={handleOptionChange}
+            className="mr-1.5"
+          />
           DX TRADE
         </label>
-        <label htmlFor="tradelocker ">
-          <input type="radio" name="mt5" id="" className="mr-1.5" />
+        <label htmlFor="tradelocker" className="space-x-3">
+          <input
+            type="radio"
+            name="tradingPlatform"
+            id="tradelocker"
+            value="tradelocker"
+            checked={selectedOption === "tradelocker"}
+            onChange={handleOptionChange}
+            className="mr-1.5"
+          />
           TRADE LOCKER
         </label>
       </div>
 
-      <div className="flex z-10 border rounded-md w-[370px] md:w-[500px] p-2 mt-4 md:mt-7 bg-[#FFFFFF33] space-x-8 md:space-x-14 items-center lg:mb-4">
+      <div className="flex z-10 border rounded-md w-[370px] md:w-[500px] p-2 mt-4 md:mt-7 bg-[#FFFFFF33] space-x-8 md:space-x-12 justify-center items-center lg:mb-4">
         <button>
           <a
-            href="#"
-            className="py-1 px-3 md:px-6 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
+            id="priceBtnOne"
+            className={
+              isActive.id === "stepOne" || "priceBtnOne" || "feeButtonOne"
+                ? `stepOne cursor-pointer py-1 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                : "cursor-pointer"
+            }
+            onClick={(e) => {
+              hideShowPriceButton(e);
+            }}
           >
             $5K
           </a>
         </button>
-        <p>$10K</p>
-        <p>$25K</p>
-        <p>$50K</p>
-        <p>$100K</p>
+        <button>
+          <a
+            id="priceBtnTwo"
+            className={
+              isActive.id === "priceBtnTwo"
+                ? `stepTwo cursor-pointer py-1 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                : "cursor-pointer"
+            }
+            onClick={(e) => {
+              hideShowDiv(e);
+            }}
+          >
+            $10K
+          </a>
+        </button>
+        <button>
+          <a
+            id="priceBtnThree"
+            className={
+              isActive.id === "priceBtnThree"
+                ? `stepTwo cursor-pointer py-1 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                : "cursor-pointer"
+            }
+            onClick={(e) => {
+              hideShowDiv(e);
+            }}
+          >
+            $25K
+          </a>
+        </button>
+        <button>
+          <a
+            id="PriceBtnFour"
+            className={
+              isActive.id === "priceBtnFour"
+                ? `stepTwo cursor-pointer py-1 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                : "cursor-pointer"
+            }
+            onClick={(e) => {
+              hideShowDiv(e);
+            }}
+          >
+            $50K
+          </a>
+        </button>
+        <button>
+          <a
+            id="priceBtnFive"
+            className={
+              isActive.id === "priceBtnFive"
+                ? `stepTwo cursor-pointer py-1 px-4  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                : "cursor-pointer"
+            }
+            onClick={(e) => {
+              hideShowDiv(e);
+            }}
+          >
+            $100K
+          </a>
+        </button>
       </div>
       {/* background blur */}
       <div className="absolute w-[600px] h-[400px] bg-[#023564] rounded-full translate-x-[-50%] translate-y-[-50%] blur-[100px] mt-[500px] right-0"></div>
       {/* Table */}
       <div
         className={
-          isActive.id === "divTwo"
-            ? `divTwo w-full flex overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide md:grid md:grid-cols-4 gap-10 z-10  place-items-center px-8	md:px-24 mb-5 md:mb-0 ease-in duration-900 text-sm md:text-base `
+          isActive.id === "stepTwo"
+            ? `stepTwo w-full flex overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide md:grid md:grid-cols-4 gap-10 z-10  place-items-center px-8	md:px-24 mb-5 md:mb-0 ease-in duration-900 text-sm md:text-base `
             : "flex lg:space-x-32 z-10"
         }
       >
@@ -134,7 +249,7 @@ const CipherChallenge = () => {
         {/* Phase1 */}
         <div
           className={
-            isActive.id === "divTwo" ? `divTwo space-y-4 ` : "divTwo hidden"
+            isActive.id === "stepTwo" ? `stepTwo space-y-4 ` : "stepTwo hidden"
           }
         >
           <h3 className="text-lg md:text-xl md:text-md font-semibold  md: text-slate-400">
@@ -154,7 +269,7 @@ const CipherChallenge = () => {
         {/* Phase4 */}
         <div
           className={
-            isActive.id === "divOne" ? `divOne space-y-4 ` : "divOne hidden"
+            isActive.id === "stepOne" ? `stepOne space-y-4 ` : "stepOne hidden"
           }
         >
           <h3 className="text-lg md:text-xl md:text-md font-semibold  md: text-slate-400">
@@ -174,7 +289,7 @@ const CipherChallenge = () => {
         {/* Phase2 */}
         <div
           className={
-            isActive.id === "divTwo" ? `divTwo space-y-4 ` : "divTwo hidden"
+            isActive.id === "stepTwo" ? `stepTwo space-y-4 ` : "stepTwo hidden"
           }
         >
           <h3 className="text-lg md:text-xl md:text-md font-semibold  md: text-slate-400">
@@ -210,22 +325,25 @@ const CipherChallenge = () => {
           </div>
         </div>
       </div>
+      {/* FEE  */}
       <div className="flex flex-col items-center text-xl space-y-1 mt-5">
         <h3>Fee</h3>
         <p
           className={
-            isActive.id === "divOne"
-              ? `divOne font-semibold text-4xl`
-              : "divOne hidden"
+            isActive.id === "stepOne" ||
+            isActive.id == "priceBtnOne" ||
+            isActive.id === "feeButtonOne"
+              ? `stepOne priceBtnOne feeButtonOne font-semibold text-4xl`
+              : "stepOne priceBtnOne feeButtonOne hidden"
           }
         >
           $39
         </p>
         <p
           className={
-            isActive.id === "divTwo"
-              ? `divTwo font-semibold text-4xl`
-              : "divTwo hidden"
+            isActive.id === "stepTwo"
+              ? `stepTwo font-semibold text-4xl`
+              : "stepTwo hidden"
           }
         >
           $29
