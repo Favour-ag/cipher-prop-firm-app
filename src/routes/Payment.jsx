@@ -259,7 +259,7 @@ const Payment = () => {
                     sm:text-md text-white w-[450px] placeholder:text-slate-400"
                             placeholder="Credit or Debit Card"
                           />
-                          <div className="flex mr-8 md:mr-0 w-[100px] space-x-1 cursor-pointer">
+                          <div className="flex mr-8 md:mr-16 w-[100px] space-x-1 cursor-pointer">
                             <img src={visaCreditCard} alt="visa" />
                             <img src={masterCard} alt="mastercard" />
                           </div>
