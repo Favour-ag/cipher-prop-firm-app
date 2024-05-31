@@ -9,8 +9,35 @@ import tether from "../assets/icons/tether.svg";
 import usdc from "../assets/icons/usdc.svg";
 import Accordion from "../components/Accordion";
 import { accordionData } from "../constants";
+import { useState } from "react";
+import ReactFlagsSelect from "react-flags-select";
 
 const Payment = () => {
+  const [isActive, setIsActive] = useState({
+    id: "stepTwo",
+  });
+
+  const hideShowDiv = (e) => {
+    setIsActive({
+      id: e.target.id,
+    });
+  };
+  const [selectedOption, setSelectedOption] = useState("mt4");
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+  const [priceButton, setPriceButton] = useState({
+    id: "priceBtnOne",
+  });
+
+  const hideShowPriceButton = (e) => {
+    setPriceButton({
+      id: e.target.id,
+    });
+  };
+  const [selected, setSelected] = useState("");
+
   return (
     <>
       <Navbar />
@@ -94,15 +121,24 @@ const Payment = () => {
                   </div>
                 </div>
                 <div className="px-3 flex flex-col md:flex-row gap-3 mt-3">
-                  <div className="w-full md:w-1/2">
-                    <select className="bg-inherit border placeholder:text-slate-500 rounded-md p-2  px-2 md:py-4 w-full text-slate-400">
+                  <div className="w-full md:w-1/2 border rounded-md">
+                    {/* <select className="bg-inherit border placeholder:text-slate-500 rounded-md p-2  px-2 md:py-4 w-full text-slate-400">
                       <option value="" className="mr-2">
                         Country
                       </option>
                       <option value="">1</option>
                       <option value="">1</option>
                       <option value="">1</option>
-                    </select>
+                    </select> */}
+                    <ReactFlagsSelect
+                      selected={selected}
+                      onSelect={(code) => setSelected(code)}
+                      placeholder={"Select Country"}
+                      searchable
+                      searchPlaceholder="Search countries"
+                      selectedSize={18}
+                      className="text-black"
+                    />
                   </div>
                   <div className="w-full md:w-1/2">
                     <select className="bg-inherit border placeholder:text-slate-500 rounded-md px-2 md:py-4 w-full text-slate-400 p-2">
@@ -126,53 +162,88 @@ const Payment = () => {
                       <p>Steps</p>
                       <div className="flex space-x-8  text-sm">
                         <div className="flex justify-center items-center">
-                          <p>1 Step</p>
+                          <button>
+                            <a
+                              id="stepOne"
+                              className={
+                                isActive.id === "stepOne"
+                                  ? `stepOne cursor-pointer py-2 px-3 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                                  : "cursor-pointer"
+                              }
+                              onClick={(e) => {
+                                hideShowDiv(e);
+                              }}
+                            >
+                              1 Step
+                            </a>
+                          </button>
                         </div>
-                        <a
-                          href="#"
-                          className="py-2 px-3 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
-                        >
-                          2 Step
-                        </a>
+                        <button>
+                          <a
+                            id="stepTwo"
+                            className={
+                              isActive.id === "stepTwo"
+                                ? `stepOne cursor-pointer py-2 px-3 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                                : "cursor-pointer"
+                            }
+                            onClick={(e) => {
+                              hideShowDiv(e);
+                            }}
+                          >
+                            2 Step
+                          </a>
+                        </button>
                       </div>
                     </div>
 
                     <div className="flex flex-col md:flex-row md:justify-between items-center mt-3 ">
                       <p>Platfrom</p>
                       <div className="hidden z-10 md:flex space-x-2 lg:space-x-6 text-sm ">
-                        <label htmlFor="mt4" className="space-x-3 flex">
+                        <label htmlFor="mt4" className="space-x-3">
                           <input
                             type="radio"
-                            name="mt4"
-                            id=""
-                            className="mr-1"
+                            name="tradingPlatform"
+                            id="mt4"
+                            value="mt4"
+                            checked={selectedOption === "mt4"}
+                            onChange={handleOptionChange}
+                            className="mr-1.5"
                           />
                           MT-4
                         </label>
-                        <label htmlFor="mt5" className="flex">
+                        <label htmlFor="mt5" className="space-x-3">
                           <input
                             type="radio"
-                            name="mt5"
-                            id=""
-                            className="mr-1"
+                            name="tradingPlatform"
+                            id="mt5"
+                            value="mt5"
+                            checked={selectedOption === "mt5"}
+                            onChange={handleOptionChange}
+                            className="mr-1.5"
                           />
                           MT-5
                         </label>
-                        <label htmlFor="dxtrade">
+                        <label htmlFor="dxtrade" className="space-x-3">
                           <input
                             type="radio"
-                            name="dxtrade"
-                            id=""
-                            className="mr-1"
+                            name="tradingPlatform"
+                            id="dxtrade"
+                            value="dxtrade"
+                            checked={selectedOption === "dxtrade"}
+                            onChange={handleOptionChange}
+                            className="mr-1.5"
                           />
                           DX TRADE
                         </label>
-                        <label htmlFor="tradelocker">
+                        <label htmlFor="tradelocker" className="space-x-3">
                           <input
                             type="radio"
-                            name="mt5"
-                            id=""
-                            className="mr-1"
+                            name="tradingPlatform"
+                            id="tradelocker"
+                            value="tradelocker"
+                            checked={selectedOption === "tradelocker"}
+                            onChange={handleOptionChange}
+                            className="mr-1.5"
                           />
                           TRADE LOCKER
                         </label>
@@ -199,16 +270,81 @@ const Payment = () => {
                     <div className="flex flex-col md:flex-row md:justify-between items-center mt-3">
                       <p>Account Size</p>
                       <div className="hidden md:flex rounded-lg space-x-10  items-center text-base">
-                        <a
-                          href="#"
-                          className="py-1 px-3 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
-                        >
-                          $5K
-                        </a>
-                        <p>$10K</p>
-                        <p>$25K</p>
-                        <p>$50K</p>
-                        <p>$100K</p>
+                        <button>
+                          <a
+                            id="priceBtnOne"
+                            className={
+                              priceButton.id === "priceBtnOne"
+                                ? `stepOne py-1 px-3 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                                : " cursor-pointer "
+                            }
+                            onClick={(e) => {
+                              hideShowPriceButton(e);
+                            }}
+                          >
+                            $5K
+                          </a>
+                        </button>
+                        <button>
+                          <a
+                            id="priceBtnTwo"
+                            className={
+                              priceButton.id === "priceBtnTwo"
+                                ? `stepOne py-1 px-3 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                                : " cursor-pointer "
+                            }
+                            onClick={(e) => {
+                              hideShowPriceButton(e);
+                            }}
+                          >
+                            $10K
+                          </a>
+                        </button>
+                        <button>
+                          <a
+                            id="priceBtnThree"
+                            className={
+                              priceButton.id === "priceBtnThree"
+                                ? `stepOne cursor-pointer py-1 px-3 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                                : " cursor-pointer "
+                            }
+                            onClick={(e) => {
+                              hideShowPriceButton(e);
+                            }}
+                          >
+                            $25K
+                          </a>
+                        </button>
+                        <button>
+                          <a
+                            id="priceBtnFour"
+                            className={
+                              priceButton.id === "priceBtnFour"
+                                ? `stepOne cursor-pointer py-1 px-3 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                                : " cursor-pointer "
+                            }
+                            onClick={(e) => {
+                              hideShowPriceButton(e);
+                            }}
+                          >
+                            $50K
+                          </a>
+                        </button>
+                        <button>
+                          <a
+                            id="priceBtnFive"
+                            className={
+                              priceButton.id === "priceBtnFive"
+                                ? `stepTwo py-1 px-3 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl`
+                                : "cursor-pointer"
+                            }
+                            onClick={(e) => {
+                              hideShowPriceButton(e);
+                            }}
+                          >
+                            $100K
+                          </a>
+                        </button>
                       </div>
                       {/* Account Size Screen */}
                       <div className="block md:hidden">
