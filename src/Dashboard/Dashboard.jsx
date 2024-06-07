@@ -15,8 +15,21 @@ import {
   lots,
   results,
 } from "../constants";
-import { detailStatistics } from "../constants";
-import { accountAnalysis } from "../constants";
+import { detailStatistics, summaryForTheDay } from "../constants";
+import {
+  accountAnalysis,
+  Symbols,
+  Type,
+  OpenDate,
+  Open,
+  ClosedDate,
+  Close,
+  TP,
+  SL,
+  LotsTradingHistory,
+  Commission,
+  Profit,
+} from "../constants";
 import Chart from "../components/Chart";
 
 const RulesandFaq = () => {
@@ -44,7 +57,7 @@ const RulesandFaq = () => {
           transition={{ duration: 1 }}
         >
           <div className="w-full h-screen flex justify-center items-center space-x-5">
-            <div className="w-[65%] h-full space-y-3">
+            <div className="w-[60%] h-full space-y-3">
               <div className="w-full h-[50%] ">
                 <Chart />
               </div>
@@ -195,43 +208,6 @@ const RulesandFaq = () => {
                   </div>
                   <div className="bg-[#01192F] border rounded-lg h-[150px] p-2">
                     <div>
-                      {dailyLossLimitDashboard.map((dailyLossLimit, index) => (
-                        <div key={index} className="flex flex-col">
-                          <div className="flex justify-between">
-                            <div className="flex space-x-1">
-                              <img
-                                src={dailyLossLimit.icon}
-                                alt="profitTarget"
-                                className="w-4 h-4 "
-                              />
-                              <p className="text-sm">{dailyLossLimit.text}</p>
-                            </div>
-                            <div>
-                              <img
-                                src={dailyLossLimit.icon2}
-                                alt="maxLoss"
-                                className="w-4 h-4 "
-                              />
-                            </div>
-                          </div>
-                          <p className="text-xl ">{`${dailyLossLimit.amt} left`}</p>
-                          <div>
-                            <div class="font-medium flex justify-end text-xs">
-                              72.43%
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-1.5  dark:bg-gray-700">
-                              <div class="bg-[#E00E5D] h-1.5 rounded-full w-[72%]"></div>
-                            </div>
-                          </div>
-                          <p className="text-xs">{`Maximum ${dailyLossLimit.dailyLossLimitDashboard} loss`}</p>
-                          <p className="text-xs">{`Today's starting balance/equity ${dailyLossLimit.todayStartingBalance} `}</p>
-                          <p className="text-xs">{`Threshold at: ${dailyLossLimit.dailyLossLimitDashboard}`}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="bg-[#01192F] border rounded-lg h-[150px] p-2">
-                    <div>
                       {minTradingDaysDashboard.map((minTradingDay, index) => (
                         <div key={index} className="flex flex-col">
                           <div className="flex justify-between">
@@ -269,10 +245,10 @@ const RulesandFaq = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[35%] h-100 bg-inherit">
-              <div className="border rounded-xl w-full h-full px-6 py-3 space-y-3">
+            <div className="w-[40%] h-100 bg-inherit">
+              <div className="rounded-xl w-full h-full space-y-3">
                 {/* ACCOUNT STATUS */}
-                <div>
+                <div className="border p-4 rounded-xl">
                   <h1 className="font-semibold">Account Status</h1>
                   <div className="flex justify-between">
                     <p>Status</p>
@@ -290,7 +266,7 @@ const RulesandFaq = () => {
                   </div>
                 </div>
                 {/* DETAIL STATISTICS */}
-                <div>
+                <div className="border p-4 rounded-xl">
                   <h1 className="font-semibold">Detail Statistics</h1>
                   <div>
                     {detailStatistics.map((detail, index) => (
@@ -305,7 +281,7 @@ const RulesandFaq = () => {
                   </div>
                 </div>
                 {/* ACCOUNT ANALYSIS */}
-                <div>
+                <div className="border p-4 rounded-xl">
                   <h1 className="font-semibold">Account Analysis</h1>
                   <div>
                     {accountAnalysis.map((analysis, index) => (
@@ -320,62 +296,327 @@ const RulesandFaq = () => {
             </div>
           </div>
         </motion.div>
-        <div className="pl-16">
-          <h1 className="text-4xl font-semibold">Trade History</h1>
-          <div className="flex space-x-44">
-            {/* dates */}
-            <div>
-              <h3 className="font-semibold text-xl">Rules</h3>
+        {/* Daily Summary */}
+        <div className="w-full flex">
+          <div className="pl-5 w-[60%] ">
+            <h1 className="text-4xl font-semibold mb-3">Daily Summary</h1>
+            <div className="flex space-x-20">
+              {/* dates */}
               <div>
-                {dates.map((date, index) => (
+                <h3 className="font-semibold text-xl">Dates</h3>
+                <div>
+                  {dates.map((date, index) => (
+                    <div key={index} className="flex items-center text-xl">
+                      <p className="text-neutral-300 hover:text-white  md:mt-5">
+                        {date.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* trades */}
+              <div>
+                <h3 className="font-semibold text-xl">Trades</h3>
+                <div>
+                  {trades.map((trade, index) => (
+                    <div key={index} className="flex items-center text-xl">
+                      <p className="text-neutral-300 hover:text-white  md:mt-5">
+                        {trade.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* lots */}
+              <div>
+                <h3 className="font-semibold text-xl">Lots</h3>
+                <div>
+                  {lots.map((lot, index) => (
+                    <div key={index} className="flex items-center text-xl">
+                      <p className="text-neutral-300 hover:text-white  md:mt-5">
+                        {lot.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* results */}
+              <div>
+                <h3 className="font-semibold text-xl">Results</h3>
+                <div>
+                  {results.map((result, index) => (
+                    <div key={index} className="flex items-center text-xl">
+                      <p
+                        className="text-neutral-300 hover:text-white md:mt-5 "
+                        style={{ color: result.color }}
+                      >
+                        {result.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Win Ratio and Profit Factor divs */}
+          <div className="w-[40%] h-full pl-2 py-4 space-y-3">
+            <div className="bg-[#01192F] border w-full rounded-lg  h-[80px] p-2">
+              <div>
+                {profitTargetDashboard.map((profit, index) => (
+                  <div key={index} className="flex flex-col">
+                    <div className="flex justify-between">
+                      <p>Win Ratio</p>
+                      <img
+                        src={profit.icon2}
+                        alt="profitTarget"
+                        className="w-4 h-4 "
+                      />
+                    </div>
+                    <div>
+                      <p>0.00%</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-[#01192F] border w-full rounded-lg  h-[80px] p-2">
+              <div>
+                {profitTargetDashboard.map((profit, index) => (
+                  <div key={index} className="flex flex-col">
+                    <div className="flex justify-between">
+                      <p>Profit Factor</p>
+                      <img
+                        src={profit.icon2}
+                        alt="profitTarget"
+                        className="w-4 h-4 "
+                      />
+                    </div>
+                    <div>
+                      <p>0.0</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Calender */}
+        <div className="w-full flex">
+          <div className="pl-5 w-[55%] ">
+            <h1 className="text-4xl font-semibold mb-3">Daily Summary</h1>
+            <div className="flex space-x-20">
+              {/* dates */}
+              <div>
+                <h3 className="font-semibold text-xl">Dates</h3>
+                <div>
+                  {dates.map((date, index) => (
+                    <div key={index} className="flex items-center text-xl">
+                      <p className="text-neutral-300 hover:text-white  md:mt-5">
+                        {date.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* trades */}
+              <div>
+                <h3 className="font-semibold text-xl">Trades</h3>
+                <div>
+                  {trades.map((trade, index) => (
+                    <div key={index} className="flex items-center text-xl">
+                      <p className="text-neutral-300 hover:text-white  md:mt-5">
+                        {trade.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* lots */}
+              <div>
+                <h3 className="font-semibold text-xl">Lots</h3>
+                <div>
+                  {lots.map((lot, index) => (
+                    <div key={index} className="flex items-center text-xl">
+                      <p className="text-neutral-300 hover:text-white  md:mt-5">
+                        {lot.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Win Ratio and Profit Factor divs */}
+          <div className="w-[45%] h-full pl-2 py-4 space-y-3">
+            <div className="bg-[#01192F] border w-full rounded-lg  h-[320px] p-2">
+              <div className="p-3 ">
+                <h1 className="font-semibold text-center text-lg">
+                  Account Analysis
+                </h1>
+                <div>
+                  {summaryForTheDay.map((summary, index) => (
+                    <div
+                      key={index}
+                      className="flex justify-between mt-3.5  p-1"
+                      style={{ backgroundColor: summary.color }}
+                    >
+                      <p>{summary.title}</p>
+                      <p>{summary.value}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Trades History*/}
+        <div className="pl-5">
+          <h1 className="text-4xl font-semibold mb-4">Trade History</h1>
+          <div className="flex space-x-10  overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide cursor-pointer mb-5">
+            {/* Symbol */}
+            <div>
+              <h3 className="font-semibold text-xl">Symbol</h3>
+              <div>
+                {Symbols.map((symbol, index) => (
                   <div key={index} className="flex items-center text-xl">
                     <p className="text-neutral-300 hover:text-white  md:mt-5">
-                      {date.text}
+                      {symbol.text}
                     </p>
                   </div>
                 ))}
               </div>
             </div>
-            {/* trades */}
+            {/* Type */}
             <div>
-              <h3 className="font-semibold text-xl">Rules</h3>
+              <h3 className="font-semibold text-xl">Type</h3>
               <div>
-                {trades.map((trade, index) => (
-                  <div key={index} className="flex items-center text-xl">
-                    <p className="text-neutral-300 hover:text-white  md:mt-5">
-                      {trade.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* lots */}
-            <div>
-              <h3 className="font-semibold text-xl">Rules</h3>
-              <div>
-                {lots.map((lot, index) => (
-                  <div key={index} className="flex items-center text-xl">
-                    <p className="text-neutral-300 hover:text-white  md:mt-5">
-                      {lot.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* results */}
-            <div>
-              <h3 className="font-semibold text-xl">Rules</h3>
-              <div>
-                {lots.map((result, index) => (
+                {Type.map((type, index) => (
                   <div key={index} className="flex items-center text-xl">
                     <p
-                      className={`text-neutral-300 hover:text-white md:mt-5 ${
-                        result.color === "green"
-                          ? "text-green-500"
-                          : "text-red-500"
-                      }`}
+                      className="text-neutral-300 hover:text-white  md:mt-5"
+                      style={{ color: type.color }}
                     >
-                      {result.text}
+                      {type.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* OpenDate */}
+            <div>
+              <h3 className="font-semibold text-xl">Open Date</h3>
+              <div>
+                {OpenDate.map((opendate, index) => (
+                  <div key={index} className="flex items-center text-xl">
+                    <p className="text-neutral-300 hover:text-white  md:mt-5">
+                      {opendate.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Open */}
+            <div>
+              <h3 className="font-semibold text-xl">Open</h3>
+              <div>
+                {Open.map((open, index) => (
+                  <div key={index} className="flex items-center text-xl">
+                    <p className="text-neutral-300 hover:text-white  md:mt-5">
+                      {open.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Closed Date */}
+            <div>
+              <h3 className="font-semibold text-xl">Closed Date</h3>
+              <div>
+                {ClosedDate.map((closedate, index) => (
+                  <div key={index} className="flex items-center text-xl">
+                    <p className="text-neutral-300 hover:text-white  md:mt-5">
+                      {closedate.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Close */}
+            <div>
+              <h3 className="font-semibold text-xl">Close</h3>
+              <div>
+                {Close.map((close, index) => (
+                  <div key={index} className="flex items-center text-xl">
+                    <p className="text-neutral-300 hover:text-white  md:mt-5">
+                      {close.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* TP*/}
+            <div>
+              <h3 className="font-semibold text-xl">TP</h3>
+              <div>
+                {TP.map((tp, index) => (
+                  <div key={index} className="flex items-center text-xl">
+                    <p className="text-neutral-300 hover:text-white  md:mt-5">
+                      {tp.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* SL */}
+            <div>
+              <h3 className="font-semibold text-xl">SL</h3>
+              <div>
+                {SL.map((sl, index) => (
+                  <div key={index} className="flex items-center text-xl">
+                    <p className="text-neutral-300 hover:text-white  md:mt-5">
+                      {sl.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Lots */}
+            <div>
+              <h3 className="font-semibold text-xl">Lots</h3>
+              <div>
+                {LotsTradingHistory.map((lotstradinghistory, index) => (
+                  <div key={index} className="flex items-center text-xl">
+                    <p className="text-neutral-300 hover:text-white  md:mt-5">
+                      {lotstradinghistory.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Commission */}
+            <div>
+              <h3 className="font-semibold text-xl">Commission</h3>
+              <div>
+                {Commission.map((commission, index) => (
+                  <div key={index} className="flex items-center text-xl">
+                    <p className="text-neutral-300 hover:text-white  md:mt-5">
+                      {commission.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Profit */}
+            <div>
+              <h3 className="font-semibold text-xl">Profit</h3>
+              <div>
+                {Profit.map((profit, index) => (
+                  <div key={index} className="flex items-center text-xl">
+                    <p
+                      className="text-neutral-300 hover:text-white  md:mt-5"
+                      style={{ color: profit.color }}
+                    >
+                      {profit.text}
                     </p>
                   </div>
                 ))}

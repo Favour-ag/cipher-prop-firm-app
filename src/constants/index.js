@@ -39,34 +39,6 @@ import winrate from "../assets/dashboardIcons/winrate.svg";
 import iIcon from "../assets/dashboardIcons/iIcon.svg";
 import { color } from "framer-motion";
 
-// export const navigation = [
-//   {
-//     id: "0",
-//     title: "Home",
-//     url: "#home",
-//   },
-//   {
-//     id: "1",
-//     title: "About Us",
-//     url: "#about-us",
-//   },
-//   {
-//     id: "2",
-//     title: "Affliate Program",
-//     url: "#affliate-program",
-//   },
-//   {
-//     id: "3",
-//     title: "FAQ",
-//     url: "#faq",
-//   },
-//   {
-//     id: "4",
-//     title: "Contact Us",
-//     url: "#contact-us",
-//   },
-// ];
-
 export const chooseCipher = [
   {
     icon: icon1,
@@ -515,9 +487,150 @@ export const lots = [
   },
 ];
 export const results = [
-  { text: "-$0.04" },
-  { text: "-$0.08" },
-  { text: "$1035.00" },
-  { text: "-$0.06" },
-  { text: "$8969.13" },
+  { text: "-$0.04", color: "#FF0B0B" },
+  { text: "-$0.08", color: "#FF0B0B" },
+  { text: "$1035.00", color: "#177A0E" },
+  { text: "-$0.06", color: "#177A0E" },
+  { text: "$8969.13", color: "#FF0B0B" },
+];
+
+export const Symbols = [
+  { text: "CADJPY" },
+  {
+    text: "SPX500",
+  },
+  {
+    text: "SPX500",
+  },
+  {
+    text: "SPX500",
+  },
+  {
+    text: "CADJPY",
+  },
+];
+export const Type = [
+  { text: "Buy", color: "#0072D8" },
+  {
+    text: "Buy",
+    color: "#0072D8",
+  },
+  {
+    text: "Sell",
+    color: "#FF0B0B",
+  },
+  {
+    text: "Sell",
+    color: "#FF0B0B",
+  },
+  {
+    text: "Buy",
+    color: "#0072D8",
+  },
+];
+export const OpenDate = [
+  { text: "Nov 20, 2023 2:01 AM" },
+  { text: "Nov 20, 2023 2:01 AM" },
+  { text: "Nov 20, 2023 2:01 AM" },
+  { text: "Nov 20, 2023 2:01 AM" },
+  { text: "Nov 20, 2023 2:01 AM" },
+];
+export const Open = [
+  { text: "100.00" },
+  { text: "100.00" },
+  { text: "100.00" },
+  { text: "100.00" },
+  { text: "100.00" },
+];
+export const ClosedDate = [
+  { text: "Apr 20, 2024 2:01 AM" },
+  { text: "Apr 20, 2024 2:01 AM" },
+  { text: "Apr 20, 2024 2:01 AM" },
+  { text: "Apr 20, 2024 2:01 AM" },
+  { text: "Apr 20, 2024 2:01 AM" },
+];
+export const Close = [
+  { text: "120.00" },
+  { text: "120.00" },
+  { text: "120.00" },
+  { text: "120.00" },
+  { text: "120.00" },
+];
+export const TP = [
+  { text: "107.080" },
+  { text: "107.080" },
+  { text: "" },
+  { text: "107.080" },
+  { text: "107.080" },
+];
+export const SL = [
+  { text: "" },
+  { text: "" },
+  { text: "1809.00" },
+  { text: "" },
+  { text: "" },
+];
+export const LotsTradingHistory = [
+  { text: "1.78" },
+  { text: "1.78" },
+  { text: "1.78" },
+  { text: "1.78" },
+  { text: "1.78" },
+];
+export const Commission = [
+  { text: "-3.56" },
+  { text: "-3.56" },
+  { text: "-3.56" },
+  { text: "-3.56" },
+  { text: "-3.56" },
+];
+export const Profit = [
+  {
+    text: "-$0.04",
+    color: "#0072D8",
+  },
+  {
+    text: "-$0.08",
+    color: "#0072D8",
+  },
+  {
+    text: "$1035.00",
+    color: "#177A0E",
+  },
+  {
+    text: "-$0.08",
+    color: "#0072D8",
+  },
+  {
+    text: "$8969.13",
+    color: "#177A0E",
+  },
+];
+
+export const summaryForTheDay = [
+  {
+    title: "Date",
+    value: "Thurs 2 May",
+    color: "black",
+  },
+  {
+    title: "Ending Balnace",
+    value: "$9,083.84",
+    color: "black",
+  },
+  {
+    title: "Trades Taken",
+    value: "1",
+    color: "black",
+  },
+  {
+    title: "Lots used",
+    value: "1.18",
+    color: "black",
+  },
+  {
+    title: "Profit",
+    value: "$2,000.01",
+    color: "green",
+  },
 ];
