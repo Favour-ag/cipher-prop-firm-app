@@ -428,9 +428,9 @@ const RulesandFaq = () => {
           <div className="pl-5 w-[55%] ">
             <Calender />
           </div>
-          {/* Win Ratio and Profit Factor divs */}
-          <div className="w-[45%] h-full pl-2 py-4 space-y-3">
-            <div className="bg-[#01192F] border w-full rounded-lg  h-[320px] p-2">
+          {/* Account Analysis*/}
+          <div className="w-[45%] h-full pl-2  space-y-3">
+            <div className="bg-[#01192F] border w-full rounded-lg  h-[350px] p-2">
               <div className="p-3 ">
                 <h1 className="font-semibold text-center text-lg">
                   Account Analysis
