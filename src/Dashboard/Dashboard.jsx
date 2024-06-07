@@ -423,6 +423,7 @@ const RulesandFaq = () => {
             </div>
           </div>
         </div>
+        {/* Calendar div */}
         <div className="w-full flex">
           <div className="pl-5 w-[55%] ">
             <Calender />
