@@ -431,7 +431,7 @@ const RulesandFaq = () => {
           {/* Account Analysis*/}
           <div className="w-[45%] h-full pl-2  space-y-3">
             <div className="bg-[#01192F] border w-full rounded-lg  h-[350px] p-2">
-              <div className="p-3 ">
+              <div className="p-3">
                 <h1 className="font-semibold text-center text-lg">
                   Account Analysis
                 </h1>
