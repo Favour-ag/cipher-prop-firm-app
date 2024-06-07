@@ -31,7 +31,7 @@ import {
   Profit,
 } from "../constants";
 import Chart from "../components/Chart";
-
+import Calender from "../components/Calender";
 const RulesandFaq = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -425,48 +425,7 @@ const RulesandFaq = () => {
         </div>
         <div className="w-full flex">
           <div className="pl-5 w-[55%] ">
-            <h1 className="text-4xl font-semibold mb-3">Daily Summary</h1>
-            <div className="flex space-x-20">
-              {/* dates */}
-              <div>
-                <h3 className="font-semibold text-xl">Dates</h3>
-                <div>
-                  {dates.map((date, index) => (
-                    <div key={index} className="flex items-center text-xl">
-                      <p className="text-neutral-300 hover:text-white  md:mt-5">
-                        {date.text}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* trades */}
-              <div>
-                <h3 className="font-semibold text-xl">Trades</h3>
-                <div>
-                  {trades.map((trade, index) => (
-                    <div key={index} className="flex items-center text-xl">
-                      <p className="text-neutral-300 hover:text-white  md:mt-5">
-                        {trade.text}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* lots */}
-              <div>
-                <h3 className="font-semibold text-xl">Lots</h3>
-                <div>
-                  {lots.map((lot, index) => (
-                    <div key={index} className="flex items-center text-xl">
-                      <p className="text-neutral-300 hover:text-white  md:mt-5">
-                        {lot.text}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <Calender />
           </div>
           {/* Win Ratio and Profit Factor divs */}
           <div className="w-[45%] h-full pl-2 py-4 space-y-3">

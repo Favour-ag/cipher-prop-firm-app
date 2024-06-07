@@ -99,10 +99,8 @@ const data = [
 
 const Example = () => {
   return (
-    <ResponsiveContainer width="100%" height="100%">
+    <ResponsiveContainer width="100%" height={400}>
       <LineChart
-        width={500}
-        height={300}
         data={data}
         margin={{
           top: 5,
@@ -123,8 +121,7 @@ const Example = () => {
           activeDot={{ r: 8 }}
         />
         <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        <Line type="monotone" dataKey="wv" stroke="#ff7300" />{" "}
-        {/* Change thirdVar to wv */}
+        <Line type="monotone" dataKey="wv" stroke="#ff7300" />
       </LineChart>
     </ResponsiveContainer>
   );
