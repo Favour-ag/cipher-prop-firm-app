@@ -316,6 +316,7 @@ export const accountStatus = [
   {
     title: "Account Size",
     value: "$5,000",
+    color: "#000F1D",
   },
   {
     title: "Start Date",
@@ -324,6 +325,7 @@ export const accountStatus = [
   {
     title: "End Date",
     value: "15/04/2023",
+    color: "#000F1D",
   },
   {
     title: "Platform",
@@ -332,6 +334,7 @@ export const accountStatus = [
   {
     title: "Phase",
     value: "2",
+    color: "#000F1D",
   },
 ];
 export const detailStatistics = [
@@ -344,6 +347,7 @@ export const detailStatistics = [
     icon: Balance,
     title: "Balance",
     value: "$4,867.32",
+    color: "#000F1D",
   },
   {
     icon: Trades,
@@ -354,6 +358,7 @@ export const detailStatistics = [
     icon: avgWinning,
     title: "Avg. Winning Trade",
     value: "$0.00",
+    color: "#000F1D",
   },
   {
     icon: avgLosing,
@@ -364,32 +369,43 @@ export const detailStatistics = [
     icon: winrate,
     title: "Win Rate",
     value: "2%",
+    color: "#000F1D",
   },
 ];
 export const accountAnalysis = [
   {
     title: "Number of Days",
     value: "43",
+    color: "white",
   },
   {
     title: "Total Trades Taken",
     value: "81",
+    backgroundColor: "#000F1D",
+    color: "white",
   },
   {
     title: "Average Trade Per Day",
     value: "1,03",
+    color: "white",
   },
   {
     title: "Total Lots used",
     value: "189.08",
+    backgroundColor: "#000F1D",
+    color: "white",
   },
   {
     title: "Biggest Win",
     value: "$1,234.43",
+
+    color: "#177A0E",
   },
   {
     title: "Biggest Loss",
     value: "$500.21",
+    backgroundColor: "#000F1D",
+    color: "#FF0000",
   },
 ];
 export const profitTargetDashboard = [

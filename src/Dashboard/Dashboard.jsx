@@ -56,8 +56,8 @@ const RulesandFaq = () => {
           animate={{ opacity: isVisible ? 1 : 0 }}
           transition={{ duration: 1 }}
         >
-          <div className="w-full h-screen flex justify-center items-center space-x-5">
-            <div className="w-[60%] h-full space-y-3">
+          <div className="w-full h-full flex justify-center items-center space-x-5">
+            <div className="w-[55%] h-full space-y-3">
               <div className="w-full h-[50%] ">
                 <Chart />
               </div>
@@ -245,32 +245,46 @@ const RulesandFaq = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[40%] h-100 bg-inherit">
+            <div className="w-[45%] h-100 bg-inherit ">
               <div className="rounded-xl w-full h-full space-y-3">
                 {/* ACCOUNT STATUS */}
-                <div className="border p-4 rounded-xl">
-                  <h1 className="font-semibold">Account Status</h1>
+                <div className="border p-4 rounded-xl bg-[#01192F]">
+                  <h1 className="font-semibold text-lg text-center">
+                    Account Status
+                  </h1>
                   <div className="flex justify-between">
                     <p>Status</p>
-                    <p className="font-semibold bg-green-200 px-1 rounded-md text-green-600">
+                    <p className="font-semibold bg-[#1D9C0833] px-1 rounded-md text-[#1D9C08]">
                       +Active
                     </p>
                   </div>
                   <div>
                     {accountStatus.map((status, index) => (
-                      <div key={index} className="flex justify-between mt-1">
-                        <p>{status.title}</p>
+                      <div
+                        key={index}
+                        className="flex justify-between mt-1.5  p-1"
+                        style={{ backgroundColor: status.color }}
+                      >
+                        <div className="flex gap-2 ">
+                          <p>{status.title}</p>
+                        </div>
                         <p>{status.value}</p>
                       </div>
                     ))}
                   </div>
                 </div>
                 {/* DETAIL STATISTICS */}
-                <div className="border p-4 rounded-xl">
-                  <h1 className="font-semibold">Detail Statistics</h1>
+                <div className="border p-4 rounded-xl  bg-[#01192F]">
+                  <h1 className="font-semibold text-lg text-center">
+                    Detail Statistics
+                  </h1>
                   <div>
                     {detailStatistics.map((detail, index) => (
-                      <div key={index} className="flex justify-between mt-1">
+                      <div
+                        key={index}
+                        className="flex justify-between mt-1.5  p-1"
+                        style={{ backgroundColor: detail.color }}
+                      >
                         <div className="flex gap-2 ">
                           <img src={detail.icon} alt="" />
                           <p>{detail.title}</p>
@@ -281,11 +295,20 @@ const RulesandFaq = () => {
                   </div>
                 </div>
                 {/* ACCOUNT ANALYSIS */}
-                <div className="border p-4 rounded-xl">
-                  <h1 className="font-semibold">Account Analysis</h1>
+                <div className="border p-4 rounded-xl  bg-[#01192F]">
+                  <h1 className="font-semibold text-lg text-center">
+                    Account Analysis
+                  </h1>
                   <div>
                     {accountAnalysis.map((analysis, index) => (
-                      <div key={index} className="flex justify-between mt-1">
+                      <div
+                        key={index}
+                        className="flex justify-between mt-1.5  p-1"
+                        style={{
+                          color: analysis.color,
+                          backgroundColor: analysis.backgroundColor,
+                        }}
+                      >
                         <p>{analysis.title}</p>
                         <p>{analysis.value}</p>
                       </div>
@@ -297,10 +320,10 @@ const RulesandFaq = () => {
           </div>
         </motion.div>
         {/* Daily Summary */}
-        <div className="w-full flex">
-          <div className="pl-5 w-[60%] ">
+        <div className="w-full flex ">
+          <div className="pl-5 w-[55%] ">
             <h1 className="text-4xl font-semibold mb-3">Daily Summary</h1>
-            <div className="flex space-x-20">
+            <div className="flex space-x-16">
               {/* dates */}
               <div>
                 <h3 className="font-semibold text-xl">Dates</h3>
@@ -359,7 +382,7 @@ const RulesandFaq = () => {
             </div>
           </div>
           {/* Win Ratio and Profit Factor divs */}
-          <div className="w-[40%] h-full pl-2 py-4 space-y-3">
+          <div className="w-[45%] h-full pl-2  py-4 space-y-3">
             <div className="bg-[#01192F] border w-full rounded-lg  h-[80px] p-2">
               <div>
                 {profitTargetDashboard.map((profit, index) => (
@@ -400,7 +423,6 @@ const RulesandFaq = () => {
             </div>
           </div>
         </div>
-        {/* Calender */}
         <div className="w-full flex">
           <div className="pl-5 w-[55%] ">
             <h1 className="text-4xl font-semibold mb-3">Daily Summary</h1>
@@ -469,6 +491,7 @@ const RulesandFaq = () => {
             </div>
           </div>
         </div>
+
         {/* Trades History*/}
         <div className="pl-5">
           <h1 className="text-4xl font-semibold mb-4">Trade History</h1>
