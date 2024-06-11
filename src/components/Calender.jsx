@@ -7,12 +7,11 @@ function MyApp() {
 
   return (
     <div className="flex justify-center items-center pr-3">
-      <div className=" text-white rounded-lg shadow-lg">
+      <div className=" text-white rounded-lg shadow-lg ">
         <Calendar
           onChange={setValue}
           value={value}
           className="react-calendar w-full text-lg bg-inherit"
-          // Set calendarType to use the US date format
         />
       </div>
     </div>

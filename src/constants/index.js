@@ -37,7 +37,6 @@ import avgWinning from "../assets/dashboardIcons/avgWinningTradeArrow.svg";
 import avgLosing from "../assets/dashboardIcons/avgLosingTradeArrow.svg";
 import winrate from "../assets/dashboardIcons/winrate.svg";
 import iIcon from "../assets/dashboardIcons/iIcon.svg";
-import { color } from "framer-motion";
 
 export const chooseCipher = [
   {

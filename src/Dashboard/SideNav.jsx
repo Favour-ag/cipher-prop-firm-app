@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { dashboardSideNavListTop } from "../constants";
 import { dashboardSideNavListBottom } from "../constants";
 import Logo from "../assets/logo.svg";
+import { BarChart3Icon } from "lucide-react";
 
 function SideNav() {
   const [activeLink, setActiveLink] = useState(null);
