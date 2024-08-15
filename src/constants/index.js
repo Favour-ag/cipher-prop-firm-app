@@ -70,13 +70,13 @@ export const socials = [
     id: "0",
     title: "Twitter",
     icon: twitter,
-    url: "https://twitter.com/",
+    url: "https://x.com/CipherEndowment",
   },
   {
     id: "1",
     title: "Instagram",
     icon: instagram,
-    url: "https://instagram.com/",
+    url: "https://www.instagram.com/cipherendowment/",
   },
   {
     id: "2",
@@ -647,5 +647,34 @@ export const summaryForTheDay = [
     title: "Profit",
     value: "$2,000.01",
     color: "green",
+  },
+];
+export const withdrawalTable = [
+  {
+    title: "REFERENCE ID",
+  },
+  {
+    title: "PAYOUT TYPE",
+  },
+  {
+    title: "REQUESTED ON",
+  },
+  {
+    title: "METHOD",
+  },
+  {
+    title: "STATUS",
+  },
+  {
+    title: "AMOUNT",
+  },
+  {
+    title: "ADMIN NOTE",
+  },
+  {
+    title: "CERTIFICATE",
+  },
+  {
+    title: "INVOICE",
   },
 ];

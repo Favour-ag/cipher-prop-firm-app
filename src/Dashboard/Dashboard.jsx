@@ -10,13 +10,8 @@ import {
   dailyLossLimitDashboard,
   netProfitLossDashboard,
   minTradingDaysDashboard,
-  dates,
-  trades,
-  lots,
-  results,
-} from "../constants";
-import { detailStatistics, summaryForTheDay } from "../constants";
-import {
+  detailStatistics,
+  summaryForTheDay,
   accountAnalysis,
   Symbols,
   Type,
@@ -29,26 +24,30 @@ import {
   LotsTradingHistory,
   Commission,
   Profit,
+  dates,
+  trades,
+  lots,
+  results,
 } from "../constants";
 import Chart from "../components/Chart";
 import Calender from "../components/Calender";
-const RulesandFaq = () => {
+const Dashboard = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
   return (
-    <div className="flex bg-inherit w-full h-full [background:radial-gradient(100%_125%_at_50%_100%,#0072D8_0%,#000_70%)]">
+    <div className="flex bg-inherit w-full h-full [background:radial-gradient(100%_125%_at_50%_100%,#0072D8_0%,#000_70%)] ">
       <div className="fixed left-0 top-0 h-full">
         <SideNav />
       </div>
       <div className="ml-52 w-full h-screen p-3 px-8 pt-4 space-y-12 overflow-y-auto">
-        <div className="flex justify-around">
+        <div className="flex flex-col lg:flex-row justify-around items-center lg:items-start space-y-4 lg:space-y-0">
           <AccountInfo />
-          <div>
-            <img src="" alt="" />
-            <p>Sophomore</p>
+          <div className="mt-4 lg:mt-0 flex flex-col items-center lg:items-start">
+            <img src="" alt="" className="w-16 h-16 rounded-full" />
+            <p className="mt-2 text-center lg:text-left">Sophomore</p>
           </div>
         </div>
         <motion.div
@@ -452,8 +451,8 @@ const RulesandFaq = () => {
           </div>
         </div>
 
-        {/* Trades History*/}
         <div className="pl-5">
+          {/* Trades History*/}
           <h1 className="text-4xl font-semibold mb-4">Trade History</h1>
           <div className="flex space-x-10  overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide cursor-pointer mb-5">
             {/* Symbol */}
@@ -612,4 +611,4 @@ const RulesandFaq = () => {
   );
 };
 
-export default RulesandFaq;
+export default Dashboard;

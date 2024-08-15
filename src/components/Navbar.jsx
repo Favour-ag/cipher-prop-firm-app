@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "../assets/cipher.png";
+import logonew from "../assets/logonew.webp";
 import { socials } from "../constants";
 
 const Navbar = () => {
@@ -22,7 +22,7 @@ const Navbar = () => {
             <a href="/">
               <img
                 className="h-12 md:h-14 w-14 md:w-20 mr-2"
-                src={logo}
+                src={logonew}
                 alt="Logo"
               />
             </a>

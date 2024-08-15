@@ -27,7 +27,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="w-full h-full flex mt-2 md:mt-0 items-center">
+    <div className=" w-full h-full flex mt-2 md:mt-0 items-center">
       {/* Blur Background */}
       <div className="block w-[100px] h-[200px] md:h-[400px] bg-[#eb26fd] rounded-full absolute top-[180px] md:top-[80%] md:left-20 md:translate-x-[-50%] md:translate-y-[-50%] blur-[100px]"></div>
       <div className="block w-[200px] md:w-[600px] h-[250px] md:h-[400px] bg-[#023564] rounded-full absolute top-[100px] md:top-[110%] right-0 md:translate-x-[-50%] md:translate-y-[-50%] blur-[100px]"></div>
