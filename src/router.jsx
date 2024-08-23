@@ -17,6 +17,7 @@ import Settings from "./Dashboard/Settings";
 import Logout from "./routes/Logout";
 import Competition from "./Dashboard/Competition";
 import Leaderboard from "./Dashboard/Leaderboard";
+import Payout from "./Dashboard/Payout";
 
 export const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -29,6 +30,7 @@ export const router = createBrowserRouter([
   { path: "/payment", element: <Payment /> },
   { path: "/dashboard", element: <Dashboard /> },
   { path: "/withdrawal", element: <Withdrawal /> },
+  { path: "/payout", element: <Payout /> },
   { path: "/announcements", element: <Announcements /> },
   { path: "/rulesandfaq", element: <RulesandFaq /> },
   { path: "/affiliate", element: <Affiliate /> },
