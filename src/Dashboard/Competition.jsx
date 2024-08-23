@@ -18,7 +18,6 @@ const Competition = () => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-[#0E1B2E] text-white">
       <SideNav isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-
       {/* Menu button for mobile */}
       <button
         onClick={toggleSidebar}

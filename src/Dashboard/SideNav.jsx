@@ -5,12 +5,13 @@ import {
   FaMoneyCheckAlt,
   FaBullhorn,
   FaTrophy,
-  FaListAlt,
   FaQuestionCircle,
   FaUserFriends,
   FaCog,
   FaSignOutAlt,
 } from "react-icons/fa";
+import { RiBarChart2Fill } from "react-icons/ri";
+import { FaBook } from "react-icons/fa6";
 import Logo from "../assets/logonew.webp";
 
 function SideNav({ isSidebarOpen, toggleSidebar }) {
@@ -36,12 +37,12 @@ function SideNav({ isSidebarOpen, toggleSidebar }) {
       url: "/competition",
     },
     {
-      icon: <FaListAlt />,
+      icon: <RiBarChart2Fill />,
       title: "Leaderboard",
       url: "/leaderboard",
     },
     {
-      icon: <FaQuestionCircle />,
+      icon: <FaBook />,
       title: "Rules & FAQ",
       url: "/rulesandFaq",
     },

@@ -93,7 +93,6 @@ const Leaderboard = () => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-[#0E1B2E] text-white">
       <SideNav isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-
       {/* Menu button for mobile */}
       <button
         onClick={toggleSidebar}
@@ -101,9 +100,8 @@ const Leaderboard = () => {
       >
         ☰
       </button>
-
       {/* Main Content */}
-      <div className="flex-1 p-6 lg:p-8 xl:p-4 2xl:p-16 lg:ml-0 [background:radial-gradient(100%_125%_at_50%_100%,#0E1B2E_0%,#000_70%)]">
+      <div className="flex-1 p-6 lg:p-8 xl:p-4 2xl:p-16 lg:ml-0 [background:radial-gradient(100%_125%_at_50%_100%,#0072D8_0%,#000_70%)]">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: isVisible ? 1 : 0 }}
