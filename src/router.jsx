@@ -15,21 +15,25 @@ import Affiliate from "./Dashboard/Affiliate";
 import NeedHelp from "./Dashboard/NeedHelp";
 import Settings from "./Dashboard/Settings";
 import Logout from "./routes/Logout";
+import Competition from "./Dashboard/Competition";
+import Leaderboard from "./Dashboard/Leaderboard";
 
 export const router = createBrowserRouter([
-  { id: "0", path: "/", element: <App /> },
-  { id: "1", path: "/about", element: <About /> },
-  { id: "2", path: "/affliateprogram", element: <AffliateProgram /> },
-  { id: "3", path: "/faq", element: <FAQ /> },
-  { id: "4", path: "/contact", element: <Contact /> },
-  { id: "5", path: "/login", element: <Login /> },
-  { id: "6", path: "/signup", element: <SignUp /> },
-  { id: "7", path: "/payment", element: <Payment /> },
+  { path: "/", element: <App /> },
+  { path: "/about", element: <About /> },
+  { path: "/affliateprogram", element: <AffliateProgram /> },
+  { path: "/faq", element: <FAQ /> },
+  { path: "/contact", element: <Contact /> },
+  { path: "/login", element: <Login /> },
+  { path: "/signup", element: <SignUp /> },
+  { path: "/payment", element: <Payment /> },
   { path: "/dashboard", element: <Dashboard /> },
   { path: "/withdrawal", element: <Withdrawal /> },
   { path: "/announcements", element: <Announcements /> },
   { path: "/rulesandfaq", element: <RulesandFaq /> },
   { path: "/affiliate", element: <Affiliate /> },
+  { path: "/competition", element: <Competition /> },
+  { path: "/leaderboard", element: <Leaderboard /> },
   { path: "/needhelp", element: <NeedHelp /> },
   { path: "/settings", element: <Settings /> },
   { path: "/logout", element: <Logout /> },

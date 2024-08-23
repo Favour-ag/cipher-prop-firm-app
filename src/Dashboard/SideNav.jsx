@@ -1,12 +1,75 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
-  dashboardSideNavListTop,
-  dashboardSideNavListBottom,
-} from "../constants"; // Consolidated imports
+  FaTachometerAlt,
+  FaMoneyCheckAlt,
+  FaBullhorn,
+  FaTrophy,
+  FaListAlt,
+  FaQuestionCircle,
+  FaUserFriends,
+  FaCog,
+  FaSignOutAlt,
+} from "react-icons/fa";
 import Logo from "../assets/logonew.webp";
 
 function SideNav({ isSidebarOpen, toggleSidebar }) {
+  const dashboardSideNavListTop = [
+    {
+      icon: <FaTachometerAlt />,
+      title: "Dashboard",
+      url: "/dashboard",
+    },
+    {
+      icon: <FaMoneyCheckAlt />,
+      title: "Withdrawal",
+      url: "/withdrawal",
+    },
+    {
+      icon: <FaBullhorn />,
+      title: "Announcements",
+      url: "/announcements",
+    },
+    {
+      icon: <FaTrophy />,
+      title: "Competition",
+      url: "/competition",
+    },
+    {
+      icon: <FaListAlt />,
+      title: "Leaderboard",
+      url: "/leaderboard",
+    },
+    {
+      icon: <FaQuestionCircle />,
+      title: "Rules & FAQ",
+      url: "/rulesandFaq",
+    },
+    {
+      icon: <FaUserFriends />,
+      title: "Affiliate",
+      url: "/affiliate",
+    },
+  ];
+
+  const dashboardSideNavListBottom = [
+    {
+      icon: <FaQuestionCircle />,
+      title: "Need help?",
+      url: "/needHelp",
+    },
+    {
+      icon: <FaCog />,
+      title: "Settings",
+      url: "/settings",
+    },
+    {
+      icon: <FaSignOutAlt />,
+      title: "Logout",
+      url: "/logout",
+    },
+  ];
+
   const location = useLocation();
 
   return (
@@ -40,11 +103,7 @@ function SideNav({ isSidebarOpen, toggleSidebar }) {
                 key={index}
                 to={dashboard.url}
               >
-                <img
-                  src={dashboard.icon}
-                  alt={dashboard.title}
-                  className="w-5 h-5"
-                />
+                {dashboard.icon}
                 <span>{dashboard.title}</span>
               </Link>
             ))}
@@ -60,11 +119,7 @@ function SideNav({ isSidebarOpen, toggleSidebar }) {
                 key={index}
                 to={dashboard.url}
               >
-                <img
-                  src={dashboard.icon}
-                  alt={dashboard.title}
-                  className="w-5 h-5"
-                />
+                {dashboard.icon}
                 <span>{dashboard.title}</span>
               </Link>
             ))}

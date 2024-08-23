@@ -21,15 +21,6 @@ import minimumTradingDays from "../assets/icons/cipherChallenge/minimumTradingDa
 import newsTrading from "../assets/icons/cipherChallenge/newsTrading.svg";
 import maximumOverallDrawdown from "../assets/icons/cipherChallenge/maximumOverallDrawdown.svg";
 
-import dashboard from "../assets/dashboardSideNavIcons/dashboard.svg";
-import withdrawal from "../assets/dashboardSideNavIcons/withdrawal.svg";
-import announcement from "../assets/dashboardSideNavIcons/announcement.svg";
-import rulesandfaq from "../assets/dashboardSideNavIcons/rulesandfaq.svg";
-import affiliate from "../assets/dashboardSideNavIcons/affiliate.svg";
-import needhelp from "../assets/dashboardSideNavIcons/needHelp.svg";
-import settings from "../assets/dashboardSideNavIcons/settings.svg";
-import logout from "../assets/dashboardSideNavIcons/logout.svg";
-
 import Equity from "../assets/dashboardIcons/equity.svg";
 import Balance from "../assets/dashboardIcons/balance.svg";
 import Trades from "../assets/dashboardIcons/trades.svg";
@@ -255,52 +246,6 @@ export const accordionData5 = [
   {
     title: "Are the fees refundable?",
     content: `To appreciate you for choosing Cipher as your partner, all traders who pass the Evalution Phase 1 and Phase 2 will receive a refund of their fees with thier 3rd profit split.`,
-  },
-];
-
-export const dashboardSideNavListTop = [
-  {
-    icon: dashboard,
-    title: "Dashboard",
-    url: "/Dashboard",
-  },
-  {
-    icon: withdrawal,
-    title: "Withdrawal",
-    url: "/Withdrawal",
-  },
-  {
-    icon: announcement,
-    title: "Announcements",
-    url: "/Announcements",
-  },
-  {
-    icon: rulesandfaq,
-    title: "Rules & Faq",
-    url: "/RulesandFaq",
-  },
-  {
-    icon: affiliate,
-    title: "Affiliate",
-    url: "/Affiliate",
-  },
-];
-
-export const dashboardSideNavListBottom = [
-  {
-    icon: needhelp,
-    title: "Need help?",
-    url: "/NeedHelp",
-  },
-  {
-    icon: settings,
-    title: "Settings",
-    url: "/Settings",
-  },
-  {
-    icon: logout,
-    title: "Logout",
-    url: "/Logout",
   },
 ];
 
