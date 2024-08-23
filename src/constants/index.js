@@ -262,32 +262,27 @@ export const dashboardSideNavListTop = [
   {
     icon: dashboard,
     title: "Dashboard",
-    url: "Dashboard",
-    active: true, // Set to true if this link is active
+    url: "/Dashboard",
   },
   {
     icon: withdrawal,
     title: "Withdrawal",
-    url: "Withdrawal",
-    active: false,
+    url: "/Withdrawal",
   },
   {
     icon: announcement,
     title: "Announcements",
-    url: "Announcements",
-    active: false,
+    url: "/Announcements",
   },
   {
     icon: rulesandfaq,
     title: "Rules & Faq",
-    url: "RulesandFaq",
-    active: false,
+    url: "/RulesandFaq",
   },
   {
     icon: affiliate,
     title: "Affiliate",
-    url: "Affiliate",
-    active: false,
+    url: "/Affiliate",
   },
 ];
 
@@ -295,22 +290,20 @@ export const dashboardSideNavListBottom = [
   {
     icon: needhelp,
     title: "Need help?",
-    url: "NeedHelp",
-    active: false, // Set to true if this link is active
+    url: "/NeedHelp",
   },
   {
     icon: settings,
     title: "Settings",
-    url: "Settings",
-    active: false, // Set to true if this link is active
+    url: "/Settings",
   },
   {
     icon: logout,
     title: "Logout",
-    url: "Logout",
-    active: false, // Set to true if this link is active
+    url: "/Logout",
   },
 ];
+
 export const accountStatus = [
   {
     title: "Account Size",

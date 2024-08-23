@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import cipher from "../assets/cipher.png";
+import cipher from "../assets/logonew.webp";
 import { socials } from "../constants";
 import rightArrowUp from "../assets/rightArrowUp.svg";
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="lg:w-1/2 px-2 lg:p-4 space-y-5 leading-7 mt-4">
         {/* logo */}
         <div>
-          <img src={cipher} alt="cipher-logo" className="w-[100px]" />
+          <img src={cipher} alt="cipher-logo" className="w-[80px]" />
         </div>
         <p className="text-justify text-md px-4 lg:px-0 text-sm md:text-base text-slate-300">
           All information disseminated by Cipher and its affiliates (hereafter
