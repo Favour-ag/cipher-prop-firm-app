@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Key from "../assets/key.svg";
 import { withdrawalTable } from "../constants";
-import Payout from "./Payout";
 
 const Withdrawal = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

@@ -121,9 +121,9 @@ const Leaderboard = () => {
             {/* Leaderboard Header */}
             <div className="bg-[#11233B] p-6 rounded-lg border mt-6">
               <h1 className="text-3xl font-bold">June Competition</h1>
-              <div className="mt-4 flex justify-between items-center">
+              <div className="mt-4 flex flex-col sm:flex-row justify-between items-center">
                 <div className="text-lg">MT5</div>
-                <span className="bg-green-600 text-white px-3 py-1 rounded">
+                <span className="bg-green-600 text-white px-3 py-1 rounded mt-2 sm:mt-0">
                   Open
                 </span>
               </div>
@@ -139,10 +139,10 @@ const Leaderboard = () => {
             </div>
 
             {/* Leaderboard Table */}
-            <div className="mt-8">
+            <div className="mt-8 overflow-x-auto">
               <h2 className="text-2xl font-bold mb-4">Leaderboard</h2>
               <div className="bg-[#11233B] p-6 rounded-lg">
-                <table className="w-full text-left">
+                <table className="w-full min-w-[600px] text-left">
                   <thead>
                     <tr>
                       <th className="py-2">Rank</th>

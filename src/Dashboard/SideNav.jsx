@@ -67,7 +67,7 @@ function SideNav({ isSidebarOpen, toggleSidebar }) {
     {
       icon: <FaSignOutAlt />,
       title: "Logout",
-      url: "/logout",
+      url: "/login",
     },
   ];
 

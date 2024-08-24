@@ -14,7 +14,7 @@ import RulesandFaq from "./Dashboard/RulesandFaq";
 import Affiliate from "./Dashboard/Affiliate";
 import NeedHelp from "./Dashboard/NeedHelp";
 import Settings from "./Dashboard/Settings";
-import Logout from "./routes/Logout";
+
 import Competition from "./Dashboard/Competition";
 import Leaderboard from "./Dashboard/Leaderboard";
 import Payout from "./Dashboard/Payout";
@@ -38,5 +38,4 @@ export const router = createBrowserRouter([
   { path: "/leaderboard", element: <Leaderboard /> },
   { path: "/needhelp", element: <NeedHelp /> },
   { path: "/settings", element: <Settings /> },
-  { path: "/logout", element: <Logout /> },
 ]);
