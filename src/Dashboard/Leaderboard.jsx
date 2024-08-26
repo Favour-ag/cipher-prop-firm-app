@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SideNav from "./SideNav";
 import AccountInfo from "../components/AccountInfo";
 import { motion } from "framer-motion";
-
+import championCup from "../assets/championCup.svg";
 const Leaderboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -119,23 +119,55 @@ const Leaderboard = () => {
             </div>
 
             {/* Leaderboard Header */}
-            <div className="bg-[#11233B] p-6 rounded-lg border mt-6">
-              <h1 className="text-3xl font-bold">June Competition</h1>
-              <div className="mt-4 flex flex-col sm:flex-row justify-between items-center">
-                <div className="text-lg">MT5</div>
-                <span className="bg-green-600 text-white px-3 py-1 rounded mt-2 sm:mt-0">
-                  Open
-                </span>
+
+            <div className="relative bg-[#070D12] p-6 rounded-lg border mt-6 text-white overflow-hidden">
+              {/* Background Image */}
+              <img
+                src={championCup}
+                alt="Cup"
+                className="absolute right-0 top-0 w-[30%] h-auto opacity-50"
+              />
+
+              {/* Content */}
+              <div>
+                <h3>Competition is still open</h3>
               </div>
-              <div className="mt-4 text-sm">
-                <p>Starts: June 1, 2024</p>
-                <p>Ends: June 30, 2024</p>
-                <p>Entry: Free</p>
-                <p>Participants: 5000</p>
+              <div className="mt-6 flex items-center  relative">
+                <div className="text-lg space-x-4">
+                  <span>MT5</span>
+                  <button className="bg-[#1D9C0833] text-white p-2 rounded-lg font-semibold">
+                    <p className="text-[#1D9C08]">Open</p>
+                  </button>
+                  <button className="bg-[#505255] text-white p-2 rounded-lg font-semibold">
+                    <p className="text-white">+ Join</p>
+                  </button>
+                </div>
               </div>
-              <button className="mt-4 bg-pink-600 text-white px-4 py-2 rounded">
-                + Join
-              </button>
+              <div className="flex gap-5 items-center mt-4  relative">
+                <div className="text-lg">
+                  <div className="text-sm text-gray-400">Starts</div>
+                  June 1st 2024
+                </div>
+                <div className="text-lg">
+                  <div className="text-sm text-gray-400">Ends</div>
+                  June 20th 2024
+                </div>
+              </div>
+              <div className="flex gap-5 items-center mt-4  relative">
+                <div className="text-lg">
+                  <div className="text-sm text-gray-400">Entry</div>
+                  Free
+                </div>
+                <div className="text-lg">
+                  <div className="text-sm text-gray-400">Participants</div>
+                  5000
+                </div>
+              </div>
+              <div className="flex gap-5 items-center mt-4  relative">
+                <h3 className="text-2xl font-bold uppercase">
+                  June Competition
+                </h3>
+              </div>
             </div>
 
             {/* Leaderboard Table */}

@@ -1,4 +1,3 @@
-import downArrow from "../assets/downArrow.svg";
 import { useState } from "react";
 
 const Accordion = ({ title, content }) => {
@@ -10,14 +9,7 @@ const Accordion = ({ title, content }) => {
         onClick={() => setAccordionOpen(!accordionOpen)}
       >
         {title}
-        <div>
-          {accordionOpen
-            ? "-"
-            : // <div className="border rounded-full p-2 h-7 flex items-center">
-              //   <img src={downArrow} alt="rightArrow" className="w-2.5" />
-              // </div>
-              "+"}
-        </div>
+        <div>{accordionOpen ? "-" : "+"}</div>
       </div>
       {accordionOpen && (
         <div className="px-2 lg:px-4 text-sm md:text-lg text-slate-300">

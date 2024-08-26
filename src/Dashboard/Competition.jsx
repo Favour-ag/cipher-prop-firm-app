@@ -64,7 +64,7 @@ const Competition = () => {
             </div>
 
             {/* Featured Competition */}
-            <h1 className="text-3xl font-bold z-10 relative">
+            <h1 className="text-3xl font-bold relative">
               Featured Competition
             </h1>
             <div className="relative bg-[#070D12] p-6 rounded-lg border mt-6 text-white overflow-hidden">
@@ -76,13 +76,13 @@ const Competition = () => {
               />
 
               {/* Content */}
-              <p className="text-lg max-w-2xl z-10 relative">
+              <p className="text-lg max-w-2xl  relative">
                 Hello! from the fascinating world of Cipher competition! Prepare
                 yourself for an adventure of strategy and financial expertise as
                 traders from all over the world converge to display their
                 skills.
               </p>
-              <div className="mt-6 flex items-center z-10 relative">
+              <div className="mt-6 flex items-center  relative">
                 <div className="text-lg space-x-4">
                   <span>MT5</span>
                   <button className="bg-[#1D9C0833] text-white p-2 rounded-lg font-semibold">
@@ -90,7 +90,7 @@ const Competition = () => {
                   </button>
                 </div>
               </div>
-              <div className="flex gap-5 items-center mt-4 z-10 relative">
+              <div className="flex gap-5 items-center mt-4  relative">
                 <div className="text-lg">
                   <div className="text-sm text-gray-400">Entry</div>
                   Free
@@ -100,7 +100,7 @@ const Competition = () => {
                   5000
                 </div>
               </div>
-              <div className="flex gap-5 items-center mt-4 z-10 relative">
+              <div className="flex gap-5 items-center mt-4  relative">
                 <h3 className="text-2xl font-bold">June Competition</h3>
                 <button className="bg-gradient-to-r from-red-500 to-blue-600 text-white px-6 py-2 rounded-3xl font-semibold">
                   View
