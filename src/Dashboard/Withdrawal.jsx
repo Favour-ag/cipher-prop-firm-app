@@ -30,17 +30,6 @@ const Withdrawal = () => {
       certificate: "--",
       invoiceLink: "", // Replace with actual invoice link
     },
-    {
-      referenceId: "5590fhie45h",
-      payoutType: "PAYOUT TYPE",
-      requestedOn: "Aug 21, 2023 9:14 AM",
-      method: "Crypto",
-      status: "Requested",
-      amount: "$0.00",
-      adminNote: "--",
-      certificate: "--",
-      invoiceLink: "", // Replace with actual invoice link
-    },
   ];
 
   return (
@@ -100,10 +89,10 @@ const Withdrawal = () => {
             </div>
 
             {/* Withdrawal Table or No Payouts Message */}
-            <div className="bg-[#070D12] w-full h-auto p-4 rounded-lg mt-8 overflow-x-auto">
+            <div className=" w-full h-auto  rounded-lg mt-8 overflow-x-auto">
               {withdrawalTable.length > 0 ? (
-                <table className="w-full text-white">
-                  <thead>
+                <table className="w-full text-white ">
+                  <thead className="bg-[#070D12]">
                     <tr className="text-gray-400">
                       <th className="text-left">REFERENCE ID</th>
                       <th className="text-left">PAYOUT TYPE</th>
