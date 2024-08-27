@@ -2,7 +2,7 @@ import { profitTargetDashboard } from "../constants";
 
 const WinRatio = () => {
   return (
-    <div className="w-[45%] h-full pl-2  py-4 space-y-3">
+    <div className="pl-3 py-4 space-y-3">
       <div className="bg-[#01192F] border w-full rounded-lg  h-[80px] p-2">
         <div>
           {profitTargetDashboard.map((profit, index) => (

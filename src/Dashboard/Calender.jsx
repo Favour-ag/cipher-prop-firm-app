@@ -2,36 +2,56 @@
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const CalendarComponent = () => {
   const [date, setDate] = useState(new Date());
 
+  // Example trade data (normally fetched from an API)
+  const tradeData = {
+    "2024-05-02": 2000.01,
+    "2024-05-06": -456.34,
+    "2024-05-08": -234.21,
+    "2024-05-13": -156.66,
+    "2024-05-14": -800.0,
+    "2024-05-15": -102.65,
+    "2024-05-16": 3000.54,
+    "2024-05-17": 2453.65,
+    "2024-05-18": 1000.0,
+    "2024-05-28": 2930.54,
+    "2024-05-31": 6054.54,
+  };
+
+  const formatDate = (date) => date.toISOString().split("T")[0];
+
   return (
-    <div className="bg-[#11233B] p-4 rounded-lg">
-      <h2 className="text-2xl font-bold mb-4">Daily Summary</h2>
+    <div className=" gap-3 pr-0 lg:pr-4 mb-5 font-sans">
+      <div className="text-white ">
+        {/* <h2 className="text-2xl font-bold text-center">May 2024</h2> */}
+      </div>
       <Calendar
         onChange={setDate}
         value={date}
-        className="bg-[#1C2F48] text-white rounded-lg border-none"
+        className="bg-[#1C2F48] text-white rounded-lg  w-full font-sans"
         tileClassName={({ date, view }) => {
-          // Add custom classes for specific dates here
-          return view === "month" && date.getDay() === 0 ? "text-red-500" : "";
+          const tradeAmount = tradeData[formatDate(date)];
+          if (view === "month" && tradeAmount) {
+            return tradeAmount > 0
+              ? "bg-green-500 text-white"
+              : "bg-red-500 text-white";
+          }
+          return "bg-[#1C2F48] text-white";
         }}
         tileContent={({ date, view }) => {
-          // Add custom content to tiles here, like trade results
-          if (view === "month" && date.getDate() === 16) {
-            return <p className="text-green-500">$200.00</p>;
+          const tradeAmount = tradeData[formatDate(date)];
+          if (view === "month" && tradeAmount) {
+            return <p>{`$${tradeAmount.toFixed(2)}`}</p>;
           }
+          return <p>$0.00</p>;
         }}
+        prevLabel={<FaArrowLeft className="text-white" />}
+        nextLabel={<FaArrowRight className="text-white" />}
       />
-      <div className="mt-4">
-        <h3 className="text-lg font-bold">Summary for {date.toDateString()}</h3>
-        {/* Display summary information here */}
-        <p>Ending Balance: $9,083.84</p>
-        <p>Trades Taken: 1</p>
-        <p>Lots Used: 1.18</p>
-        <p className="text-green-500">Profit: $2,000.01</p>
-      </div>
     </div>
   );
 };

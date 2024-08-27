@@ -56,7 +56,7 @@ const Dashboard = () => {
               </div>
               <GoalsOverview />
             </div>
-            <div className="lg:col-span-1">
+            <div className="col-span-1">
               {/* Account Status and other widgets */}
               <AccountStatus />
               <DetailStatus />

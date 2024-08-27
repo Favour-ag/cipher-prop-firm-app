@@ -8,7 +8,7 @@ import {
 
 const GoalsOverview = () => {
   return (
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <div className="bg-[#01192F] border rounded-lg h-[150px] p-2">
         <div>
           {profitTargetDashboard.map((profit, index) => (

@@ -9,7 +9,7 @@ import {
 const DailySummary = () => {
   return (
     <div className="w-full flex ">
-      <div className="pl-5 w-[55%] ">
+      <div className="mb-5">
         <h1 className="text-4xl font-semibold mb-3">Daily Summary</h1>
         <div className="flex space-x-16">
           {/* dates */}
