@@ -65,7 +65,7 @@ const Affiliate = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 p-4 bg-black gap-6">
               {/* Earnings Section */}
               <div className="border border-white rounded-md p-4 ">
-                <div className="space-y-6 text-center lg:text-left">
+                <div className="space-y-6 text-center ">
                   <div>
                     <h4 className="text-lg">Total Earnings</h4>
                     <p className="text-2xl">$0.00</p>

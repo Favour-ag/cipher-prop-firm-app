@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import SideNav from "./SideNav";
 import AccountInfo from "../components/AccountInfo";
 import { motion } from "framer-motion";
+import { AiOutlineCalendar, AiOutlineClockCircle } from "react-icons/ai";
+import { IoPricetag } from "react-icons/io5";
+import { FaUser } from "react-icons/fa";
+
 import championCup from "../assets/championCup.svg";
+
 const Leaderboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -93,14 +98,12 @@ const Leaderboard = () => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-[#0E1B2E] text-white">
       <SideNav isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-      {/* Menu button for mobile */}
       <button
         onClick={toggleSidebar}
         className="p-4 bg-[#0C2E4E] text-white lg:hidden fixed top-0 left-0 z-20"
       >
         ☰
       </button>
-      {/* Main Content */}
       <div className="flex-1 p-6 lg:p-8 xl:p-4 2xl:p-16 lg:ml-0 [background:radial-gradient(100%_125%_at_50%_100%,#0072D8_0%,#000_70%)]">
         <motion.div
           initial={{ opacity: 0 }}
@@ -108,69 +111,71 @@ const Leaderboard = () => {
           transition={{ duration: 1 }}
         >
           <div className="max-w-screen-xl mx-auto">
-            {/* Account Section */}
             <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-4 lg:space-y-0">
               <AccountInfo />
-
               <div className="mt-4 lg:mt-0 flex items-center lg:pb-4 space-x-3">
                 <img src="" alt="" className="w-16 h-16 rounded-full" />
                 <p className="mt-2 text-center lg:text-left">Sophomore</p>
               </div>
             </div>
-
-            {/* Leaderboard Header */}
-
             <div className="relative bg-[#070D12] p-6 rounded-lg border mt-6 text-white overflow-hidden">
-              {/* Background Image */}
               <img
                 src={championCup}
                 alt="Cup"
                 className="absolute right-0 top-0 w-[30%] h-auto opacity-50"
               />
-
-              {/* Content */}
               <div>
                 <h3>Competition is still open</h3>
               </div>
-              <div className="mt-6 flex items-center  relative">
-                <div className="text-lg space-x-4">
+              <div className="mt-6 flex items-center space-x-4 relative">
+                <span className="text-lg flex items-center space-x-2">
                   <span>MT5</span>
-                  <button className="bg-[#1D9C0833] text-white p-2 rounded-lg font-semibold">
-                    <p className="text-[#1D9C08]">Open</p>
-                  </button>
-                  <button className="bg-[#505255] text-white p-2 rounded-lg font-semibold">
-                    <p className="text-white">+ Join</p>
-                  </button>
+                </span>
+                <button className="bg-[#1D9C0833] text-white p-2 rounded-lg font-semibold">
+                  <p className="text-[#1D9C08]">Open</p>
+                </button>
+                <button className="bg-[#505255] text-white p-2 rounded-lg font-semibold">
+                  <p className="text-white">+ Join</p>
+                </button>
+              </div>
+              <div className="flex gap-5 items-center mt-4 relative">
+                <div className="text-lg flex items-center space-x-2">
+                  <AiOutlineCalendar className="text-gray-400" />
+                  <span>
+                    <div className="text-sm text-gray-400">Starts</div>
+                    June 1st 2024
+                  </span>
+                </div>
+                <div className="text-lg flex items-center space-x-2">
+                  <AiOutlineClockCircle className="text-gray-400" />
+                  <span>
+                    <div className="text-sm text-gray-400">Ends</div>
+                    June 20th 2024
+                  </span>
                 </div>
               </div>
-              <div className="flex gap-5 items-center mt-4  relative">
-                <div className="text-lg">
-                  <div className="text-sm text-gray-400">Starts</div>
-                  June 1st 2024
+              <div className="flex gap-5 items-center mt-4 relative">
+                <div className="text-lg flex items-center space-x-2">
+                  <IoPricetag />
+                  <span>
+                    <div className="text-sm text-gray-400">Entry</div>
+                    Free
+                  </span>
                 </div>
-                <div className="text-lg">
-                  <div className="text-sm text-gray-400">Ends</div>
-                  June 20th 2024
-                </div>
-              </div>
-              <div className="flex gap-5 items-center mt-4  relative">
-                <div className="text-lg">
-                  <div className="text-sm text-gray-400">Entry</div>
-                  Free
-                </div>
-                <div className="text-lg">
-                  <div className="text-sm text-gray-400">Participants</div>
-                  5000
+                <div className="text-lg flex items-center space-x-2">
+                  <FaUser />
+                  <span>
+                    <div className="text-sm text-gray-400">Participants</div>
+                    5000
+                  </span>
                 </div>
               </div>
-              <div className="flex gap-5 items-center mt-4  relative">
+              <div className="flex gap-5 items-center mt-4 relative">
                 <h3 className="text-2xl font-bold uppercase">
                   June Competition
                 </h3>
               </div>
             </div>
-
-            {/* Leaderboard Table */}
             <div className="mt-8 overflow-x-auto">
               <h2 className="text-2xl font-bold mb-4">Leaderboard</h2>
               <div className="bg-[#11233B] p-6 rounded-lg">

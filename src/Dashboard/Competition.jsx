@@ -3,6 +3,8 @@ import { FaFilter, FaTrophy } from "react-icons/fa"; // Import the filter and tr
 import SideNav from "./SideNav";
 import AccountInfo from "../components/AccountInfo";
 import { motion } from "framer-motion";
+import { IoPricetag } from "react-icons/io5";
+import { FaUser } from "react-icons/fa";
 import championCup from "../assets/championCup.svg";
 
 const Competition = () => {
@@ -90,14 +92,20 @@ const Competition = () => {
                   </button>
                 </div>
               </div>
-              <div className="flex gap-5 items-center mt-4  relative">
-                <div className="text-lg">
-                  <div className="text-sm text-gray-400">Entry</div>
-                  Free
+              <div className="flex gap-5 items-center mt-4 relative">
+                <div className="text-lg flex items-center space-x-2">
+                  <IoPricetag />
+                  <span>
+                    <div className="text-sm text-gray-400">Entry</div>
+                    Free
+                  </span>
                 </div>
-                <div className="text-lg">
-                  <div className="text-sm text-gray-400">Participants</div>
-                  5000
+                <div className="text-lg flex items-center space-x-2">
+                  <FaUser />
+                  <span>
+                    <div className="text-sm text-gray-400">Participants</div>
+                    5000
+                  </span>
                 </div>
               </div>
               <div className="flex gap-5 items-center mt-4  relative">
