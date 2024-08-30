@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TradingHistory from "../Dashboard/TradeHistory";
 import SideNav from "./SideNav";
-import AccountInfo from "../components/AccountInfo";
+import AccountInfo from "./AccountInfo";
 import Chart from "./Chart";
 import AccountStatus from "./AccountStatus";
 import DetailStatus from "./DetailStatus";

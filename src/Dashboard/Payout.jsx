@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SideNav from "./SideNav";
-import AccountInfo from "../components/AccountInfo";
+import AccountInfo from "./AccountInfo";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 

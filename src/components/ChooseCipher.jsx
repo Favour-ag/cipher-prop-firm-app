@@ -2,19 +2,16 @@ import { chooseCipher } from "../constants";
 
 const ChooseCipher = () => {
   return (
-    <div className="">
-      <h2 className="text-xl leading-10 sm:text-5xl lg:text-5xl text-center my-10 lg:my-20">
+    <div className="container mx-auto">
+      <h2 className="text-xl leading-10 sm:text-5xl lg:text-5xl text-center mt-10 lg:my-20">
         Why Choose Cipher?
       </h2>
-      <div className="flex flex-wrap justify-center mt-[-50px] lg:mr-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-3 md:gap-8 p-4 md:p-0">
         {chooseCipher.map((chooseCipher, index) => (
-          <div
-            key={index}
-            className="w-full sm:w-1/2  lg:w-1/3 px-4 lg:px-20 py-3"
-          >
+          <div key={index} className=" flex justify-center">
             <div
               className="[background:radial-gradient(125%_125%_at_50%_10%,#0072D8_20%,#000_70%)] rounded-2xl p-6 text-md border border-neutral-800 font-thin lg:h-[300px]
-            w-full lg:w-[350px] space-y-2"
+            w-full  space-y-2"
             >
               <div className="flex justify-center lg:justify-start  text-center">
                 <img

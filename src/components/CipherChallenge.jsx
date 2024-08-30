@@ -1,7 +1,7 @@
 import { rules, phase1, phase2, phase3, phase4 } from "../constants";
 import rightArrowPointed from "../assets/rightArrowPointed.svg";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const CipherChallenge = () => {
   const [isActive, setIsActive] = useState({
@@ -36,7 +36,7 @@ const CipherChallenge = () => {
   return (
     <div
       id="cipherchallenge"
-      className="w-full min-h-screen flex flex-col items-center mt-6 md:mt-20 z-10 "
+      className="container mx-auto flex flex-col items-center mt-6 md:mt-20 z-10 lg:mb-8 "
     >
       <h1 className="text-xl md:text-5xl text-center tracking-wide z-10">
         Choose Your Cipher Challenge
@@ -210,7 +210,7 @@ const CipherChallenge = () => {
       <div
         className={
           isActive.id === "stepTwo"
-            ? `stepTwo w-full flex overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide md:grid md:grid-cols-4 gap-10 z-10  place-items-center px-8	md:px-24 mb-5 md:mb-0 ease-in duration-900 text-sm md:text-base `
+            ? `stepTwo w-full flex overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide md:grid md:grid-cols-4 gap-10 z-10  place-items-center px-8	 mb-5 md:mb-0 ease-in duration-900 text-sm md:text-base `
             : "flex lg:space-x-32 z-10"
         }
       >

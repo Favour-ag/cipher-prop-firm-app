@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <>
+    <div className="max-w-screen-3xl mx-auto">
       <Navbar />
       <HeroSection />
       <EvaluationProcess />
@@ -20,7 +20,7 @@ const App = () => {
       <JoinTeamCipher />
       <Faq />
       <Footer />
-    </>
+    </div>
   );
 };
 

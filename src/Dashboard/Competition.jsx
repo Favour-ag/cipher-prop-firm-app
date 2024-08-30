@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaFilter, FaTrophy } from "react-icons/fa"; // Import the filter and trophy icons
 import SideNav from "./SideNav";
-import AccountInfo from "../components/AccountInfo";
+import AccountInfo from "./AccountInfo";
 import { motion } from "framer-motion";
 import { IoPricetag } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";

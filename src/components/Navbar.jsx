@@ -13,8 +13,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#010f1c] w-full">
-      <div className="container px-2 md:px-3 py-2 md:py-3.5 lg:py-0 mx-auto relative text-sm lg:px-7">
+    <nav className="container mx-auto z-50 bg-[#010f1c]">
+      <div className="container px-2 md:px-3 py-2 md:py-3.5 text-sm lg:px-7 ">
         {/* DESKTOP VIEW */}
         <div className="flex justify-between items-center lg:py-3">
           {/* LOGO */}
@@ -132,7 +132,7 @@ const Navbar = () => {
         </div>
         {/* MOBILE MENU */}
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-[#010f1c] w-full h-screen flex flex-col items-center text-center lg:hidden gap-3 transition duration-700 ease-in">
+          <div className=" right-0 z-50 bg-[#010f1c] w-full h-screen flex flex-col items-center text-center lg:hidden gap-3 transition duration-700 ease-in">
             <div className="w-[400px] h-[400px] bg-[#023564] rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[100px]"></div>
             <ul className="space-y-3 mt-8 text-lg z-10">
               <li>

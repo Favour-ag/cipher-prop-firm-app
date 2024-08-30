@@ -25,12 +25,12 @@ const EvaluationProcess = () => {
     );
   }, []);
   return (
-    <div className="w-full min-h-screen flex flex-col items-center mt-10 ">
+    <div className="container mx-auto flex flex-col items-center mt-10 ">
       <h1 className="text-xl  lg:text-5xl text-center tracking-wide z-10">
         Our Evaluation Process
       </h1>
-      <div className="flex lg:mt-8 justify-center px-0 lg:px-14 lg:gap-14 z-10">
-        <div className="rounded-lg lg:w-1/2  mx-2 my-4 flex flex-col space-y-4 items-center z-10">
+      <div className=" z-10 grid grid-cols-1 md:grid-cols-2 mb-4 lg:space-x-24">
+        <div className="rounded-lg   mx-2 my-4 flex flex-col space-y-4 items-center z-10">
           <div className="border w-[320px] md:w-[600px] rounded-lg flex flex-col md:flex-row lg:justify-around px-4 md:px-6 lg:px-8 py-5 space-x-0 lg:space-x-8">
             <div className="w-full flex justify-center lg:align-middle z-10">
               <img
@@ -89,16 +89,16 @@ const EvaluationProcess = () => {
             </div>
           </div>
         </div>
-        <div className="hidden lg:block rounded-lg w-1/2  mx-2 my-4">
-          <div className="flex justify-start pl-44">
+        <div className="hidden lg:flex flex-col items-center rounded-lg mt-12 ">
+          <div className="pr-24">
             <img
               src={bitcoin}
               alt="bitcoin"
               id="bitcoin"
-              className="z-10 relative top-40"
+              className="z-10 relative "
             />
           </div>
-          <div className="flex items-center relative top-[20%]">
+          <div className="flex items-center relative ">
             <img src={evaluationEclipse} alt="eclipse" />
             <img
               src={walletSvg}

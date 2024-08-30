@@ -3,9 +3,9 @@ import { accordionData } from "../constants";
 
 const Faq = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 mb-12">
+    <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 my-8 lg:mb-16">
       {/* Left Side: FAQ Title and Button */}
-      <div className=" ">
+      <div className="m-5">
         <p className="text-2xl lg:text-5xl font-bold mb-4">
           Frequently Asked Questions
         </p>
@@ -18,7 +18,7 @@ const Faq = () => {
       </div>
 
       {/* Right Side: Accordion Sec tion */}
-      <div className=" ">
+      <div className="m-5 ">
         <div className="w-full">
           <div className="space-y-4">
             {accordionData.map(({ title, content }) => (

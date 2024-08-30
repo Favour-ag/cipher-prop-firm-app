@@ -4,8 +4,8 @@ import { socials } from "../constants";
 import rightArrowUp from "../assets/rightArrowUp.svg";
 const Footer = () => {
   return (
-    <div className="bg-[#0E1419] w-full h-full flex flex-col md:flex-row justify-center lg:px-24 lg:gap-12 lg:pt-10">
-      <div className="lg:w-1/2 px-2 lg:p-4 space-y-5 leading-7 mt-4">
+    <div className="container mx-auto bg-[#0E1419] grid grid-cols-1 md:grid-cols-2">
+      <div className="px-2 space-y-5 leading-7 mt-4">
         {/* logo */}
         <div>
           <img src={cipher} alt="cipher-logo" className="w-[80px]" />
@@ -39,7 +39,7 @@ const Footer = () => {
 
         <p>© 2024 Cipher. All rights reserved.</p>
       </div>
-      <div className="lg:w-1/2 flex flex-col items-center text-sm md:text-base text-slate-300">
+      <div className=" flex flex-col items-center text-sm md:text-base text-slate-300">
         <div className="bg-[#FFFFFF33] w-[90%] mt-8 rounded-md flex items-center py-2 justify-between px-2 flex-col md:flex-row">
           <p className="font-semibold">Newsletter Group</p>
           <div className="py-0.5 px-0.5 w-[300px] bg-gradient-to-r from-red-500 to-blue-600">
@@ -57,8 +57,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row mt-6 w-full px-8">
-          <div className="w-1/2">
+        <div className="grid grid-cols-1 md:grid-cols-2 mt-6 w-full px-8">
+          <div className="">
             <h3 className="text-md font-semibold lg:mb-2 text-[#0072D8]">
               LEGAL
             </h3>
@@ -67,7 +67,7 @@ const Footer = () => {
               <a href="">Terms & Conditions</a>
             </div>
           </div>
-          <div className="w-1/2 mt-4 lg:mt-0 mb-4">
+          <div className="">
             <h3 className="text-md font-semibold lg:mb-2 text-[#0072D8]">
               QUICK LINKS
             </h3>

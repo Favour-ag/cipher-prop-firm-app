@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SideNav from "./SideNav";
-import AccountInfo from "../components/AccountInfo";
+import AccountInfo from "./AccountInfo";
 import { motion } from "framer-motion";
 import { FaCopy } from "react-icons/fa";
 import noticeIcon from "../assets/icons/dashboardIcons/noticeIcon.svg";

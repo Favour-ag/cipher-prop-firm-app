@@ -1,7 +1,7 @@
 import React from "react";
 import SideNav from "./SideNav";
 import announcementBigo from "../assets/icons/dashboardIcons/announcementBigo.svg";
-import AccountInfo from "../components/AccountInfo";
+import AccountInfo from "./AccountInfo";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 

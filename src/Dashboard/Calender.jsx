@@ -25,7 +25,7 @@ const CalendarComponent = () => {
   const formatDate = (date) => date.toISOString().split("T")[0];
 
   return (
-    <div className=" gap-3 pr-0 lg:pr-4 mb-5 font-sans">
+    <div className="  pr-0 lg:pr-4 mb-5 font-sans">
       <div className="text-white ">
         {/* <h2 className="text-2xl font-bold text-center">May 2024</h2> */}
       </div>
