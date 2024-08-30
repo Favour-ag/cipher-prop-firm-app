@@ -3,7 +3,7 @@ import NewsLetter from "./NewsLetter";
 const JoinTeamCipher = () => {
   return (
     <div className="container mx-auto">
-      <div className=" flex flex-col justify-center items-center pt-4 md:pt-0 md:p-20">
+      <div className=" flex flex-col justify-center items-center pt-4  md:p-20">
         <p className="text-xl lg:text-4xl font-semibold ">
           Join our Team at Cipher
         </p>
