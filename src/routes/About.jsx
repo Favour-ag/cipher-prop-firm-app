@@ -16,7 +16,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="container mx-auto mt-4 ">
+    <div className="container mx-auto ">
       <Navbar />
       <motion.div
         initial={{ opacity: 0 }}

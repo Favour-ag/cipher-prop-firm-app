@@ -12,9 +12,9 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="w-full h-screen md:h-[750px] flex justify-center"
+        className="container mx-auto min-h-screen flex justify-center md:mb-6"
       >
-        <div className="w-full flex flex-col pt-6   md:w-[70%]">
+        <div className="w-full flex flex-col p-6 ">
           <p className="text-4xl text-center mb-12">Contact Us</p>
           <div className="px-3 flex flex-col md:flex-row gap-3 md:gap-8">
             <div className="w-full md:w-1/2">

@@ -35,7 +35,7 @@ const FAQ = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="w-full min-h-full  bg-[#010f1c] flex flex-col items-center lg:mt-4 lg:space-y-7"
+        className="container mx-auto  bg-[#010f1c] flex flex-col items-center lg:mt-4 lg:space-y-7"
       >
         <div className=" w-full flex flex-col items-center">
           <div className=" lg:w-[50%] flex flex-col items-center gap-4 mt-8">
@@ -53,7 +53,7 @@ const FAQ = () => {
                   </div>
                   <input
                     type="text"
-                    className="placeholder:text-white block bg-[#FFFFFF33] w-[100%] rounded-md py-2 pl-12 pr-8 shadow-sm focus:outline-none sm:text-md text-white"
+                    className="placeholder:text-white block bg-[#FFFFFF33] w-[100%] rounded-md py-2 pl-12 pr-8 shadow-sm focus:outline-none sm:text-md text-white font-sans"
                     placeholder="Search keywords... (trade, account)"
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}
