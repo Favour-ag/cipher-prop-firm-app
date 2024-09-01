@@ -9,8 +9,7 @@ import { accordionData3 } from "../constants";
 import { accordionData4 } from "../constants";
 import { accordionData5 } from "../constants";
 import rightArrow from "../assets/rightArrow.svg";
-import discordLogo from "../assets/discordLogo.svg";
-import rightPointedArrow from "../assets/rightPointedArrow.svg";
+import NewsLetter from "../components/NewsLetter";
 
 const FAQ = () => {
   useEffect(() => {}, []);
@@ -239,78 +238,9 @@ const FAQ = () => {
             </div>
           </div>
         </div>
-        {/* still not satisfied? */}
-        <div className=" w-full h-screen flex flex-col justify-center items-center">
-          <div className="mt-60 flex flex-col md:flex-row justify-center items-center space-x-4 space-y-2 lg:space-y-0">
-            <p className="text-3xl lg:text-4xl font-semibold">
-              Still not satisfied?
-            </p>
-
-            <a
-              href="/contact"
-              className=" flex gap-2 py-3 px-4 bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
-            >
-              Contact Us
-              <img src={rightPointedArrow} alt="rightArrow" className="w-4" />
-            </a>
-          </div>
-
-          {/* NewsLetter */}
-          <div className=" w-full min-h-screen px-4 mt-7 lg:mt-24 flex flex-col md:flex-row lg:px-24 xl:px-32 gap-8 ">
-            <div className="lg:w-1/2 lg:space-y-3 mt-3 ">
-              <p className="lg:text-3xl font-semibold">
-                Join our Team at Cipher
-              </p>
-              <p className="text-md">
-                The industry's most affordable option with advanced technology
-                to help you achieve your trading goals. We believe in your
-                potential and are here to support your success. Additionally,
-                join our platform to learn more about our academy and further
-                enhance your trading skills.
-              </p>
-              {/* BUTTONS */}
-              <div className="flex justify-start mt-2 lg:mt-0 space-x-3 lg:space-x-6 items-start">
-                <div className="py-3 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl">
-                  <a href="#" className="py-3 px-3  bg-[#010f1c] rounded-3xl">
-                    Select An Account
-                  </a>
-                </div>
-                <a
-                  href="#"
-                  className="py-3 px-4   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
-                >
-                  Affiliate Program
-                </a>
-              </div>
-            </div>
-            <div className="lg:w-1/2 mt-[-20px] lg:mt-0">
-              <div className="py-0.5 px-0.5  bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl lg:w-[400px] relative lg:left-20">
-                <div className="bg-[#010f1c] py-16 px-0.5 rounded-3xl h-[200px]">
-                  <div className="px-4 lg:px-12 mt-[-36px]">
-                    <p className="lg:text-base text-center">
-                      For more Information about our Academy join our community
-                      on Discord
-                    </p>
-                  </div>
-                  <div className="text-center mt-4">
-                    <a
-                      href="#"
-                      className="py-2.5 px-3   bg-gradient-to-r from-red-500 to-blue-600 rounded-3xl"
-                    >
-                      Join The Community
-                    </a>
-                  </div>
-                  <div className="">
-                    <img
-                      src={discordLogo}
-                      alt=""
-                      className="w-24 rounded-bl-3xl lg:mt-[-20px]"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        {/*Newsletter */}
+        <div className="mb-4">
+          <NewsLetter />
         </div>
       </motion.div>
       <Footer />
